@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+*.pem
+*.key
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Raw data and generated analysis results
+data/
+raw_data/
+outputs/
+outputs_frozen_v1/
+
+# Local archives and temporary files
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.log

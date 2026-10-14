@@ -1,0 +1,9 @@
+{
+  "schema_version": "tbm_dynamic_parameter_registry_v1",
+  "parameters": {
+    "advance_speed": {"column": "advance_speed", "display_name": "推进速度"},
+    "thrust": {"column": "thrust", "display_name": "总推力"},
+    "torque": {"column": "torque", "display_name": "刀盘扭矩"},
+    "rpm": {"column": "rpm_canonical", "display_name": "刀盘转速"}
+  }
+}

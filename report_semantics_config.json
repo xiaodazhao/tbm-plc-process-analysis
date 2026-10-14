@@ -1,0 +1,52 @@
+{
+  "schema_version": "tbm_construction_semantics_v3",
+  "activity_evidence": {
+    "minimum_confirmed_distance_m": 0.1,
+    "minimum_confirmed_distance_source_count": 2,
+    "zero_distance_tolerance_m": 0.001
+  },
+  "process_selection": {
+    "minimum_duration_seconds": 600.0,
+    "minimum_stable_scope_seconds": 180.0,
+    "minimum_core_parameter_valid_ratio": 0.8,
+    "unsegmented_minimum_duration_seconds": 1200.0,
+    "session_maximum_gap_seconds": 2700.0,
+    "session_maximum_span_seconds": 14400.0,
+    "session_maximum_parameter_ratio": 2.5,
+    "session_minimum_comparable_parameter_count": 2,
+    "session_minimum_total_duration_seconds": 1200.0,
+    "session_minimum_process_count": 2,
+    "relative_level_minimum_cohort_size": 3,
+    "relative_level_minimum_spread_ratio": 1.15,
+    "relative_level_lower_quantile": 0.3333333333,
+    "relative_level_upper_quantile": 0.6666666667
+  },
+  "period_comparison": {
+    "bands": [
+      {"label": "00:00—12:00", "start_hour": 0.0, "end_hour": 12.0},
+      {"label": "12:00—19:00", "start_hour": 12.0, "end_hour": 19.0},
+      {"label": "19:00—24:00", "start_hour": 19.0, "end_hour": 24.0}
+    ],
+    "minimum_process_count_per_band": 2,
+    "minimum_stable_duration_seconds_per_band": 900.0,
+    "higher_ratio": 1.25,
+    "lower_ratio": 0.8,
+    "minimum_different_parameter_count": 2
+  },
+  "response_selection": {
+    "minimum_duration_seconds": 240.0,
+    "significant_relative_change": 0.4,
+    "strong_changing_parameter_count": 3,
+    "opposing_change_minimum_duration_seconds": 600.0,
+    "sustained_fluctuation_minimum_duration_seconds": 900.0,
+    "strong_fluctuation_parameter_count": 3,
+    "strong_fluctuation_minimum_duration_seconds": 600.0,
+    "duplicate_overlap_ratio": 0.5
+  },
+  "parameter_units": {
+    "advance_speed": {"unit": null, "status": "unconfirmed_plc_point_table"},
+    "thrust": {"unit": null, "status": "unconfirmed_plc_point_table"},
+    "torque": {"unit": null, "status": "unconfirmed_plc_point_table"},
+    "rpm": {"unit": null, "status": "provisional_mapping_and_unit_unconfirmed"}
+  }
+}
