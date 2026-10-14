@@ -18,11 +18,11 @@ venv/
 .idea/
 .vscode/
 
-# Raw data and generated analysis results
-data/
-raw_data/
-outputs/
-outputs_frozen_v1/
+# Raw data and generated analysis results at the repository root
+/data/
+/raw_data/
+/outputs/
+/outputs_frozen_v1/
 
 # Local archives and temporary files
 *.zip

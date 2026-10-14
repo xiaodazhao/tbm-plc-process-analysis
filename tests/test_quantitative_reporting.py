@@ -23,6 +23,16 @@ def payload() -> dict:
     semantic_path = ROOT / "outputs" / "report_semantics" / f"{DATE}.json"
     samples_path = ROOT / "outputs_frozen_v1" / "processed_samples" / f"{DATE}.csv"
     registry_path = ROOT / "configs" / "report_parameter_units.json"
+    missing_paths = [
+        path
+        for path in (frozen_path, semantic_path, samples_path)
+        if not path.exists()
+    ]
+    if missing_paths:
+        pytest.skip(
+            "requires locally generated frozen-analysis artifacts: "
+            + ", ".join(str(path.relative_to(ROOT)) for path in missing_paths)
+        )
     return build_quantitative_report_payload(
         frozen_result=json.loads(frozen_path.read_text(encoding="utf-8")),
         semantic_payload=json.loads(semantic_path.read_text(encoding="utf-8")),
