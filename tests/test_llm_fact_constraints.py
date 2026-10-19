@@ -22,7 +22,7 @@ def load_day(date: str = "2023-11-03"):
 
 def test_compact_fact_pool_preserves_ids_and_excludes_prebuilt_semantics() -> None:
     source_path = SOURCE_ROOT / "2023-11-03.llm_input.research.json"
-    source = json.loads(source_path.read_text())
+    source = json.loads(source_path.read_text(encoding="utf-8"))
     pool, evidence = load_day()
 
     source_ids = {
