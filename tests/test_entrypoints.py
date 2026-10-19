@@ -45,7 +45,7 @@ def test_llm_experiment_call_limit_never_substitutes_template_for_llm(
     tmp_path: Path,
 ) -> None:
     config = json.loads(
-        (PROJECT_ROOT / "configs/llm_report_experiment.json").read_text()
+        (PROJECT_ROOT / "configs/llm_report_experiment.json").read_text(encoding="utf-8")
     )
     config["source_root"] = str(PROJECT_ROOT / "tests/fixtures/current_llm_inputs")
     config["input_pattern"] = "{date}.llm_input.research.json"
@@ -71,12 +71,12 @@ def test_llm_experiment_call_limit_never_substitutes_template_for_llm(
         capture_output=True,
         text=True,
         check=False,
-        env={"PATH": os.environ.get("PATH", "")},
+        env={**os.environ, "DEEPSEEK_API_KEY": ""},
     )
 
     date_dir = tmp_path / "experiment/2023-11-03"
     assert completed.returncode == 1
     assert not (date_dir / "B_direct.report.md").exists()
-    failure = json.loads((date_dir / "B_direct.run.json").read_text())
+    failure = json.loads((date_dir / "B_direct.run.json").read_text(encoding="utf-8"))
     assert failure["status"] == "failed"
     assert failure["note"] == "No template output was substituted for a failed LLM result."
