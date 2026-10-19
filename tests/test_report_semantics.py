@@ -1,10 +1,6 @@
 from __future__ import annotations
 
-import json
 from copy import deepcopy
-from pathlib import Path
-
-import pytest
 
 from tbm_process.reporting.semantics import (
     build_construction_semantics,
@@ -172,6 +168,14 @@ def test_semantics_hide_internal_vocabulary_and_use_chainage_advance() -> None:
     assert advance["distance_source"] == "guidance_shield_head_chainage"
 
 
+def test_experimental_source_is_named_without_claiming_frozen_segmentation() -> None:
+    payload = build_construction_semantics(_daily_result())
+    payload["generation"]["source_analysis_variant"] = "tbm_platform_first_downstream_v1"
+    markdown = render_semantics_markdown(payload)
+    assert "由平台优先候选分析结果" in markdown
+    assert "由冻结版 PLC 分析结果" not in markdown
+
+
 def test_zero_chainage_does_not_exclude_process_and_transition_event_is_not_reported() -> None:
     payload = build_construction_semantics(_daily_result())
     decision = next(
@@ -337,14 +341,3 @@ def test_response_retains_quantitative_evidence_without_publishing_units() -> No
         row["fact_id"] for row in payload["main_processes"]
     }
     assert "整体呈上升趋势" in response["text"]
-
-
-def test_real_november_third_result_when_available() -> None:
-    path = Path(__file__).resolve().parents[1] / "outputs_frozen_v1/structured_full_days/2023-11-03.json"
-    if not path.exists():
-        pytest.skip("Frozen real-data output is not available in this checkout.")
-    payload = build_construction_semantics(json.loads(path.read_text(encoding="utf-8")))
-    assert validate_semantic_payload(payload)["passed"] is True
-    assert payload["selection_metadata"]["process_candidate_count"] == 66
-    assert len(payload["main_processes"]) >= 2
-    assert any(row["fact_type"] == "within_day_parameter_comparison" for row in payload["main_processes"])

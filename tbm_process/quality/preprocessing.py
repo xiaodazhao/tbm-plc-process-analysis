@@ -53,6 +53,26 @@ def preprocess_day(
     out["gap_before_seconds"] = gap_before_seconds
     out["hard_gap_before"] = gap_before_seconds.gt(float(config["large_gap_seconds"])).fillna(False)
     out["continuity_block_id"] = out["hard_gap_before"].cumsum().astype(int)
+    suspicious_chainage = out.get(
+        "chainage_step_quality",
+        pd.Series("not_assessed", index=out.index),
+    ).eq("suspicious_short_gap_jump")
+    for index in out.index[suspicious_chainage]:
+        previous = index - 1 if index > 0 else None
+        quality_events.append(
+            {
+                "event_type": "data_quality",
+                "subtype": "unreliable_guidance_chainage_jump",
+                "start_time": iso(out.loc[previous, "time"]) if previous is not None else None,
+                "end_time": iso(out.loc[index, "time"]),
+                "duration_seconds": safe_number(out.loc[index, "chainage_step_gap_seconds"]),
+                "chainage_step_delta_m": safe_number(out.loc[index, "chainage_step_delta_m"]),
+                "action": "exclude_daily_chainage_advance_from_report_pending_review",
+                "source_file": str(out.loc[index, "source_file"]),
+                "source_row_start": int(out.loc[previous, "source_row"]) if previous is not None else None,
+                "source_row_end": int(out.loc[index, "source_row"]),
+            }
+        )
     switch = pd.Timestamp(config["rpm_switch_timestamp"])
     before = out["time"] < switch
     out["rpm_canonical_candidate"] = out["rpm_actual_raw"].where(

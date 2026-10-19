@@ -30,7 +30,12 @@ def build_daily_result(
     selected_semantic_segments = selected_semantic_segments or []
     selected_coupled_parameter_events = selected_coupled_parameter_events or []
     durations = state_durations(frame, config)
-    chainage = frame["chainage"].dropna()
+    chainage_status = _daily_chainage_status(frame)
+    chainage = (
+        frame["chainage"].dropna()
+        if chainage_status == "usable"
+        else pd.Series(dtype=float)
+    )
     cumulative = frame["cumulative_advance"].dropna()
     sample_interval = frame["time"].diff().dt.total_seconds().dropna()
     observed_duration_seconds = float(frame["sample_dt_seconds"].fillna(0).sum())
@@ -93,6 +98,7 @@ def build_daily_result(
                 if len(chainage) >= 2
                 else None
             ),
+            "chainage_quality_status": chainage_status,
             "cumulative_advance_change_m": (
                 safe_number(abs(cumulative.iloc[-1] - cumulative.iloc[0]))
                 if len(cumulative) >= 2
@@ -169,6 +175,16 @@ def build_daily_result(
             "missing_calendar_dates_are_not_interpreted_as_stopped_operation",
         ],
     }
+
+
+def _daily_chainage_status(frame: pd.DataFrame) -> str:
+    if "chainage_step_quality" not in frame:
+        return "usable_unverified_legacy_input"
+    if frame["chainage_step_quality"].eq("suspicious_short_gap_jump").any():
+        return "unavailable_suspicious_short_gap_jump"
+    if frame["chainage"].notna().sum() < 2:
+        return "unavailable_insufficient_samples"
+    return "usable"
 
 
 def build_complete_daily_result(

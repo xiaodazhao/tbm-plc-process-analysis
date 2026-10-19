@@ -21,8 +21,8 @@ venv/
 # Raw data and generated analysis results at the repository root
 /data/
 /raw_data/
-/outputs/
-/outputs_frozen_v1/
+/outputs/*
+!/outputs/README.md
 
 # Local archives and temporary files
 *.zip

@@ -1,6 +1,23 @@
 {
-  "schema_version": "tbm_field_profile_v1",
+  "schema_version": "tbm_field_profile_v2",
   "profile_id": "tbm9_2023",
+  "guidance_chainage_mapping": {
+    "enabled": true,
+    "version": "tbm9_guidance_chainage_alignment_v1_2026-10-17",
+    "fields": {
+      "roll": "导向滚动角",
+      "head": "导向盾首里程",
+      "middle": "导向盾中里程",
+      "tail": "导向盾尾里程"
+    },
+    "valid_chainage_min": 900000.0,
+    "valid_chainage_max": 1100000.0,
+    "head_middle_spacing_min_m": 5.0,
+    "head_middle_spacing_max_m": 30.0,
+    "maximum_short_gap_seconds": 120.0,
+    "maximum_short_gap_step_m": 30.0,
+    "unresolved_action": "exclude_from_absolute_chainage_use_without_interpolation"
+  },
   "aliases": {
     "time": ["运行时间-time", "timestamp", "time", "datetime"],
     "raw_state": ["掘进状态", "施工状态", "state"],

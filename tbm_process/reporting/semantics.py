@@ -206,10 +206,16 @@ def render_semantics_markdown(payload: dict[str, Any]) -> str:
         ("掘进过程与运行表现", payload["main_processes"]),
         ("值得关注的运行情况", payload["construction_responses"]),
     ]
+    source_variant = payload.get("generation", {}).get("source_analysis_variant")
+    source_note = (
+        "由平台优先候选分析结果通过确定性规则生成，未调用大语言模型。"
+        if source_variant
+        else "由冻结版 PLC 分析结果通过确定性规则生成，未调用大语言模型。"
+    )
     lines = [
         f"# {payload['date']} PLC 施工语义事实",
         "",
-        "> 由冻结版 PLC 分析结果通过确定性规则生成，未调用大语言模型。",
+        f"> {source_note}",
         "",
     ]
     for title, rows in sections:
@@ -921,16 +927,24 @@ def _express_overview(
         }
     else:
         fact_id = f"{organized['date']}-O02"
+        chainage_quality = overall.get("chainage_quality_status")
+        quality_excluded = chainage_quality == "unavailable_suspicious_short_gap_jump"
         rows.append(
             {
                 "fact_id": fact_id,
                 "fact_type": "daily_advance",
                 "distance_source": "guidance_shield_head_chainage",
-                "availability": "insufficient_records",
+                "availability": (
+                    "excluded_by_data_quality" if quality_excluded else "insufficient_records"
+                ),
                 "chainage_start": chainage_start,
                 "chainage_end": chainage_end,
                 "distance_m": None,
-                "text": "当日记录不足，无法根据导向盾首里程首末变化可靠计算今日进尺。",
+                "text": (
+                    "当日导向盾首里程存在短采样间隔内的大幅跳变，今日进尺不作报告。"
+                    if quality_excluded
+                    else "当日记录不足，无法根据导向盾首里程首末变化可靠计算今日进尺。"
+                ),
             }
         )
         traceability[fact_id] = {
@@ -939,10 +953,15 @@ def _express_overview(
                 "overall.chainage_start",
                 "overall.chainage_end",
                 "overall.chainage_change_m",
+                "overall.chainage_quality_status",
                 "overall.row_count",
             ],
             "scope": "daily_guidance_shield_head_chainage",
-            "quality_limit": "Insufficient records; no alternative distance field is substituted.",
+            "quality_limit": (
+                "Guidance chainage excluded by short-gap jump quality control; no alternative distance field is substituted."
+                if quality_excluded
+                else "Insufficient records; no alternative distance field is substituted."
+            ),
         }
 
     durations = organized.get("machine_states", {}).get("duration_seconds", {})

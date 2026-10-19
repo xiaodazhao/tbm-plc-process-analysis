@@ -1,108 +1,149 @@
-# TBM PLC 施工过程分析
+# TBM PLC施工过程与日报事实生成
 
-本项目读取 91 份日 PLC 文件，完成数据质量控制、施工状态识别、掘进循环划分、循环内四阶段识别、阶段内动态语义提取和可追溯事实包生成。项目本身不调用 LLM；报告层可以生成定量事实包、完整模型请求和确定性日报核查预览。
-
-当前正式方法：`tbm_four_phase_v1_2026-10-12`。
-
-当前软件架构：`tbm_process_layered_v1_2026-10-13`。架构重组不改变冻结四阶段方法。
-
-## 正式流程
+本项目当前只保留一条研究主线：
 
 ```text
-原始PLC -> 字段统一与质量控制 -> machine_state -> 掘进循环
-       -> startup/rising/stable/declining -> 阶段内动态语义
-       -> 完整事实包 -> 工程语义筛选与表达 -> 结构化LLM输入包
+原始PLC
+  -> 字段映射与质量控制
+  -> machine_state
+  -> 平台优先施工过程识别
+  -> startup / rising / stable / declining
+  -> 阶段内动态语义
+  -> 完整结构化事实
+  -> 日报数值事实、明细表和图形
+  -> 受约束LLM组织正文
+  -> 事实一致性校验
+  -> HTML / PDF日报
 ```
 
-运行状态与四阶段是两个层级。`stopped`、`advancing`、`free_rotation` 等属于 `machine_state`；`startup`、`rising`、`stable`、`declining` 只用于已接受掘进循环内部。无法可靠分段的部分保留为 `unsegmented_cycle` 或 `unidentified_process`，不会强制归类。
+平台识别方法版本为`tbm_platform_first_experiment_v1`，四阶段方法版本为`tbm_four_phase_v1_2026-10-12`。版本字符串是方法标识，不代表项目中仍保留多套历史实现。
 
-## 环境与运行
+当前方法仍属于研究方法，尚未经过人工真值标注和跨TBM定量验证。算法平台不能直接解释为现场确认的真实掘进循环。A-E生成与验证代码作为论文对照实验保留，不是正式日报的必经路径。
 
-```bash
-cd /Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis
-conda run -n LLMenv python -m pip install -r requirements.txt
-conda run -n LLMenv python -m pytest -q
-conda run -n LLMenv python scripts/run_frozen_regression.py
-conda run -n LLMenv python run_analysis.py
-conda run -n LLMenv python scripts/validate_analysis.py
-conda run -n LLMenv python scripts/build_report_semantics.py
-conda run -n LLMenv python scripts/validate_report_semantics.py
-conda run -n LLMenv python scripts/build_quantitative_daily_report.py --date 2023-11-03
-conda run -n LLMenv python scripts/validate_quantitative_report.py --date 2023-11-03
+## 目录
+
+```text
+tbm-plc-process-analysis/
+├── tbm_process/
+│   ├── ingestion/          # 原始字段读取与字段配置
+│   ├── quality/            # 数据质量、采样连续性和暂定转速映射
+│   ├── process/            # machine_state、平台识别和四阶段
+│   ├── dynamics/           # 趋势、波动、转折和多参数共同变化
+│   ├── facts/              # 完整及精简结构化事实
+│   ├── reporting/          # 工程事实、日报正文约束、图表和HTML/PDF
+│   ├── llm_reporting/      # A-E论文对照实验与事实验证器
+│   ├── orchestration/      # 基础流程与当前平台优先流程
+│   └── outputs/            # 确定性文件写出
+├── configs/
+├── scripts/
+├── tests/
+├── docs/
+├── outputs/                # 本地生成，不提交Git
+├── config.json
+└── run_analysis.py
 ```
 
-默认 PLC 目录在 [tbm_process/config.py](tbm_process/config.py) 中定义，也可通过 `--plc-dir` 指定。当前 TBM 字段映射位于 `configs/field_profiles/tbm9_2023.json`，可通过 `--field-profile` 替换。正式输出目录固定为 `outputs_frozen_v1/`。
-
-在另一台电脑上使用时，克隆仓库并安装环境，然后通过 `--plc-dir` 指向该电脑上的 PLC 数据目录。原始 PLC、冻结逐点结果和其他大型生成文件不会上传 GitHub。
+## 安装
 
 ```bash
-git clone git@github.com:xiaodazhao/tbm-plc-process-analysis.git
-cd tbm-plc-process-analysis
 conda create -n LLMenv python=3.11 -y
 conda run -n LLMenv python -m pip install -r requirements.txt
-conda run -n LLMenv python run_analysis.py --plc-dir /path/to/TBM9_2023
+conda run -n LLMenv python -m pytest -q
 ```
 
-## 分层代码结构
+## 当前运行流程
 
-- `tbm_process/contracts/`：层间 DataFrame 和 JSON 数据契约。
-- `tbm_process/ingestion/`：读取文件，并按字段配置转换为统一 PLC 字段。
-- `tbm_process/quality/`：速度、贯入度、转速质量控制与采样连续性。
-- `tbm_process/process/`：运行状态、掘进循环、冻结四阶段和动态分析范围。
-- `tbm_process/dynamics/`：阶段内趋势、波动、转折和多参数共同变化。
-- `tbm_process/facts/`：生成完整及精简的可追溯 PLC 事实包。
-- `tbm_process/reporting/`：将冻结事实确定性转换为读者可读的施工语义。
-- `tbm_process/orchestration/`：只负责层级调用顺序和全数据集汇总。
-- `tbm_process/outputs/`：CSV、JSON、方法清单和基础图表。
-- `configs/field_profiles/`：不同 TBM 的原始字段映射；更换数据源时不修改分析层。
-- `configs/dynamic_parameters.json`：动态分析参数注册表；增加新参数时不修改四阶段模块。
-- `scripts/validate_analysis.py`：91 天独立一致性验证。
-- `scripts/run_frozen_regression.py`：冻结版 10 天回归。
-- `scripts/build_report_semantics.py`：批量生成完整工程语义事实及人类可读核查文本。
-- `scripts/build_quantitative_daily_report.py`：从冻结结果只读生成日报级量化事实、正式版/研究版 LLM 输入和确定性预览。
-- `scripts/validate_quantitative_report.py`：独立复核量化事实、日报重现性、请求状态和冻结源码校验值。
-- `scripts/validate_report_semantics.py`：批量验证语义事实的口径、追溯和表达约束。
-- `prompts/tbm_daily_report_system_v2_quantitative.txt`：支持正式版和研究定量预览版的日报提示词。
+### 1. 生成基础质量控制数据
 
-## 主要输出
+```bash
+conda run -n LLMenv python run_analysis.py \
+  --plc-dir /path/to/TBM9_2023
+```
 
-- `processed_samples/*.csv`：逐点质量、状态、循环、阶段和分析范围，保留原始文件及行号。
-- `advance_intervals.csv`：全部有效掘进循环。
-- `phases.csv`：正式四阶段汇总，由最终逐点归属重新计算。
-- `analysis_scopes.csv`：包括未分段循环与未识别施工区间的动态分析范围。
-- `merged_semantic_segments.csv`：合并后的连续趋势区间，统计由合并范围原始记录复算。
-- `coupled_parameter_events.csv`：多参数共同变化，统计由事件精确重叠时段复算。
-- `structured_full_days/*.json`：每日完整、未筛选、可追溯事实包。
-- `structured_days/*.json`：适合后续 LLM 读取的精简事实包，带筛选前后数量和未纳入范围说明。
-- `outputs/report_semantics/*.json`：结构化工程事实、筛选记录、中文表达和内部证据。
-- `outputs/report_semantics/*.md`：便于人工检查的中文语义事实。
-- `outputs/report_quantitative_v1/*.quantitative.json`：日报级量化事实、来源、单位状态及两种 LLM 输入包。
-- `outputs/report_quantitative_v1/*.llm_input.formal.json`：不包含未确认单位绝对值的正式版输入。
-- `outputs/report_quantitative_v1/*.llm_input.research.json`：显著标记单位限制的研究定量预览输入。
-- `outputs/report_quantitative_v1/*.report.*.deterministic.md`：未调用 LLM 的确定性日报核查预览。
-- `outputs/report_quantitative_v1/*.delivery_validation.json`：量化交付的独立一致性和冻结源码校验报告。
-- `outputs/validation/`：工程语义多日一致性与表达约束报告。
-- `validation_report.json` 与 `验证说明.md`：正式验证结果。
-- `outputs_frozen_v1/examples/2023-11-03/`：冻结动态语义事实示例。
+输出到`outputs/base_analysis/`。这是当前平台分析的输入层，不是另一套对外方法。
 
-完整分层与扩展规则见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)，字段说明见 [docs/OUTPUT_SCHEMA.md](docs/OUTPUT_SCHEMA.md)，冻结方法见 [docs/FROZEN_METHOD.md](docs/FROZEN_METHOD.md)。施工语义表达层见 [docs/REPORT_SEMANTICS.md](docs/REPORT_SEMANTICS.md)，2023-11-03 的定量字段与单位核查见 [docs/QUANTITATIVE_REPORT_AUDIT_2023-11-03.md](docs/QUANTITATIVE_REPORT_AUDIT_2023-11-03.md)。这些报告层均不修改冻结分段结果，也不调用大语言模型。
+### 2. 运行当前平台优先分析
 
-## 已完成验证
+```bash
+conda run -n LLMenv python scripts/run_current_analysis.py
+```
 
-- 91/91 份文件运行完成，共 328,217 条记录。
-- 每条记录最多一个正式循环和一个正式阶段标签。
-- 阶段表与逐点结果完全对应，阶段统计可独立复算。
-- 循环、阶段和动态语义均不跨硬采样缺口。
-- 硬缺口不计入运行或停机时长。
-- 有效循环核心样本全部进入动态分析范围。
-- 10 天冻结回归保持核心循环、稳定边界和核心逐点阶段标签不变。
+输出到`outputs/current_analysis/`，包括逐点结果、全部平台、四阶段、动态语义、完整事实、定量事实和LLM输入。
 
-这些检查证明程序可运行、规则可复现和内部数据一致，不代表阶段识别准确率达到 100%。正式定量准确率仍需人工标注后计算。
+默认处理`configs/platform_analysis.json`中的10天研究样本，可通过`--dates`指定其他已生成日期。
 
-## 研究限制
+### 3. 运行A-E受约束日报对照实验（可选）
 
-- 刀盘转速统一字段是依据数据关系建立的暂定映射，仍待 PLC 点位表确认。
-- 明显不可信的推进速度会被排除，但不能据此还原真实速度。
-- 约 20 秒采样可能遗漏非常短的空转、空推和快速升降过程。
-- 施工响应事件只描述参数事实，不能自动解释为地质恶化、刀具磨损、卡机或设备故障。
-- 当前规则仅在这批数据和 10 天目视样本上检查，跨项目泛化尚未验证。
+只准备输入和Prompt，不调用API：
+
+```bash
+conda run -n LLMenv python scripts/run_llm_report_experiment.py \
+  --date 2023-11-03 --groups A,B,C,D,E --dry-run
+```
+
+调用DeepSeek时只从环境变量读取密钥：
+
+```bash
+export DEEPSEEK_API_KEY="..."
+conda run -n LLMenv python scripts/run_llm_report_experiment.py \
+  --all --groups A,B,C,D,E --resume --max-api-calls 30
+```
+
+输出到`outputs/llm_experiment/`。该入口只用于论文对照实验，不是生成正式日报的前置步骤。当前严格验证器直接用于核验和E组局部修订；规则通过率不能称为工程事实准确率。
+
+### 4. 生成施工日报前两章
+
+先完成基础分析和当前平台优先分析，再运行：
+
+```bash
+conda run -n LLMenv python scripts/build_daily_report_front_sections.py \
+  --date 2023-11-03 \
+  --analysis-dir outputs/current_analysis \
+  --output-dir outputs/daily_reports/2023-11-03 \
+  --report-text-mode llm
+```
+
+该入口只读取现有逐点结果、平台表和四阶段表，不重新识别施工过程。输出包括日报事实JSON、全部平台明细CSV、短句证据JSON、两章正文JSON、时间轴、三参数曲线、HTML、PDF和一致性验证结果。表格“主要情况”始终由确定性事实规则生成；默认正文使用确定性回退文本，使用`--report-text-mode llm`时由LLM依据结构化事实组织两章正文。密钥从环境变量或被Git忽略的`.env`读取，请求、响应和核验元数据保存在`report_narrative_generation/`；调用失败或输出越界时自动回退。
+
+### 5. 生成最终三章日报
+
+先生成`outputs/current_analysis/`，再提供地质 V2 候选结果目录：
+
+```bash
+conda run -n LLMenv python scripts/run_final_reports.py \
+  --date 2024-04-26 \
+  --analysis-dir outputs/current_analysis \
+  --geology-candidate-root /path/to/TBM9_geology_v2_candidate
+```
+
+该入口复用冻结 PLC 事实与已经通过规划检查的地质内容单元，确定性生成三章 HTML/PDF、地质里程轴、事实映射和成品审计，不调用 LLM。默认输出到`outputs/final_reports/`。Chrome/Chromium会自动发现，也可用`--chrome`指定；只有HTML时可加`--skip-pdf`。完整方法和外部数据目录要求见[最终三章日报](docs/FINAL_REPORTING.md)。
+
+## 当前入口
+
+- `run_analysis.py`：基础字段统一、质量控制、状态和基础结构化分析。
+- `scripts/run_current_analysis.py`：唯一的平台优先施工过程、四阶段、动态语义和日报事实入口。
+- `scripts/run_llm_report_experiment.py`：A-E受约束生成实验。
+- `scripts/build_daily_report_front_sections.py`：基于现有分析结果生成日报前两章。
+- `scripts/run_final_reports.py`：读取冻结 PLC 与地质 V2 证据，生成并审计最终三章日报。
+- `tbm_process/llm_reporting/verifier.py`：当前类型化事实验证器。
+
+## 配置
+
+- `config.json`：质量控制、四阶段和动态分析参数。
+- `configs/platform_analysis.json`：平台优先识别参数及研究日期。
+- `configs/field_profiles/tbm9_2023.json`：TBM9原始字段映射。
+- `configs/dynamic_parameters.json`：动态参数注册表。
+- `configs/report_parameter_units.json`：工程单位和报告使用限制。
+- `configs/llm_report_experiment.json`：A-E实验与模型配置。
+- `configs/final_report.json`：最终三章日报的可移植路径、日期和地质轴配置。
+
+## 研究边界
+
+- 原始PLC表头未提供可靠工程单位；没有PLC点位表时不得猜测单位。
+- 刀盘统一转速是暂定映射，仍需现场点位资料确认。
+- 约20秒采样可能遗漏极短启动或下降过程。
+- 参数响应不能自动解释为地质、刀具或设备故障。
+- 当前10天样本属于方法开发和目视检查集，不是定量准确率验证集。
+- 生成输出均位于`outputs/`并被Git忽略；新电脑克隆后应从原始PLC重新运行。
+
+方法说明见[当前架构](docs/ARCHITECTURE.md)、[阶段方法](docs/PHASE_METHOD.md)、[输出结构](docs/OUTPUT_SCHEMA.md)、[受约束生成](docs/LLM_CONSTRAINED_REPORTING.md)、[事实验证器](docs/FACT_VERIFIER.md)和[最终三章日报](docs/FINAL_REPORTING.md)。本轮删除与保留内容见[项目清理记录](docs/CLEANUP_2026-10-16.md)。

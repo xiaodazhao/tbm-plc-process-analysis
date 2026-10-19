@@ -1,4 +1,4 @@
-"""Deterministic engineering-language facts and LLM input packages."""
+"""Engineering facts, constrained narratives, and daily-report rendering."""
 
 from .semantics import (
     SCHEMA_VERSION,
@@ -13,7 +13,6 @@ from .quantitative import (
     render_quantitative_report,
     validate_quantitative_payload,
 )
-
 __all__ = [
     "SCHEMA_VERSION",
     "build_construction_semantics",

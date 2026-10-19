@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 
 from .profiles import load_field_aliases
+from .chainage import annotate_chainage_steps, normalize_guidance_chainage
 
 
 FILE_RE = re.compile(r"tbm_data_(\d{8})\.(csv|xlsx|xls)$", re.IGNORECASE)
@@ -46,6 +47,7 @@ def canonicalize(
     *,
     source_file: Path,
     field_aliases: dict[str, list[str]] | None = None,
+    guidance_chainage_mapping: dict[str, Any] | None = None,
 ) -> pd.DataFrame:
     out = pd.DataFrame(index=frame.index)
     resolved: dict[str, str | None] = {}
@@ -67,8 +69,23 @@ def canonicalize(
             )
     out["source_file"] = source_file.name
     out["source_row"] = np.arange(len(frame), dtype=int) + 2
+    chainage = normalize_guidance_chainage(
+        frame,
+        direct_chainage=out["chainage"],
+        direct_source_field=resolved.get("chainage"),
+        config=guidance_chainage_mapping,
+    )
+    for column in chainage.columns:
+        out[column] = chainage[column]
     out.attrs["resolved_columns"] = resolved
-    return out.sort_values("time", kind="stable").reset_index(drop=True)
+    out.attrs["guidance_chainage_mapping"] = guidance_chainage_mapping
+    sorted_out = out.sort_values("time", kind="stable").reset_index(drop=True)
+    sorted_out = annotate_chainage_steps(
+        sorted_out,
+        config=guidance_chainage_mapping,
+    )
+    sorted_out.attrs.update(out.attrs)
+    return sorted_out
 
 
 def find_column(frame: pd.DataFrame, aliases: list[str]) -> str | None:

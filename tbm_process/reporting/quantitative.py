@@ -566,24 +566,49 @@ def validate_quantitative_payload(payload: dict[str, Any]) -> dict[str, Any]:
         advance.get("distance_source") == "guidance_shield_head_chainage",
     )
     states = next(
-        row
-        for row in payload["daily_overview"]
-        if row.get("fact_type") == "machine_state_duration"
+        (
+            row
+            for row in payload["daily_overview"]
+            if row.get("fact_type") == "machine_state_duration"
+        ),
+        None,
     )
-    denominator = float(states["percentage_denominator"]["duration_seconds"])
-    percentage_sum = sum(
-        float(item["percentage"] or 0)
-        for item in states.get("state_statistics", {}).values()
-    )
-    add("state_percentage_sum_is_100", _close(percentage_sum, 100.0), percentage_sum)
-    observed = _number(
-        states["percentage_denominator"].get("observed_duration_seconds")
-    )
-    add(
-        "state_duration_matches_observed_duration",
-        _close(denominator, observed),
-        {"state_seconds": denominator, "observed_seconds": observed},
-    )
+    if states is None:
+        coverage = next(
+            (
+                row
+                for row in payload["daily_overview"]
+                if row.get("fact_type") == "data_coverage"
+            ),
+            {},
+        )
+        add(
+            "state_duration_checks_not_applicable_when_fact_unavailable",
+            True,
+            {
+                "status": "machine_state_duration_fact_unavailable",
+                "sample_count": coverage.get("sample_count"),
+            },
+        )
+    else:
+        denominator = float(states["percentage_denominator"]["duration_seconds"])
+        percentage_sum = sum(
+            float(item["percentage"] or 0)
+            for item in states.get("state_statistics", {}).values()
+        )
+        add(
+            "state_percentage_sum_is_100",
+            _close(percentage_sum, 100.0),
+            percentage_sum,
+        )
+        observed = _number(
+            states["percentage_denominator"].get("observed_duration_seconds")
+        )
+        add(
+            "state_duration_matches_observed_duration",
+            _close(denominator, observed),
+            {"state_seconds": denominator, "observed_seconds": observed},
+        )
     unit_errors = [
         parameter
         for parameter, definition in payload["parameter_registry"]["parameters"].items()
@@ -675,7 +700,10 @@ def render_quantitative_report(payload: dict[str, Any], *, mode: str) -> str:
     overview = payload["daily_overview"]
     coverage = next(row for row in overview if row["fact_type"] == "data_coverage")
     advance = next(row for row in overview if row["fact_type"] == "daily_advance")
-    states = next(row for row in overview if row["fact_type"] == "machine_state_duration")
+    states = next(
+        (row for row in overview if row["fact_type"] == "machine_state_duration"),
+        None,
+    )
     daily_parameters = next(
         row
         for row in overview
@@ -722,14 +750,26 @@ def render_quantitative_report(payload: dict[str, Any], *, mode: str) -> str:
             "",
             "状态占比以有数据支持、经过采样时长封顶的状态时长之和为分母；硬采样缺口不计作停止时间。",
             "",
-            "| 运行状态 | 累计时长 | 占有数据支持时长比例 |",
-            "|---|---:|---:|",
         ]
     )
-    for state, item in states["state_statistics"].items():
-        lines.append(
-            f"| {STATE_NAMES.get(state, state)} | {item['duration_display']} | {_format_number(item['percentage'], 2)}% |"
+    if states is None:
+        lines.extend(
+            [
+                "当日有效记录不足，无法计算设备运行状态累计时长及占比。",
+                "",
+            ]
         )
+    else:
+        lines.extend(
+            [
+                "| 运行状态 | 累计时长 | 占有数据支持时长比例 |",
+                "|---|---:|---:|",
+            ]
+        )
+        for state, item in states["state_statistics"].items():
+            lines.append(
+                f"| {STATE_NAMES.get(state, state)} | {item['duration_display']} | {_format_number(item['percentage'], 2)}% |"
+            )
     lines.extend(["", "### 1.3 主要掘进参数", ""])
     if mode == "formal":
         lines.extend(

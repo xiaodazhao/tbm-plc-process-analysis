@@ -5,7 +5,11 @@ import json
 from pathlib import Path
 
 from tbm_process.config import DEFAULT_PLC_DIR, PROJECT_ROOT, load_config
-from tbm_process.ingestion.profiles import DEFAULT_FIELD_PROFILE_PATH, load_field_aliases
+from tbm_process.ingestion.profiles import (
+    DEFAULT_FIELD_PROFILE_PATH,
+    load_field_aliases,
+    load_guidance_chainage_mapping,
+)
 from tbm_process.orchestration.pipeline import run_dataset
 from tbm_process.outputs.writer import write_outputs
 
@@ -21,7 +25,11 @@ def main() -> None:
         default=str(DEFAULT_FIELD_PROFILE_PATH),
         help="JSON mapping from project-specific PLC columns to canonical fields.",
     )
-    parser.add_argument("--out-dir", default=str(PROJECT_ROOT / "outputs_frozen_v1"))
+    parser.add_argument(
+        "--out-dir",
+        default=str(PROJECT_ROOT / "outputs" / "base_analysis"),
+        help="Base quality-controlled output consumed by scripts/run_current_analysis.py.",
+    )
     parser.add_argument("--max-files", type=int, default=None)
     parser.add_argument(
         "--plot-dates",
@@ -31,11 +39,13 @@ def main() -> None:
     args = parser.parse_args()
     config = load_config(Path(args.config))
     field_aliases = load_field_aliases(Path(args.field_profile))
+    guidance_chainage_mapping = load_guidance_chainage_mapping(Path(args.field_profile))
     result = run_dataset(
         plc_dir=Path(args.plc_dir).expanduser(),
         config=config,
         max_files=args.max_files,
         field_aliases=field_aliases,
+        guidance_chainage_mapping=guidance_chainage_mapping,
     )
     plot_dates = [item.strip() for item in args.plot_dates.split(",") if item.strip()]
     write_outputs(result, Path(args.out_dir).expanduser(), plot_dates=plot_dates)

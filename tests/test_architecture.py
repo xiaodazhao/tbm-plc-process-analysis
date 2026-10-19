@@ -61,6 +61,7 @@ def test_layer_dependencies_remain_one_directional() -> None:
             "quality",
         },
         "outputs": {"outputs", "config", "ingestion"},
+        "final_reporting": {"final_reporting"},
     }
     package_root = PROJECT_ROOT / "tbm_process"
     for layer, permitted in allowed.items():

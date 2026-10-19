@@ -37,6 +37,7 @@ def run_dataset(
     config: dict[str, Any],
     max_files: int | None = None,
     field_aliases: dict[str, list[str]] | None = None,
+    guidance_chainage_mapping: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     paths = discover_files(plc_dir)
     if max_files is not None:
@@ -45,13 +46,19 @@ def run_dataset(
     resolved_rows = []
     for path in paths:
         raw = read_daily_file(path)
-        canonical = canonicalize(raw, source_file=path, field_aliases=field_aliases)
+        canonical = canonicalize(
+            raw,
+            source_file=path,
+            field_aliases=field_aliases,
+            guidance_chainage_mapping=guidance_chainage_mapping,
+        )
         validate_canonical_samples(canonical)
         resolved_rows.append(
             {
                 "date": _date(canonical, path),
                 "source_file": path.name,
                 **{f"field_{key}": value for key, value in canonical.attrs["resolved_columns"].items()},
+                "guidance_chainage_mapping_enabled": bool(guidance_chainage_mapping),
                 "row_count": int(len(canonical)),
             }
         )

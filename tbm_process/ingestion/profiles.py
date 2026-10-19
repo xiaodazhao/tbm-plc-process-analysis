@@ -24,3 +24,13 @@ def load_field_aliases(path: Path | None = None) -> dict[str, list[str]]:
         str(name): [str(alias) for alias in aliases]
         for name, aliases in profile["aliases"].items()
     }
+
+
+def load_guidance_chainage_mapping(path: Path | None = None) -> dict[str, Any] | None:
+    profile = load_field_profile(path)
+    mapping = profile.get("guidance_chainage_mapping")
+    if mapping is None:
+        return None
+    if not isinstance(mapping, dict):
+        raise ValueError("guidance_chainage_mapping must be a JSON object")
+    return mapping

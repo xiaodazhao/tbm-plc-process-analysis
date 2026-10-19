@@ -1,0 +1,1775 @@
+{
+  "schema_version": "tbm_llm_fact_input_v3",
+  "quantitative_enrichment_version": "tbm_report_quantitative_v1",
+  "date": "2023-10-28",
+  "report_mode": "research_preview",
+  "target_layout": [
+    "一、当日施工概况",
+    "二、掘进过程与运行表现",
+    "三、值得关注的运行情况",
+    "附：数据来源与质量说明"
+  ],
+  "structured_facts": {
+    "daily_overview": [
+      {
+        "fact_id": "2023-10-28-O01",
+        "fact_type": "data_coverage",
+        "start_time": "2023-10-28T00:00:10",
+        "end_time": "2023-10-28T23:59:50",
+        "sample_count": 4751
+      },
+      {
+        "fact_id": "2023-10-28-O02",
+        "fact_type": "daily_advance",
+        "distance_source": "guidance_shield_head_chainage",
+        "chainage_start": 1013859.0,
+        "chainage_end": 1013871.0,
+        "distance_m": 12.0
+      },
+      {
+        "fact_id": "2023-10-28-O03",
+        "fact_type": "machine_state_duration",
+        "duration_seconds": {
+          "advancing": 21620.0,
+          "free_rotation": 5440.0,
+          "stopped": 59300.0,
+          "thrusting_no_advance": 20.0
+        },
+        "percentage_denominator": {
+          "definition": "sum_of_observed_capped_machine_state_durations",
+          "duration_seconds": 86380.0,
+          "observed_duration_seconds": 86380.0,
+          "hard_gaps_excluded": true
+        },
+        "state_statistics": {
+          "advancing": {
+            "display_name": "推进",
+            "duration_seconds": 21620.0,
+            "duration_display": "6小时",
+            "percentage": 25.02894188469553
+          },
+          "free_rotation": {
+            "display_name": "空转",
+            "duration_seconds": 5440.0,
+            "duration_display": "1小时31分钟",
+            "percentage": 6.297754109747626
+          },
+          "stopped": {
+            "display_name": "停止",
+            "duration_seconds": 59300.0,
+            "duration_display": "16小时28分钟",
+            "percentage": 68.65015049780041
+          },
+          "thrusting_no_advance": {
+            "display_name": "加压但未满足推进条件",
+            "duration_seconds": 20.0,
+            "duration_display": "0分钟",
+            "percentage": 0.0231535077564251
+          }
+        },
+        "unclassified_duration_seconds": 0.0
+      },
+      {
+        "fact_id": "2023-10-28-OQ01",
+        "fact_type": "daily_advancing_parameter_statistics",
+        "scope": {
+          "filter": "machine_state == advancing",
+          "scope_name": "quality_controlled_advancing_state_records",
+          "scope_sample_count": 1202,
+          "excludes_stopped_and_free_rotation": true
+        },
+        "parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 1202,
+            "valid_ratio": 1.0,
+            "p10": 15.14355,
+            "median": 26.645385,
+            "p90": 40.44775,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 1202,
+            "valid_ratio": 1.0,
+            "p10": 22848.942,
+            "median": 28697.33,
+            "p90": 31824.301,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 1202,
+            "valid_ratio": 1.0,
+            "p10": 2013.0853000000004,
+            "median": 3861.2235,
+            "p90": 5000.6611,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 1202,
+            "valid_ratio": 1.0,
+            "p10": 4.719866000000001,
+            "median": 4.996463,
+            "p90": 5.524521900000001,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      }
+    ],
+    "main_processes": [
+      {
+        "fact_id": "2023-10-28-P01",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T01:01:40",
+        "end_time": "2023-10-28T01:26:10",
+        "continuity_class": "single_continuous_activity",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 1470.0,
+        "total_process_duration_seconds": 1490.0,
+        "total_intervening_gap_seconds": 0,
+        "comparable_scope_seconds": 1340.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T01:01:40",
+            "end_time": "2023-10-28T01:26:10",
+            "duration_seconds": 1490.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 76,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 75,
+                "valid_ratio": 0.9868421052631579,
+                "p10": 0.0,
+                "median": 23.96191,
+                "p90": 30.97791,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 76,
+                "valid_ratio": 1.0,
+                "p10": 0.0,
+                "median": 28377.68,
+                "p90": 29340.010000000002,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 76,
+                "valid_ratio": 1.0,
+                "p10": 312.1601,
+                "median": 3077.292,
+                "p90": 3768.2315,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 76,
+                "valid_ratio": 1.0,
+                "p10": 4.79575,
+                "median": 4.861653,
+                "p90": 4.875683,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [],
+        "relative_parameter_levels": {
+          "advance_speed": "lower",
+          "thrust": "middle",
+          "torque": "lower"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "25分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 76,
+          "phase_count": 1,
+          "comparable_scope_seconds": 1340.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 75,
+            "valid_ratio": 0.9868421052631579,
+            "p10": 0.0,
+            "median": 23.96191,
+            "p90": 30.97791,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 76,
+            "valid_ratio": 1.0,
+            "p10": 0.0,
+            "median": 28377.68,
+            "p90": 29340.010000000002,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 76,
+            "valid_ratio": 1.0,
+            "p10": 312.1601,
+            "median": 3077.292,
+            "p90": 3768.2315,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 76,
+            "valid_ratio": 1.0,
+            "p10": 4.79575,
+            "median": 4.861653,
+            "p90": 4.875683,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      },
+      {
+        "fact_id": "2023-10-28-P02",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T02:19:20",
+        "end_time": "2023-10-28T06:18:50",
+        "continuity_class": "intermittent_activities",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 14370.0,
+        "total_process_duration_seconds": 10190.0,
+        "total_intervening_gap_seconds": 4240.0,
+        "comparable_scope_seconds": 8990.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T02:19:20",
+            "end_time": "2023-10-28T03:00:40",
+            "duration_seconds": 2500.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 124,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 115,
+                "valid_ratio": 0.9274193548387096,
+                "p10": 32.20483,
+                "median": 38.33936,
+                "p90": 40.831593999999996,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 124,
+                "valid_ratio": 1.0,
+                "p10": 25631.579999999998,
+                "median": 26378.605,
+                "p90": 28011.010000000002,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 124,
+                "valid_ratio": 1.0,
+                "p10": 3038.558,
+                "median": 3762.1695,
+                "p90": 4183.5948,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 124,
+                "valid_ratio": 1.0,
+                "p10": 4.7206168,
+                "median": 4.7272655,
+                "p90": 4.7349939,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          },
+          {
+            "start_time": "2023-10-28T03:42:10",
+            "end_time": "2023-10-28T04:45:40",
+            "duration_seconds": 3830.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 194,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 177,
+                "valid_ratio": 0.9123711340206185,
+                "p10": 17.252638,
+                "median": 30.67139,
+                "p90": 43.975124,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 194,
+                "valid_ratio": 1.0,
+                "p10": 23445.453,
+                "median": 29170.035,
+                "p90": 30725.826,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 194,
+                "valid_ratio": 1.0,
+                "p10": 1457.7098,
+                "median": 2967.9269999999997,
+                "p90": 4362.1673,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 194,
+                "valid_ratio": 1.0,
+                "p10": 4.8588283,
+                "median": 5.052395,
+                "p90": 5.0717367,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          },
+          {
+            "start_time": "2023-10-28T05:14:50",
+            "end_time": "2023-10-28T06:18:50",
+            "duration_seconds": 3860.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 201,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 168,
+                "valid_ratio": 0.835820895522388,
+                "p10": 27.22046,
+                "median": 28.37085,
+                "p90": 37.936561000000005,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 201,
+                "valid_ratio": 1.0,
+                "p10": 25399.37,
+                "median": 26226.39,
+                "p90": 27095.7,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 201,
+                "valid_ratio": 1.0,
+                "p10": 3901.282,
+                "median": 4504.354,
+                "p90": 5525.015,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 201,
+                "valid_ratio": 1.0,
+                "p10": 4.981823,
+                "median": 4.990786,
+                "p90": 4.998669,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [
+          {
+            "start_time": "2023-10-28T03:00:40",
+            "end_time": "2023-10-28T03:42:10",
+            "duration_seconds": 2490.0,
+            "interpretation": "intervening_time_not_counted_as_selected_activity"
+          },
+          {
+            "start_time": "2023-10-28T04:45:40",
+            "end_time": "2023-10-28T05:14:50",
+            "duration_seconds": 1750.0,
+            "interpretation": "intervening_time_not_counted_as_selected_activity"
+          }
+        ],
+        "relative_parameter_levels": {
+          "advance_speed": "higher",
+          "thrust": "middle",
+          "torque": "middle"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "2小时50分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 519,
+          "phase_count": 3,
+          "comparable_scope_seconds": 8990.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 460,
+            "valid_ratio": 0.8863198458574181,
+            "p10": 22.42847,
+            "median": 31.05469,
+            "p90": 42.59494600000001,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 519,
+            "valid_ratio": 1.0,
+            "p10": 25550.228000000003,
+            "median": 26765.9,
+            "p90": 30007.04,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 519,
+            "valid_ratio": 1.0,
+            "p10": 2450.7842,
+            "median": 3880.785,
+            "p90": 5103.977,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 519,
+            "valid_ratio": 1.0,
+            "p10": 4.7256324,
+            "median": 4.986562,
+            "p90": 5.0635066,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      },
+      {
+        "fact_id": "2023-10-28-P03",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T11:59:30",
+        "end_time": "2023-10-28T12:34:20",
+        "continuity_class": "single_continuous_activity",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 2090.0,
+        "total_process_duration_seconds": 2110.0,
+        "total_intervening_gap_seconds": 0,
+        "comparable_scope_seconds": 1690.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T11:59:30",
+            "end_time": "2023-10-28T12:34:20",
+            "duration_seconds": 2110.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 85,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 81,
+                "valid_ratio": 0.9529411764705882,
+                "p10": 12.65161,
+                "median": 35.27197,
+                "p90": 36.42261,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 85,
+                "valid_ratio": 1.0,
+                "p10": 20314.418,
+                "median": 23114.47,
+                "p90": 23922.557999999997,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 85,
+                "valid_ratio": 1.0,
+                "p10": 4040.2452,
+                "median": 5100.178,
+                "p90": 5458.420999999999,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 85,
+                "valid_ratio": 1.0,
+                "p10": 5.284552000000001,
+                "median": 5.586521,
+                "p90": 5.5968816,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [],
+        "relative_parameter_levels": {
+          "advance_speed": "higher",
+          "thrust": "lower",
+          "torque": "higher"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "35分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 85,
+          "phase_count": 1,
+          "comparable_scope_seconds": 1690.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 81,
+            "valid_ratio": 0.9529411764705882,
+            "p10": 12.65161,
+            "median": 35.27197,
+            "p90": 36.42261,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 85,
+            "valid_ratio": 1.0,
+            "p10": 20314.418,
+            "median": 23114.47,
+            "p90": 23922.557999999997,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 85,
+            "valid_ratio": 1.0,
+            "p10": 4040.2452,
+            "median": 5100.178,
+            "p90": 5458.420999999999,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 85,
+            "valid_ratio": 1.0,
+            "p10": 5.284552000000001,
+            "median": 5.586521,
+            "p90": 5.5968816,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      },
+      {
+        "fact_id": "2023-10-28-P04",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T13:26:50",
+        "end_time": "2023-10-28T14:04:00",
+        "continuity_class": "single_continuous_activity",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 2230.0,
+        "total_process_duration_seconds": 2250.0,
+        "total_intervening_gap_seconds": 0,
+        "comparable_scope_seconds": 2060.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T13:26:50",
+            "end_time": "2023-10-28T14:04:00",
+            "duration_seconds": 2250.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 119,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 115,
+                "valid_ratio": 0.9663865546218487,
+                "p10": 20.779444,
+                "median": 24.92017,
+                "p90": 27.335646,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 119,
+                "valid_ratio": 1.0,
+                "p10": 30558.056,
+                "median": 31014.35,
+                "p90": 31474.718,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 119,
+                "valid_ratio": 1.0,
+                "p10": 3533.5142,
+                "median": 4184.883,
+                "p90": 4617.72,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 119,
+                "valid_ratio": 1.0,
+                "p10": 4.922466,
+                "median": 4.989377,
+                "p90": 4.999523,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [],
+        "relative_parameter_levels": {
+          "advance_speed": "middle",
+          "thrust": "higher",
+          "torque": "higher"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "38分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 119,
+          "phase_count": 1,
+          "comparable_scope_seconds": 2060.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 115,
+            "valid_ratio": 0.9663865546218487,
+            "p10": 20.779444,
+            "median": 24.92017,
+            "p90": 27.335646,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 119,
+            "valid_ratio": 1.0,
+            "p10": 30558.056,
+            "median": 31014.35,
+            "p90": 31474.718,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 119,
+            "valid_ratio": 1.0,
+            "p10": 3533.5142,
+            "median": 4184.883,
+            "p90": 4617.72,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 119,
+            "valid_ratio": 1.0,
+            "p10": 4.922466,
+            "median": 4.989377,
+            "p90": 4.999523,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      },
+      {
+        "fact_id": "2023-10-28-P05",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T21:32:00",
+        "end_time": "2023-10-28T22:05:10",
+        "continuity_class": "single_continuous_activity",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 1990.0,
+        "total_process_duration_seconds": 2010.0,
+        "total_intervening_gap_seconds": 0,
+        "comparable_scope_seconds": 860.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T21:32:00",
+            "end_time": "2023-10-28T22:05:10",
+            "duration_seconds": 2010.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 49,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 49,
+                "valid_ratio": 1.0,
+                "p10": 9.9298342,
+                "median": 14.56836,
+                "p90": 15.526956,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 49,
+                "valid_ratio": 1.0,
+                "p10": 12842.762,
+                "median": 13782.09,
+                "p90": 15215.942,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 49,
+                "valid_ratio": 1.0,
+                "p10": 230.1048,
+                "median": 270.2263,
+                "p90": 336.67048000000005,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 49,
+                "valid_ratio": 1.0,
+                "p10": 4.017750400000001,
+                "median": 4.018586,
+                "p90": 4.0193472,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [],
+        "relative_parameter_levels": {
+          "advance_speed": "lower",
+          "thrust": "lower",
+          "torque": "lower"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "lower",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "34分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 49,
+          "phase_count": 1,
+          "comparable_scope_seconds": 860.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 49,
+            "valid_ratio": 1.0,
+            "p10": 9.9298342,
+            "median": 14.56836,
+            "p90": 15.526956,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 49,
+            "valid_ratio": 1.0,
+            "p10": 12842.762,
+            "median": 13782.09,
+            "p90": 15215.942,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 49,
+            "valid_ratio": 1.0,
+            "p10": 230.1048,
+            "median": 270.2263,
+            "p90": 336.67048000000005,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 49,
+            "valid_ratio": 1.0,
+            "p10": 4.017750400000001,
+            "median": 4.018586,
+            "p90": 4.0193472,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      },
+      {
+        "fact_id": "2023-10-28-P06",
+        "fact_type": "representative_construction_period",
+        "start_time": "2023-10-28T23:09:30",
+        "end_time": "2023-10-28T23:56:00",
+        "continuity_class": "single_continuous_activity",
+        "activity_expression_class": "confirmed_excavation",
+        "elapsed_span_seconds": 2790.0,
+        "total_process_duration_seconds": 2810.0,
+        "total_intervening_gap_seconds": 0,
+        "comparable_scope_seconds": 2260.0,
+        "activities": [
+          {
+            "start_time": "2023-10-28T23:09:30",
+            "end_time": "2023-10-28T23:56:00",
+            "duration_seconds": 2810.0,
+            "activity_expression_class": "confirmed_excavation",
+            "statistics_scope": {
+              "scope_name": "formal_stable_phase_records",
+              "scope_sample_count": 127,
+              "phase_count": 1
+            },
+            "report_parameter_statistics": {
+              "advance_speed": {
+                "parameter": "advance_speed",
+                "display_name": "推进速度",
+                "source_field": "推进速度",
+                "analysis_column": "advance_speed",
+                "valid_count": 123,
+                "valid_ratio": 0.968503937007874,
+                "p10": 23.770068,
+                "median": 24.92065,
+                "p90": 25.879342,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+              },
+              "thrust": {
+                "parameter": "thrust",
+                "display_name": "总推力",
+                "source_field": "推力",
+                "analysis_column": "thrust",
+                "valid_count": 127,
+                "valid_ratio": 1.0,
+                "p10": 29567.65,
+                "median": 30630.44,
+                "p90": 31499.406,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "torque": {
+                "parameter": "torque",
+                "display_name": "刀盘扭矩",
+                "source_field": "刀盘扭矩",
+                "analysis_column": "torque",
+                "valid_count": 127,
+                "valid_ratio": 1.0,
+                "p10": 3504.0422,
+                "median": 3829.414,
+                "p90": 4210.2052,
+                "engineering_unit": null,
+                "unit_status": "unconfirmed_no_plc_point_table",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "原始PLC记录值，工程单位待核实",
+                "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+              },
+              "rpm": {
+                "parameter": "rpm",
+                "display_name": "刀盘转速",
+                "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+                "analysis_column": "rpm_canonical",
+                "valid_count": 127,
+                "valid_ratio": 1.0,
+                "p10": 5.1936146,
+                "median": 5.521861,
+                "p90": 5.5311234,
+                "engineering_unit": null,
+                "unit_status": "provisional_mapping_and_unit_unconfirmed",
+                "formal_numeric_reporting": false,
+                "research_raw_reporting": true,
+                "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+                "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+              }
+            }
+          }
+        ],
+        "intervening_gaps": [],
+        "relative_parameter_levels": {
+          "advance_speed": "middle",
+          "thrust": "higher",
+          "torque": "middle"
+        },
+        "parameter_comparison_basis": {
+          "advance_speed": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "thrust": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "higher",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          },
+          "torque": {
+            "comparison_cohort": "selected_sessions_with_comparable_sustained_operation",
+            "cohort_size": 6,
+            "statistic": "weighted_median_of_sustained_operation_medians",
+            "classification": "middle",
+            "value_validity": "quality_controlled_comparable_scope",
+            "unit_status": "unconfirmed_plc_point_table"
+          }
+        },
+        "duration_display": "47分钟",
+        "duration_display_rule": "nearest_whole_minute_from_total_process_duration_seconds",
+        "report_statistics_scope": {
+          "scope_name": "pooled_formal_stable_phase_records_from_selected_activities",
+          "scope_sample_count": 127,
+          "phase_count": 1,
+          "comparable_scope_seconds": 2260.0
+        },
+        "report_parameter_statistics": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 123,
+            "valid_ratio": 0.968503937007874,
+            "p10": 23.770068,
+            "median": 24.92065,
+            "p90": 25.879342,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 127,
+            "valid_ratio": 1.0,
+            "p10": 29567.65,
+            "median": 30630.44,
+            "p90": 31499.406,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 127,
+            "valid_ratio": 1.0,
+            "p10": 3504.0422,
+            "median": 3829.414,
+            "p90": 4210.2052,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+          },
+          "rpm": {
+            "parameter": "rpm",
+            "display_name": "刀盘转速",
+            "source_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+            "analysis_column": "rpm_canonical",
+            "valid_count": 127,
+            "valid_ratio": 1.0,
+            "p10": 5.1936146,
+            "median": 5.521861,
+            "p90": 5.5311234,
+            "engineering_unit": null,
+            "unit_status": "provisional_mapping_and_unit_unconfirmed",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+            "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+          }
+        }
+      }
+    ],
+    "construction_responses": [
+      {
+        "fact_id": "2023-10-28-R01",
+        "fact_type": "observed_construction_response",
+        "start_time": "2023-10-28T05:19:30",
+        "end_time": "2023-10-28T05:27:20",
+        "duration_seconds": 490.0,
+        "related_main_process_fact_id": "2023-10-28-P02",
+        "parameter_states": {
+          "advance_speed": {
+            "parameter": "advance_speed",
+            "display_name": "推进速度",
+            "source_field": "推进速度",
+            "analysis_column": "advance_speed",
+            "valid_count": 30,
+            "valid_ratio": 1.0,
+            "p10": 28.562614,
+            "median": 31.05469,
+            "p90": 41.559458000000035,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence.",
+            "initial_representative_value": 28.75421,
+            "final_representative_value": 38.91406,
+            "absolute_change": 10.159849999999999,
+            "actual_percent_change_from_raw_records": 35.33343465183011,
+            "edge_statistic": "median_of_first_and_last_quarter_of_valid_event_samples",
+            "percentage_definition": "(final_raw_median - initial_raw_median) / abs(initial_raw_median) * 100",
+            "frozen_event_absolute_change": 10.159849999999999,
+            "absolute_change_matches_frozen_event": true,
+            "trend": "increasing",
+            "fluctuation_level": "moderate",
+            "internal_normalized_relative_change_excluded_from_llm": true
+          },
+          "thrust": {
+            "parameter": "thrust",
+            "display_name": "总推力",
+            "source_field": "推力",
+            "analysis_column": "thrust",
+            "valid_count": 30,
+            "valid_ratio": 1.0,
+            "p10": 24842.436999999998,
+            "median": 25220.095,
+            "p90": 26882.095999999998,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records.",
+            "initial_representative_value": 25184.57,
+            "final_representative_value": 26877.53,
+            "absolute_change": 1692.9599999999991,
+            "actual_percent_change_from_raw_records": 6.722211258719125,
+            "edge_statistic": "median_of_first_and_last_quarter_of_valid_event_samples",
+            "percentage_definition": "(final_raw_median - initial_raw_median) / abs(initial_raw_median) * 100",
+            "frozen_event_absolute_change": 1692.9599999999991,
+            "absolute_change_matches_frozen_event": true,
+            "trend": "increasing",
+            "fluctuation_level": "moderate",
+            "internal_normalized_relative_change_excluded_from_llm": true
+          },
+          "torque": {
+            "parameter": "torque",
+            "display_name": "刀盘扭矩",
+            "source_field": "刀盘扭矩",
+            "analysis_column": "torque",
+            "valid_count": 30,
+            "valid_ratio": 1.0,
+            "p10": 3535.7643,
+            "median": 4469.7325,
+            "p90": 5465.8584,
+            "engineering_unit": null,
+            "unit_status": "unconfirmed_no_plc_point_table",
+            "formal_numeric_reporting": false,
+            "research_raw_reporting": true,
+            "value_label": "原始PLC记录值，工程单位待核实",
+            "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records.",
+            "initial_representative_value": 3538.064,
+            "final_representative_value": 5213.167,
+            "absolute_change": 1675.1030000000005,
+            "actual_percent_change_from_raw_records": 47.345186520085576,
+            "edge_statistic": "median_of_first_and_last_quarter_of_valid_event_samples",
+            "percentage_definition": "(final_raw_median - initial_raw_median) / abs(initial_raw_median) * 100",
+            "frozen_event_absolute_change": 1675.1030000000005,
+            "absolute_change_matches_frozen_event": true,
+            "trend": "increasing",
+            "fluctuation_level": "moderate",
+            "internal_normalized_relative_change_excluded_from_llm": true
+          }
+        }
+      }
+    ],
+    "data_quality": [
+      {
+        "fact_id": "2023-10-28-Q01",
+        "fact_type": "data_quality_limitation",
+        "subtype": "unreliable_advance_speed",
+        "event_count": 50,
+        "event_count_definition": "contiguous_or_nearby_quality_episode_count",
+        "affected_record_count": 293,
+        "episode_span_record_count": 293
+      },
+      {
+        "fact_id": "2023-10-28-Q02",
+        "fact_type": "data_quality_limitation",
+        "subtype": "unreliable_canonical_rpm",
+        "event_count": 25,
+        "event_count_definition": "contiguous_or_nearby_quality_episode_count",
+        "affected_record_count": 52,
+        "episode_span_record_count": 56
+      },
+      {
+        "fact_id": "2023-10-28-Q03",
+        "fact_type": "data_quality_limitation",
+        "subtype": "unreliable_penetration",
+        "event_count": 17,
+        "event_count_definition": "contiguous_or_nearby_quality_episode_count",
+        "affected_record_count": 293,
+        "episode_span_record_count": 351
+      }
+    ]
+  },
+  "semantic_expressions": [
+    {
+      "fact_id": "2023-10-28-O01",
+      "section": "daily_overview",
+      "text": "当日 PLC 数据覆盖 00:00—23:59，共记录 4751 条数据。"
+    },
+    {
+      "fact_id": "2023-10-28-O02",
+      "section": "daily_overview",
+      "text": "按导向盾首里程计算，今日进尺为 12.00 m（导向盾首里程 1,013,859 m 至 导向盾首里程 1,013,871 m）。"
+    },
+    {
+      "fact_id": "2023-10-28-O03",
+      "section": "daily_overview",
+      "text": "按冻结状态规则，有数据支持的时长为：推进 6 小时，空转 1 小时 31 分钟，停止 16 小时 28 分钟，加压但未满足推进条件 不足 1 分钟。"
+    },
+    {
+      "fact_id": "2023-10-28-OQ01",
+      "section": "daily_overview",
+      "text": "当日推进状态共有 1202 条记录；主要参数统计仅使用该范围内的有效记录。"
+    },
+    {
+      "fact_id": "2023-10-28-P01",
+      "section": "main_processes",
+      "text": "01:01—01:26，设备开展了一段掘进作业，实际纳入统计的作业时长约 25 分钟；按可比持续运行片段统计，推进速度、刀盘扭矩相对较低。"
+    },
+    {
+      "fact_id": "2023-10-28-P02",
+      "section": "main_processes",
+      "text": "02:19—06:18期间，设备先后开展多段掘进作业，实际纳入统计的累计活动时长约 2 小时 50 分钟；各次活动之间存在间隔，该时间跨度不表示连续掘进；按可比持续运行片段统计，推进速度相对较高。"
+    },
+    {
+      "fact_id": "2023-10-28-P03",
+      "section": "main_processes",
+      "text": "11:59—12:34，设备开展了一段掘进作业，实际纳入统计的作业时长约 35 分钟；按可比持续运行片段统计，推进速度、刀盘扭矩相对较高，总推力相对较低。"
+    },
+    {
+      "fact_id": "2023-10-28-P04",
+      "section": "main_processes",
+      "text": "13:26—14:04，设备开展了一段掘进作业，实际纳入统计的作业时长约 38 分钟；按可比持续运行片段统计，总推力、刀盘扭矩相对较高。"
+    },
+    {
+      "fact_id": "2023-10-28-P05",
+      "section": "main_processes",
+      "text": "21:32—22:05，设备开展了一段掘进作业，实际纳入统计的作业时长约 34 分钟；按可比持续运行片段统计，推进速度、总推力、刀盘扭矩相对较低。"
+    },
+    {
+      "fact_id": "2023-10-28-P06",
+      "section": "main_processes",
+      "text": "23:09—23:56，设备开展了一段掘进作业，实际纳入统计的作业时长约 47 分钟；按可比持续运行片段统计，总推力相对较高。"
+    },
+    {
+      "fact_id": "2023-10-28-R01",
+      "section": "construction_responses",
+      "text": "05:19—05:27，掘进作业中，推进速度、总推力、刀盘扭矩整体呈上升趋势；该变化时段约 8 分钟。"
+    },
+    {
+      "fact_id": "2023-10-28-Q01",
+      "section": "data_quality",
+      "text": "当日识别到 50 处推进速度不可信记录；这些记录未用于正常推进速度统计，也未据此补造真实速度。"
+    },
+    {
+      "fact_id": "2023-10-28-Q02",
+      "section": "data_quality",
+      "text": "当日识别到 25 处刀盘转速可疑记录；刀盘转速仅保留作待核验信息，未写入面向读者的参数结论。"
+    },
+    {
+      "fact_id": "2023-10-28-Q03",
+      "section": "data_quality",
+      "text": "当日识别到 17 处贯入度可疑记录；这些记录未作为可靠贯入度证据使用。"
+    }
+  ],
+  "generation_constraints": [
+    "Use only supplied facts; do not invent values, times, causes, actions or diagnoses.",
+    "Today's advance is exclusively the guidance-shield-head chainage change.",
+    "State percentages use the sum of observed capped state durations as their denominator; hard gaps are not stopped time.",
+    "Do not expose internal interval IDs, phase labels, scores or candidate counts.",
+    "Keep construction responses separate from data-quality limitations.",
+    "Do not infer geology, cutter wear, jamming, faults, maintenance or staffing.",
+    "Representative processes are selected coverage, not an exhaustive cycle list.",
+    "Do not treat internal normalized relative_change as an actual percentage.",
+    "This is a research preview, not a formal engineering record.",
+    "Every table or sentence containing parameter values must visibly state: 原始PLC记录值，工程单位待核实，仅用于研究检查.",
+    "Raw-value percentages are permitted only when supplied as actual_percent_change_from_raw_records; preserve their stated calculation basis.",
+    "The source analysis uses an experimental platform-first candidate pending researcher approval.",
+    "Do not describe instantaneous stop boundaries as sustained declining phases.",
+    "Do not infer a decline where termination was unobserved because of a sampling gap or daily record end."
+  ],
+  "evidence_lookup": "Use fact_id in the companion quantitative JSON traceability object."
+}

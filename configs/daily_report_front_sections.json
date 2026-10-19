@@ -1,0 +1,38 @@
+{
+  "schema_version": "tbm_daily_report_front_sections_v1",
+  "stopped_state": "stopped",
+  "platform_id_column": "experimental_platform_id",
+  "phase_label_column": "experimental_phase_label",
+  "advance_quality": {
+    "maximum_missing_ratio": 0.05,
+    "reset_drop_threshold_m": 0.5,
+    "positive_jump_threshold_m": 0.5,
+    "minor_backtrack_tolerance_m": 0.125,
+    "minimum_adoptable_net_change_m": -0.125
+  },
+  "parameters": {
+    "advance_speed": {
+      "display_name": "推进速度",
+      "value_label": "原始PLC值",
+      "quality_column": "advance_speed_quality",
+      "allowed_quality": ["usable"]
+    },
+    "thrust": {
+      "display_name": "总推力",
+      "value_label": "原始PLC值"
+    },
+    "torque": {
+      "display_name": "刀盘扭矩",
+      "value_label": "原始PLC值"
+    }
+  },
+  "plot": {
+    "platform_colors": ["#d8e5e2", "#e8ddca", "#d9e0ec", "#e5d9df"],
+    "line_colors": {
+      "advance_speed": "#2477a5",
+      "thrust": "#77549a",
+      "torque": "#c45125"
+    },
+    "gap_break_seconds": 120
+  }
+}

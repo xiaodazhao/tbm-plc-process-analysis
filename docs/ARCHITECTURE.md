@@ -3,6 +3,7 @@
 ## 架构身份
 
 - 软件架构版本：`tbm_process_layered_v1_2026-10-13`
+- 当前过程方法：`tbm_platform_first_experiment_v1`
 - 四阶段方法版本：`tbm_four_phase_v1_2026-10-12`
 - 工程语义版本：`tbm_construction_semantics_v3`
 
@@ -15,7 +16,11 @@ ingestion -> quality -> process -> dynamics -> facts -> reporting
                     \______________________________/
                                orchestration
 
-facts/reporting -> outputs
+facts/reporting -> deterministic tables and figures -> constrained narrative -> HTML/PDF
+
+reporting -> llm_reporting -> A-E comparison experiments
+
+reporting + approved geology facts -> final_reporting -> three-chapter HTML/PDF and audit
 ```
 
 各层只能读取上游的标准结果，不能修改上游事实，也不能反向调用下游。`tests/test_architecture.py` 会检查主要包之间的依赖方向。
@@ -26,12 +31,14 @@ facts/reporting -> outputs
 |---|---|---|---|
 | `ingestion` | 原始 CSV/Excel、字段配置 | 统一字段采样表 | 异常判断、阶段识别 |
 | `quality` | 统一字段采样表 | 质量受控采样表、质量事件 | 施工阶段、报告表达 |
-| `process` | 质量受控采样表 | 运行状态、循环、四阶段、分析范围 | 参数趋势、工程解释 |
+| `process` | 质量受控采样表 | 运行状态、平台、四阶段、分析范围 | 参数趋势、工程解释 |
 | `dynamics` | 分析范围和参数注册表 | 趋势、波动、转折、共同变化 | 修改阶段边界、因果诊断 |
 | `facts` | 全日过程和动态结果 | 完整及精简可追溯事实包 | 中文修辞、LLM调用 |
-| `reporting` | 完整事实包 | 工程语义和 LLM 输入包 | 重新分段、修改PLC事实 |
+| `reporting` | 完整事实包和逐点分析结果 | 工程语义、日报数值事实、受约束正文、图表和HTML/PDF | 重新分段、修改PLC事实 |
 | `orchestration` | 各层公开接口 | 日级和全量执行顺序 | 拥有具体算法规则 |
 | `outputs` | 正式结果对象 | CSV、JSON、图表和方法清单 | 修改分析结果 |
+| `llm_reporting` | 只读日报事实包 | A-E论文对照实验的内容计划、草稿、核验和局部修订 | 生成正式日报的必经流程、读取原始PLC、重新分段、反写分析事实 |
+| `final_reporting` | 冻结PLC事实、已规划地质内容单元 | 三章日报、地质里程轴、事实映射和成品审计 | 重新提取PDF、改变平台和四阶段、修改地质内容计划、调用LLM |
 
 ## 稳定数据契约
 
@@ -46,7 +53,7 @@ facts/reporting -> outputs
 
 ## 配置隔离
 
-冻结参数仍保存在根目录 `config.json`，以保持研究方法清单连续。运行时 `layer_config()` 只向每层提供其拥有的键：
+四阶段及质量参数保存在根目录`config.json`，平台识别参数保存在`configs/platform_analysis.json`。运行时`layer_config()`只向每层提供其拥有的键：
 
 - 质量层不能读取稳定阶段阈值；
 - 四阶段层不能读取报告筛选规则；
@@ -59,7 +66,7 @@ facts/reporting -> outputs
 2. 修改原始字段别名，不改变统一字段名称；
 3. 根据新设备单位和信号定义建立独立质量规则验证；
 4. 使用 `run_analysis.py --field-profile <配置路径>` 运行；
-5. 质量层验证通过后，过程、动态和报告层可继续使用统一字段契约。
+5. 先运行`run_analysis.py`生成基础质量数据，再运行`scripts/run_current_analysis.py`。
 
 字段相同不代表单位和物理含义相同。跨TBM使用前仍需确认点位表、单位、采样频率和量程。
 
@@ -80,4 +87,4 @@ facts/reporting -> outputs
 - 不让报告层重新读取原始 PLC；
 - 不用字段缺失时的隐式默认值掩盖数据源差异；
 - 四阶段核心代码或参数变化必须产生新的方法版本；
-- 纯架构重组必须通过单元测试、10天冻结回归和91天全量对照。
+- 纯架构重组必须通过单元测试和当前10天研究样本回归；跨TBM验证另行开展。
