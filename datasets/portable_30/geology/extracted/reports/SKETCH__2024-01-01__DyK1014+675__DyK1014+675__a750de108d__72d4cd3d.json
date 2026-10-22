@@ -1,0 +1,192 @@
+{
+  "schema_version": "tbm_geology_evidence_v2",
+  "document_type": "掌子面素描记录",
+  "extraction_scope": "表格及地质描述文字，不处理示意图",
+  "report_metadata": {
+    "source_report_id": "CZXZZQ-8-SM-DyK1014+675",
+    "source_file": "DyK1014+675.00_伯舒拉岭右线DyK1014+675洞身素描记录表.pdf",
+    "source_type": "sketch",
+    "tunnel_name": "伯舒拉岭隧道进口右线",
+    "alignment": "right",
+    "chainage_prefix": "DyK",
+    "coverage_start_m": 1014675.0,
+    "coverage_end_m": 1014675.0,
+    "coverage_start": "DyK1014+675",
+    "coverage_end": "DyK1014+675",
+    "coverage_source_quote": "里程：DyK1014+675",
+    "test_date": null,
+    "test_date_source": null,
+    "cover_date": null,
+    "cover_date_source": null,
+    "submission_date": null,
+    "submission_date_source": null,
+    "observation_date": "2024-01-01",
+    "observation_date_source": {
+      "source_file": "DyK1014+675.00_伯舒拉岭右线DyK1014+675洞身素描记录表.pdf",
+      "source_report_id": "CZXZZQ-8-SM-DyK1014+675",
+      "source_page": 1,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 1,
+      "source_section": "素描记录表签署栏",
+      "source_quote": "日期：2024 年01月01日"
+    },
+    "date_conflicts": [],
+    "identifier_conflicts": [],
+    "actual_distribution_time_verified": false,
+    "page_count": 1,
+    "source_sha256": "a750de108d1c7d302aaaa263f1dcce284b6bf10322c5003b9c927bce982b4ef7",
+    "source_bytes": 471957,
+    "chainage_reference": "DyK",
+    "chainage_alignment_note": "当前项目统一采用地质报告中的DyK里程，不进行DK/DyK转换。"
+  },
+  "observation": {
+    "observation_id": "SKETCH-O01",
+    "semantics": "observation",
+    "geometry": "point",
+    "chainage_m": 1014675.0,
+    "chainage": "DyK1014+675",
+    "face_dimensions": {
+      "excavation_width_m": 12.24,
+      "excavation_height_m": 12.07,
+      "excavation_area_m2": 126.31,
+      "excavation_method": "全断面",
+      "cell_evidence": {
+        "width": {
+          "raw_fragments": [
+            "12.2",
+            "4"
+          ],
+          "raw_joined": "12.24",
+          "value": 12.24,
+          "character_boxes": [
+            [
+              204.47999572753906,
+              177.511962890625,
+              221.69410705566406,
+              190.8946990966797
+            ],
+            [
+              213.24000549316406,
+              192.39195251464844,
+              218.2150115966797,
+              205.77468872070312
+            ]
+          ],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        },
+        "height": {
+          "raw_fragments": [
+            "12.07"
+          ],
+          "raw_joined": "12.07",
+          "value": 12.07,
+          "character_boxes": [
+            [
+              270.0,
+              180.39195251464844,
+              292.374267578125,
+              193.77468872070312
+            ]
+          ],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        },
+        "area": {
+          "raw_fragments": [
+            "126.3",
+            "1"
+          ],
+          "raw_joined": "126.31",
+          "value": 126.31,
+          "character_boxes": [
+            [
+              348.0,
+              177.511962890625,
+              370.37353515625,
+              190.8946990966797
+            ],
+            [
+              361.32000732421875,
+              192.39195251464844,
+              366.2950134277344,
+              205.77468872070312
+            ]
+          ],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        }
+      }
+    },
+    "selected_fields": {
+      "face_state": [
+        "正面掉块"
+      ],
+      "excavated_surface_state": [
+        "随时间松弛、掉块"
+      ],
+      "rock_strength_category": "30＜R≤60",
+      "weathering_degree": "弱风化",
+      "structural_plane_spacing_m": "0.2～0.6",
+      "structural_plane_persistence": "差",
+      "structural_plane_roughness": "平整光滑有擦痕",
+      "structural_plane_aperture_mm": "密闭＜0.1",
+      "karst_development": "无"
+    },
+    "water_entry": {
+      "selected_category": "其它",
+      "raw_value": "8",
+      "value": 8.0,
+      "unit_raw": "L/min1·10m",
+      "source_quote": "其它8"
+    },
+    "design_grade": "Ⅳ",
+    "table_suggested_grade": "Ⅳ",
+    "narrative_conclusion_grade": "Ⅳ",
+    "grade_conflict": false,
+    "geological_description": "伯舒拉岭隧道进口右线DyK1014+675~DyK1014+705洞身推测岩性为石炭二叠系板岩夹变质 砂岩，矿物成分以石英、长石为主，钙质胶结。围岩整体弱风化，岩质硬，节理裂隙发育，岩体 破碎,呈碎石状压碎结构，存在轻微掉块现象，掌子面滴渗水。 板理产状：N25°W/45°S 。同时发育3组节理裂隙，产状如下： J1 ：N24°W60°N，d=0.2~0.4m ，L= 3~5m，平直、光滑、密闭、无充填； J2 ：N18°W/21°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填； J3 ：N35°W/69°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅳ级，与设计相符。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位 置应提前支护，防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机 。",
+    "source_file": "DyK1014+675.00_伯舒拉岭右线DyK1014+675洞身素描记录表.pdf",
+    "source_report_id": "CZXZZQ-8-SM-DyK1014+675",
+    "source_page": 1,
+    "source_page_type": "pdf_actual_page_1_based",
+    "source_page_printed": 1,
+    "source_section": "洞身段地质素描记录表",
+    "source_quote": "伯舒拉岭隧道进口右线DyK1014+675~DyK1014+705洞身推测岩性为石炭二叠系板岩夹变质 砂岩，矿物成分以石英、长石为主，钙质胶结。围岩整体弱风化，岩质硬，节理裂隙发育，岩体 破碎,呈碎石状压碎结构，存在轻微掉块现象，掌子面滴渗水。 板理产状：N25°W/45°S 。同时发育3组节理裂隙，产状如下： J1 ：N24°W60°N，d=0.2~0.4m ，L= 3~5m，平直、光滑、密闭、无充填； J2 ：N18°W/21°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填； J3 ：N35°W/69°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅳ级，与设计相符。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位 置应提前支护，防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机 。",
+    "normalized_fact": {
+      "type": "face_observation_at_point",
+      "chainage": "DyK1014+675",
+      "description": "伯舒拉岭隧道进口右线DyK1014+675~DyK1014+705洞身推测岩性为石炭二叠系板岩夹变质 砂岩，矿物成分以石英、长石为主，钙质胶结。围岩整体弱风化，岩质硬，节理裂隙发育，岩体 破碎,呈碎石状压碎结构，存在轻微掉块现象，掌子面滴渗水。 板理产状：N25°W/45°S 。同时发育3组节理裂隙，产状如下： J1 ：N24°W60°N，d=0.2~0.4m ，L= 3~5m，平直、光滑、密闭、无充填； J2 ：N18°W/21°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填； J3 ：N35°W/69°N，d=0.3~0.5m ，L=3~5m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅳ级，与设计相符。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位 置应提前支护，防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机 。"
+    }
+  },
+  "forecast_intervals": [],
+  "risk_records": [],
+  "quality_validation": {
+    "status": "validated",
+    "checks": [
+      {
+        "check": "observation_date_present",
+        "status": "pass",
+        "detail": "observation_date=2024-01-01"
+      },
+      {
+        "check": "observation_chainage_present",
+        "status": "pass",
+        "detail": "Point chainage required."
+      },
+      {
+        "check": "sketch_is_point_not_interval",
+        "status": "pass",
+        "detail": "Sketch must remain a point observation."
+      },
+      {
+        "check": "sketch_description_present",
+        "status": "pass",
+        "detail": "Narrative description required."
+      },
+      {
+        "check": "sketch_grade_present",
+        "status": "pass",
+        "detail": "Suggested grade required."
+      }
+    ],
+    "issues": [],
+    "failed_check_count": 0
+  }
+}

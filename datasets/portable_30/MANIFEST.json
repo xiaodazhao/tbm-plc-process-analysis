@@ -1,0 +1,1629 @@
+{
+  "schema_version": "tbm_portable_report_dataset_v1",
+  "day_count": 30,
+  "days": [
+    "2023-09-18",
+    "2023-10-09",
+    "2023-11-10",
+    "2023-12-02",
+    "2023-12-12",
+    "2023-12-26",
+    "2024-01-03",
+    "2024-01-04",
+    "2024-01-06",
+    "2024-01-07",
+    "2024-02-11",
+    "2024-02-25",
+    "2024-03-15",
+    "2024-03-21",
+    "2024-03-22",
+    "2024-04-26",
+    "2024-05-23",
+    "2024-05-29",
+    "2024-06-15",
+    "2024-06-19",
+    "2024-08-06",
+    "2024-08-15",
+    "2024-08-16",
+    "2024-08-19",
+    "2024-08-29",
+    "2024-08-31",
+    "2024-09-01",
+    "2024-09-09",
+    "2024-09-10",
+    "2024-09-21"
+  ],
+  "table_row_counts": {
+    "实验平台明细.csv": 290,
+    "实验四阶段明细.csv": 835
+  },
+  "extracted_geology_report_count": 223,
+  "raw_plc_or_pdf_included": false,
+  "files": [
+    {
+      "path": "DAYS.txt",
+      "size_bytes": 330,
+      "sha256": "e28a647f3fa019b572fb5638025f952171fa6bf58dfe92e56286913c6ab42ec8"
+    },
+    {
+      "path": "analysis/processed_samples/2023-09-18.csv",
+      "size_bytes": 1987548,
+      "sha256": "0e1fb21fd09f69a3902a4770e03d9dc1df36738ea12bdd19b25dbc11f449dc8f"
+    },
+    {
+      "path": "analysis/processed_samples/2023-10-09.csv",
+      "size_bytes": 2849953,
+      "sha256": "462e2d568126f95592db91ff9759a69709f46e41d43f2fa7e15b256d77f91a21"
+    },
+    {
+      "path": "analysis/processed_samples/2023-11-10.csv",
+      "size_bytes": 2106108,
+      "sha256": "0e017bda9261862f4198ae2a781ffd1a082cc54a37a159afdb429880c111dfda"
+    },
+    {
+      "path": "analysis/processed_samples/2023-12-02.csv",
+      "size_bytes": 967479,
+      "sha256": "a576d643b55a4db447b0071bd5e9bd4db6697f1e146c06ea30ecea89e9a70792"
+    },
+    {
+      "path": "analysis/processed_samples/2023-12-12.csv",
+      "size_bytes": 2709881,
+      "sha256": "7b93f172f82eaaf93f1801c22726bc6409f4329d52c6ee6457ed5e18bb05e528"
+    },
+    {
+      "path": "analysis/processed_samples/2023-12-26.csv",
+      "size_bytes": 2821582,
+      "sha256": "52832141d323145eb603e57e141f25af9fd1fb7bd5d7478c62088fbde5204f13"
+    },
+    {
+      "path": "analysis/processed_samples/2024-01-03.csv",
+      "size_bytes": 2657822,
+      "sha256": "570f22ea9600976cc0c59d572df27649f35b6e8eda2350f17732a45201992e59"
+    },
+    {
+      "path": "analysis/processed_samples/2024-01-04.csv",
+      "size_bytes": 2748969,
+      "sha256": "afa5469d406f89ebca9a234c252915092a9241d0c082e09922ff34872a1d2ebf"
+    },
+    {
+      "path": "analysis/processed_samples/2024-01-06.csv",
+      "size_bytes": 2543878,
+      "sha256": "93bcbc652bef4722fd8d97bf837c94f8a6e55e6e52acab0c36b06a793ac81b41"
+    },
+    {
+      "path": "analysis/processed_samples/2024-01-07.csv",
+      "size_bytes": 2580904,
+      "sha256": "9ed0b93e7aec942d3a6cb59ec7376020670ec3313ca3f17cfecacc699ca8baeb"
+    },
+    {
+      "path": "analysis/processed_samples/2024-02-11.csv",
+      "size_bytes": 3073267,
+      "sha256": "9ff6887657567aa2998ad3bff15258cee073f770c06f199e5a073be6e07d94e8"
+    },
+    {
+      "path": "analysis/processed_samples/2024-02-25.csv",
+      "size_bytes": 3180675,
+      "sha256": "68a0e62d361604445364524e1594d5e63fe173c2aeae3ba7f241707f1244df4a"
+    },
+    {
+      "path": "analysis/processed_samples/2024-03-15.csv",
+      "size_bytes": 3497681,
+      "sha256": "a785d6cabf916ca9014cb9e8547cc12faf1d169627db8e39560b941548a480e1"
+    },
+    {
+      "path": "analysis/processed_samples/2024-03-21.csv",
+      "size_bytes": 3331567,
+      "sha256": "5d710882f77c7a5d4aa038eb3ffc31c06b7169e3f8525193efd6fcda73e367c7"
+    },
+    {
+      "path": "analysis/processed_samples/2024-03-22.csv",
+      "size_bytes": 3379015,
+      "sha256": "8f74ba662e449934a00312d3b933d51003bda6cb76bfc0f1dc4f65aef726a9c2"
+    },
+    {
+      "path": "analysis/processed_samples/2024-04-26.csv",
+      "size_bytes": 3046021,
+      "sha256": "c206005166739a60fd389b5645afd055929dfbf87bb1128f1fdffe455577ff50"
+    },
+    {
+      "path": "analysis/processed_samples/2024-05-23.csv",
+      "size_bytes": 39031,
+      "sha256": "b3075846260ec54cda1279d3e79d15d541497e5a6821433581b1e85ccd14f373"
+    },
+    {
+      "path": "analysis/processed_samples/2024-05-29.csv",
+      "size_bytes": 54114,
+      "sha256": "f60bc97cb53d56edc92d6126d8cf1a8320911a6e84e3d6130673685018d5e301"
+    },
+    {
+      "path": "analysis/processed_samples/2024-06-15.csv",
+      "size_bytes": 617511,
+      "sha256": "fd881e9398047db94a03f11aec0d9c2dc5619a7ac46b19f4b56af40c33eb3161"
+    },
+    {
+      "path": "analysis/processed_samples/2024-06-19.csv",
+      "size_bytes": 2686905,
+      "sha256": "4b29000e43992fbbc2fa9370e4e78924d5ddcd7eeeb65b5629f46efa6ba9d41a"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-06.csv",
+      "size_bytes": 2697417,
+      "sha256": "72a11ace0e6039aed5cef83469a13a94fea3ddc158ee120f84075b651c8d7ddd"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-15.csv",
+      "size_bytes": 885008,
+      "sha256": "690900295b56230f857d06aea051f4cba4c200e149fe1cb2376c6a4c90e26ce2"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-16.csv",
+      "size_bytes": 2773876,
+      "sha256": "5ba1380a8971b8e1c40d2b4565710efacf52cad1d0e31f0cf7df97919f87a54c"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-19.csv",
+      "size_bytes": 2004001,
+      "sha256": "604eea8373174e053fab37b86f1d2b584bfef78d50cc87836eec2095369e1c30"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-29.csv",
+      "size_bytes": 93838,
+      "sha256": "9cf23dbc5d42d2f6daa179610b0ca761d27a7a7095b6294859cfedbf884a3a61"
+    },
+    {
+      "path": "analysis/processed_samples/2024-08-31.csv",
+      "size_bytes": 475561,
+      "sha256": "e205a0b46ff288f48ab49d7289d6d2caa67f3d4a06aefb2e6fa0f90e0fea9dfb"
+    },
+    {
+      "path": "analysis/processed_samples/2024-09-01.csv",
+      "size_bytes": 209839,
+      "sha256": "7b88e488e9e0156b9bfa305570f29bae3d1c1cb8281a161eb4e8c8be7e4f48db"
+    },
+    {
+      "path": "analysis/processed_samples/2024-09-09.csv",
+      "size_bytes": 2582468,
+      "sha256": "c4cfde52e0a3c48869d007300cabb7cabdd9adced05bd4c92903fb8c1e058ebf"
+    },
+    {
+      "path": "analysis/processed_samples/2024-09-10.csv",
+      "size_bytes": 2366305,
+      "sha256": "bdd95cad74bd37141866b83651121774c4cc3acc35e274903f658ed0bb9faac9"
+    },
+    {
+      "path": "analysis/processed_samples/2024-09-21.csv",
+      "size_bytes": 2565920,
+      "sha256": "74a9d44f733419fa1ea363af5614ffb69bf751bcf1e44cddb0a5b2bd2ad84f78"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-09-18.json",
+      "size_bytes": 571391,
+      "sha256": "27169477228f967ecc1cd3917a4bb9f15d961fafdfa8d50642f5d19a87dd7c0e"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-10-09.json",
+      "size_bytes": 491492,
+      "sha256": "8e951f0aad376aec5196c62cf7d7259a0d98cc36c6b523038fc7985133de7c6c"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-11-10.json",
+      "size_bytes": 567446,
+      "sha256": "acfba9e664667c1a59cb3fbbc8e00b3dcce95de1f2ca3cd9db5e579d4748fbfa"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-12-02.json",
+      "size_bytes": 546302,
+      "sha256": "4ec34a66229276ea3f6036f07ba9e306d8662988c0d4f7a356fcf6b1e7abab57"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-12-12.json",
+      "size_bytes": 1103172,
+      "sha256": "6a44f928b16d934affe0496f45ec0a33e22818dfabca678ecb97fa91e2e5d04e"
+    },
+    {
+      "path": "analysis/structured_full_days/2023-12-26.json",
+      "size_bytes": 1514818,
+      "sha256": "e0d1e20c10217e26c58e0c1411823378d3f80cdd26e335e974fd3e2ac752ea71"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-01-03.json",
+      "size_bytes": 1843326,
+      "sha256": "943731aa7345f0e934e6a9b2b2ea61351bc25f423be8d3bb7aaf4df62be0f01b"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-01-04.json",
+      "size_bytes": 1271456,
+      "sha256": "7ed48c89b31148b402cd19efe2ebb2b0e4868765d67190e5c7471288fccb4ce2"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-01-06.json",
+      "size_bytes": 1182636,
+      "sha256": "797ce9f8c63b2c75843467f3bb996f01d72b015331ddb6591dc1a659d7f5f52c"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-01-07.json",
+      "size_bytes": 976038,
+      "sha256": "303a4f8c895536817ce98b7170f1e733a516407a4cf8d5b0c13a3ad38a921400"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-02-11.json",
+      "size_bytes": 12989,
+      "sha256": "c8f40a6255fd1513c01ddde625fdf6110ae4ed5626982b8c3ffd96c8d550b749"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-02-25.json",
+      "size_bytes": 918749,
+      "sha256": "93d6958713a0d40011378d1be718aea2aef0414ffaf5d35c82268cfb9b14916a"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-03-15.json",
+      "size_bytes": 1236967,
+      "sha256": "862b9dc40169e268a6596e6c1776b4eae450f943caceaf365afa42d436b11e4d"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-03-21.json",
+      "size_bytes": 1412633,
+      "sha256": "f529429759faddaec36f978e596939509b7c7f6307f042b14a4bbc31b0d631d8"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-03-22.json",
+      "size_bytes": 1298951,
+      "sha256": "1347bdeba6a23a65a33f4d3f802d0ad43696c7623fb58ad82d0a953652ae501f"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-04-26.json",
+      "size_bytes": 823840,
+      "sha256": "b44f9f8c72c7c283ec01fd3a57620d312463bd16f46bd4a4a55d0db0aba9dc6a"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-05-23.json",
+      "size_bytes": 32575,
+      "sha256": "3d2992d9d2174d3c475df31eddcbd58a62868c882e9db6a42e49941a40e0457e"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-05-29.json",
+      "size_bytes": 64170,
+      "sha256": "9760ab516ff9d49123a0896e1aedf30e7594a7919eb0bf443f26da0b96eb80c4"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-06-15.json",
+      "size_bytes": 79708,
+      "sha256": "30c7e9aab90cc0123ed3a7bf2f4424242756f857d308cc47f136583155cfcf88"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-06-19.json",
+      "size_bytes": 992859,
+      "sha256": "993e897ec247bf0ffa9e54dc30ac397e57db5f416954d151f44e52b5c4965c7d"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-06.json",
+      "size_bytes": 451301,
+      "sha256": "e253f81db2248d19a97f730429cf7d8300bc59ac5892d07aad4f97e35328b22a"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-15.json",
+      "size_bytes": 244236,
+      "sha256": "5ee87ecf1c67ef5ce5ea775fd80595bdc139b693bf92984f9712a5693870a8a8"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-16.json",
+      "size_bytes": 532606,
+      "sha256": "8bd2d82e931ac88cfa6f6cb667483ac9e1d73613af0ed169bcd1e6d8e7e185dd"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-19.json",
+      "size_bytes": 226130,
+      "sha256": "fe09389c16555a66cfe22b0a779f404dac7928dda468fc9b688a0f3f3335ec22"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-29.json",
+      "size_bytes": 8636,
+      "sha256": "dafd7118b1da6703be07319193c6e9192c7e526e7cfd5aea4f98347308a94f3b"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-08-31.json",
+      "size_bytes": 288289,
+      "sha256": "761a874bc5b5c4d28ca528d54717c5d49ac72bd135e40e9628700dc64473ea25"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-09-01.json",
+      "size_bytes": 73856,
+      "sha256": "86751f17228a5a0a953cb8e4428bc1e3f574225797e644904ead8dba26bccbbd"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-09-09.json",
+      "size_bytes": 168265,
+      "sha256": "1c826d4622c0ea4c630046519d26b16351432d370f6055729527f11dcd12a752"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-09-10.json",
+      "size_bytes": 462194,
+      "sha256": "4978842d70b23d76430603868e09a0e48321c165491f634370a1cadf7bcf2274"
+    },
+    {
+      "path": "analysis/structured_full_days/2024-09-21.json",
+      "size_bytes": 4136,
+      "sha256": "e922555888c1c8d1a8aa053f06737edc8b8d2c334c420e3c043ca0a0852d26c8"
+    },
+    {
+      "path": "analysis/tables/实验四阶段明细.csv",
+      "size_bytes": 428066,
+      "sha256": "39263fd331aab942d3fd81b7106670030605b7601d7bc9bcc139dd7f6b990cd2"
+    },
+    {
+      "path": "analysis/tables/实验平台明细.csv",
+      "size_bytes": 326460,
+      "sha256": "0dc5266070d331be4c258322c8d2e2968bc63411bb0a413529aab23c85dfd5ae"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-09-18/03_v2_content_units.json",
+      "size_bytes": 29283,
+      "sha256": "07cbbdd1d79c693fd5304c63993ffaf2c80654e5b21978c706596e5adf47b111"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-10-09/03_v2_content_units.json",
+      "size_bytes": 27845,
+      "sha256": "738699ebb0e930f85e167fc7b657d4106c28b72012fe5d55daea305731614d2f"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-11-10/03_v2_content_units.json",
+      "size_bytes": 30535,
+      "sha256": "776ea8515e3eaf6b355836b6d159405e355de2578ab62c5e114bd49503a5a8fe"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-12-02/03_v2_content_units.json",
+      "size_bytes": 26655,
+      "sha256": "b65ae176ab88be9f0b4944a1c1a225d9aa3123d8518e0df14f2e425106806146"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-12-12/03_v2_content_units.json",
+      "size_bytes": 29508,
+      "sha256": "d642f2d17772ddd5af590d0c1359ec1363ce867c1003c3cc0cc7abf2845731ed"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2023-12-26/03_v2_content_units.json",
+      "size_bytes": 37684,
+      "sha256": "439cb678b7cd3b1ab746f9954ce58a212b21bcfc6a88e7bb706e5ae3db6c081a"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-01-03/03_v2_content_units.json",
+      "size_bytes": 41393,
+      "sha256": "348b2111071c36f3fc69dd16743f61772aa41a02a8f18220abb7284b0b63f416"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-01-04/03_v2_content_units.json",
+      "size_bytes": 33301,
+      "sha256": "5244b2a10a4008b98df1696932db7e0b5ddb59ac8b0387820ab9e9e6898b931e"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-01-06/03_v2_content_units.json",
+      "size_bytes": 17672,
+      "sha256": "c198699e873086bdc6337274fade48d82e9fe13992e4ff8709d9526d4a2e6987"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-01-07/03_v2_content_units.json",
+      "size_bytes": 27978,
+      "sha256": "dfdd438deb0517a73e3d5d982073d8877e1dbd1dbaaac5f3e193d2b1e107defb"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-02-11/03_v2_content_units.json",
+      "size_bytes": 16037,
+      "sha256": "c7f90aa310424ce91e0f6157b144ee48a609e6892238b41e51adb46488860f34"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-02-25/03_v2_content_units.json",
+      "size_bytes": 36485,
+      "sha256": "7073fbbbb0fb6bbde61f42cb340cee3e961a27f127bce1855db6d6edcf5ca88a"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-03-15/03_v2_content_units.json",
+      "size_bytes": 7896,
+      "sha256": "04b39d3de3247b0ba6096484eb5ac3ce9b17111746c1d190343e93fa6524c587"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-03-21/03_v2_content_units.json",
+      "size_bytes": 23490,
+      "sha256": "8c0989902fb7017788ac56ac823ceaf7080c887ef2526b5e1f514f5702dbf626"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-03-22/03_v2_content_units.json",
+      "size_bytes": 21027,
+      "sha256": "8ac5ca504ec2635d36f4fc4b695c5aa5c8a245153435acb881626abba04c3726"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-04-26/03_v2_content_units.json",
+      "size_bytes": 52031,
+      "sha256": "ec5346094cc0f29bcbc7f24a0a0c952a146b4532405a745c8f8ec90135c0d11a"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-05-23/03_v2_content_units.json",
+      "size_bytes": 22864,
+      "sha256": "6d529f475c68f3b519c8171a824c30de5bbe7568a9b90d9160e10b86268c802a"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-05-29/03_v2_content_units.json",
+      "size_bytes": 22897,
+      "sha256": "599c63c7f2e0e4cf46cd4c0a851027360cf23320b8da46dd8bfad54fd623d25d"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-06-15/03_v2_content_units.json",
+      "size_bytes": 34710,
+      "sha256": "0164cc249c79cc172b388dd66ddf6815fe5cc569d3f67e494eb6b887e369cb36"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-06-19/03_v2_content_units.json",
+      "size_bytes": 7858,
+      "sha256": "9f3b61b4aa94806a01ebcb4bcd4a9b60aa062904adde9e8e106699a68bc37dd5"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-06/03_v2_content_units.json",
+      "size_bytes": 49490,
+      "sha256": "7e52be4f0488245519c197c9f7a8e54581c0d73524a0d62a69563d462bfffe5b"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-15/03_v2_content_units.json",
+      "size_bytes": 59465,
+      "sha256": "643a52e1eef12358f50b05792e250433a4694649361ba2002cdda39b5c88b196"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-16/03_v2_content_units.json",
+      "size_bytes": 52492,
+      "sha256": "3099946dded9aae3280126c6a292b152532806b451796680e9296940e24366ec"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-19/03_v2_content_units.json",
+      "size_bytes": 53644,
+      "sha256": "be77e96dd872936484e810a0ff26d8c2f85d32f0adaad79595392e5534338646"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-29/03_v2_content_units.json",
+      "size_bytes": 43351,
+      "sha256": "0707f3c5ea36b333b0a6222402f52207a3edeaefc71964ccc4b70a7b1b016585"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-08-31/03_v2_content_units.json",
+      "size_bytes": 47689,
+      "sha256": "0ff87fda187498dc24ff7b45f5395acc46c88e909b2900495bd426715dc2722f"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-09-01/03_v2_content_units.json",
+      "size_bytes": 28318,
+      "sha256": "6b737796c81a0311ea00b489878e05aebdefd7ad8e5f46cb4c87e5f201d08f07"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-09-09/03_v2_content_units.json",
+      "size_bytes": 36979,
+      "sha256": "0c869a2e56d4e4a0ceaa3035c69dd7415e10d8fbd06add662883e89f3e5eb39d"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-09-10/03_v2_content_units.json",
+      "size_bytes": 43065,
+      "sha256": "8fe6e4e1f3836e7023521abbfc55c26cd105c709113494645c351bb4d2268bd3"
+    },
+    {
+      "path": "geology/evidence/prepared_days/2024-09-21/03_v2_content_units.json",
+      "size_bytes": 60206,
+      "sha256": "892bfe1a3ee0510bd05c648f0d75506330fb30e80f1d692de6bb856715d778d1"
+    },
+    {
+      "path": "geology/extracted/geology_catalog_right_line.json",
+      "size_bytes": 3187646,
+      "sha256": "50d97ea8b2231442ef477fdb4dd0e73da402f6d4e62b5dfe46f597cc1885bd21"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-09-13__DyK1013+190.2__DyK1013+290.2__cf4b16abf6__389474e3.json",
+      "size_bytes": 19266,
+      "sha256": "9c49ccc95be57cece9187f0de1e67e873251cfbf1fd151a349db2c80dcd01b0a"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-09-22__DyK1013+273__DyK1013+373__717a850239__575baf09.json",
+      "size_bytes": 20168,
+      "sha256": "bcef62ca6d9c250b209f01d63075710a8f1a6aafc036091987bf83e3c25f660f"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-05__DyK1013+445__DyK1013+545__98645499ee__27debe42.json",
+      "size_bytes": 21177,
+      "sha256": "4fa303f20ec93fd555b2b6336cc1a1415deefb48c5fdd12abeb842283a486fd4"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-11__DyK1013+525__DyK1013+625__0aadc5f208__b05fb288.json",
+      "size_bytes": 24474,
+      "sha256": "4bf11ac7a726c1cabc069cc95ede6bc1e85a46a1941a9b828350dbf3108f3de0"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-15__DyK1013+601.6__DyK1013+701.6__19910995b6__4eb318fc.json",
+      "size_bytes": 24656,
+      "sha256": "b2fe7dd7dc44fe9ba77d47d04a153f77495e7b058657b790f37a92d8ea21cf70"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-18__DyK1013+674__DyK1013+774__9bdd313dc2__369cf57d.json",
+      "size_bytes": 13532,
+      "sha256": "90d84aa9d4a0176095d1ccf27ca91b0d8e83fcf2854b1c5c350acc10e8519e95"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-21__DyK1013+764__DyK1013+864__42e579346a__407a541c.json",
+      "size_bytes": 14630,
+      "sha256": "3c19413d1542c44f89ab10e93b0306764857264e5dbf865af12978c8b5ccbf50"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-10-26__DyK1013+845__DyK1013+945__33a7ff312f__5d09fe49.json",
+      "size_bytes": 20157,
+      "sha256": "49d965424d7f756c468f9f0c2903e01bd541d8f154eaca21e2a94593f3cfcd8b"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-11-05__DyK1013+929__DyK1014+029__b9f85f845e__cdcdadf4.json",
+      "size_bytes": 26929,
+      "sha256": "e72b4b2c3c3158ce0feaea9d0ec0dec46360d9d5d55c3a59e633677f03367b30"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-11-17__DyK1014+019__DyK1014+119__5096929133__d8347a31.json",
+      "size_bytes": 27369,
+      "sha256": "b78023284552eed253023d6827fd4663ff6c6202b2794a3ffe2af16ae2a9f329"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-11-21__DyK1014+109__DyK1014+209__35863ceff8__5d57c40c.json",
+      "size_bytes": 24519,
+      "sha256": "91fe6c10d74c8d0fde879a87c0f6a450fd485254c1f17f444ee6ccb396c5dcc2"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-11-28__DyK1014+199__DyK1014+299__171d8d8541__0ce97381.json",
+      "size_bytes": 21326,
+      "sha256": "7bf0b52508bf38db8016dd8c44ea575d122629f32d1de89b15f226a42e05f981"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-02__DyK1014+266__DyK1014+366__88aa4912db__2d7bb1d3.json",
+      "size_bytes": 21212,
+      "sha256": "cb332aab632c3d54fdce7699f0defaecb7620d30ba54b5e38a1d52450e61ca3c"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-08__DyK1014+341__DyK1014+441__033a18c21f__10f72aa7.json",
+      "size_bytes": 22976,
+      "sha256": "59b46edd1213642a6bde0373d0cf21b094deaf9373b27382e146d2f0bd028f67"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-16__DyK1014+431__DyK1014+531__caba0e49d7__2a662b09.json",
+      "size_bytes": 26265,
+      "sha256": "4a0d6dd3fcba72e1ea60d967cdace2675a6f0f6f29f5e47e1f92aab57e37c51b"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-18__DyK1014+455__DyK1014+555__1107372234__bc026c10.json",
+      "size_bytes": 13211,
+      "sha256": "ce37d4f83a1724d000d27a8ee789ede8653bd04744f3b464e59e8d8a4972c1cb"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-23__DyK1014+545__DyK1014+645__9e84875dcf__bd7604e4.json",
+      "size_bytes": 20204,
+      "sha256": "3f82289f39b0237359fbe7c735f6b175d7238ec8f3ad70b4bdacb5a96e307ec0"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2023-12-28__DyK1014+635__DyK1014+735__5cb9bcfac2__663f22e0.json",
+      "size_bytes": 24208,
+      "sha256": "76c332fa8fd6ad1dbfb5a7a3e4434e5099a59ae5cd73a14318254b61d1497426"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-01-05__DyK1014+725__DyK1014+825__2906b7c266__c533c353.json",
+      "size_bytes": 18808,
+      "sha256": "6c8d8a0493fbeeb8f418b693eb296a655c89b4be1d5ae23eb5cab86074e0c497"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-01-12__DyK1014+806__DyK1014+906__30c1335fa7__5282709b.json",
+      "size_bytes": 13405,
+      "sha256": "6ee329caff9d3da96408a1e669a3c826cf4d414fd62407e6c855f2a24142b13f"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-01-27__DyK1014+896__DyK1014+996__94cbfee525__62c4db33.json",
+      "size_bytes": 24576,
+      "sha256": "f3db341cdf9eaa286f7f9d8bf9720ca304ac02dfd85f2d0aad34c4274e322d95"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-02-03__DyK1014+984__DyK1015+084__ac740ecbac__324acbbb.json",
+      "size_bytes": 17798,
+      "sha256": "794fcf59aa7f0e9e7ad6ea16d03287e76ae547e9576ea01daea058109649f161"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-02-15__DyK1015+067__DyK1015+167__c7580f0fa2__192df52a.json",
+      "size_bytes": 21825,
+      "sha256": "6b62434afe0f157f473b83cc23c7c41bbf17f5cf746914001ba610aa19328c09"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-02-23__DyK1015+157__DyK1015+257__3b176eba48__19a307a7.json",
+      "size_bytes": 25044,
+      "sha256": "1067932c52cbb2e581e53aad83a4c46b4f315b870c3996fb0e3665c9382aa2b3"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-03-10__DyK1015+247__DyK1015+347__7893c31959__3c1e8c2d.json",
+      "size_bytes": 17880,
+      "sha256": "7546661683fa5579b5fc4a81f40293ee96210f072c8ee8f7aecedb13306ac5d6"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-03-14__DyK1015+323__DyK1015+423__fef06b4006__c574e89b.json",
+      "size_bytes": 12366,
+      "sha256": "b900adf0854b7e6c0473049982c25feaec9c5c5a10c2d290bfe05ec35d8f0919"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-03-17__DyK1015+405__DyK1015+505__f85808efda__33e035a0.json",
+      "size_bytes": 16541,
+      "sha256": "0968577df1fc8bf99e6fa06187514e48baba21d7d147dc332ce243ae440a5b68"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-03-23__DyK1015+495__DyK1015+595__3407a39ac1__82c56b2c.json",
+      "size_bytes": 17636,
+      "sha256": "e7c9b0bef2263b1c2f04d0267c2c0efee823ffeff67ed5f6b8f0e8aa5fa1a2cb"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-03-27__DyK1015+585__DyK1015+685__cf14a2cce7__ceb77b19.json",
+      "size_bytes": 12144,
+      "sha256": "9839d111f9b7ce5d39bfdc667b93aa06596b1f24f628b9d25021726001677b54"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-04-07__unknown__unknown__cd519c75ed__0ccfaadd.json",
+      "size_bytes": 19496,
+      "sha256": "612918caab7deccde803345ead068063cec9a631c961eadc2f44ea13a58cfc57"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-04-17__DyK1015+763__DyK1015+863__9899235e21__591f4688.json",
+      "size_bytes": 22078,
+      "sha256": "9fddec04ffcbb5b2b7a3a3342a7566bef8508da90c58cde297bf0b5bb38fed98"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-04-28__DyK1015+853__DyK1015+953__927d403ffc__acfca083.json",
+      "size_bytes": 15518,
+      "sha256": "e8e9686c2cf19378bc3d0038cd095053af6a6e12831eb615b759ede98becf7ec"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-05-04__DyK1015+936__DyK1016+036__f7292e0ab2__ccd7990f.json",
+      "size_bytes": 18801,
+      "sha256": "7546bea119716dced371cc3ddb6c9977c9da03d1d84f4a8bcc9ccd6973892eda"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-05-12__DyK1016+026__DyK1016+126__3893bd01e0__224b887a.json",
+      "size_bytes": 18675,
+      "sha256": "b286021aaa05f9b77d44effd175aaf3dd46fda9d33f4753dbbf4ebe689977607"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-05-18__DyK1016+116__DyK1016+216__6ec9928b1b__1bb1a4b9.json",
+      "size_bytes": 17564,
+      "sha256": "06f29dada2aeb463cbc2b740b2fbadf1771a73d568526783e682a52db2d6e774"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-05-25__DyK1016+206__DyK1016+306__411f61dd30__15153f3b.json",
+      "size_bytes": 12222,
+      "sha256": "fcd8a9eb9595bcfa46ccaf28a1b1acc79a6613429b83c0ef74b708a487f0163c"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-06-01__DyK1016+296__DyK1016+396__46cf9552e9__37487644.json",
+      "size_bytes": 18708,
+      "sha256": "7ed28239f06e414ed19c4e75bb5be2b2ce126dbd82f241125edc50fa03143d9d"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-06-10__DyK1016+386__DyK1016+486__9b358ec278__3e65a7dd.json",
+      "size_bytes": 24077,
+      "sha256": "3b98afe116f5d333c66cff00767d0651f87da409cf37d65331cc7ca5352d081a"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-06-18__DyK1016+476__DyK1016+576__877be140a5__2830a45c.json",
+      "size_bytes": 16482,
+      "sha256": "681995c4c3b6625885a1236b348e8e5600174f61274611049fcf0a42d22c906c"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-06-23__DyK1016+555__DyK1016+655__0110fe3f48__a225dff3.json",
+      "size_bytes": 21812,
+      "sha256": "22b99aa8b7b294cc5dc6172bc7d79fe8e03e03b2529596a6e8d729fc85bc340b"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-02__DyK1016+642__DyK1016+742__3df930c5e7__dd889087.json",
+      "size_bytes": 22972,
+      "sha256": "a341efaab4d04a3e3435852c974eb5ad7a6c36d688d87f6a3e7f48d71bcdd7ee"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-06__DyK1016+732__DyK1016+832__33bbd5198d__43c0c05b.json",
+      "size_bytes": 26217,
+      "sha256": "c55363809c23e28557d44fc1d124596aadefa5d24b7995ba3e7db62f272b55a5"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-15__DyK1016+908__DyK1017+008__dfba7f482d__7c86e3ea.json",
+      "size_bytes": 26528,
+      "sha256": "bd9ba47154049e8ea5f7354f80d14fb5a13d6d497e355cce0255636e7b9d10e4"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-19__DyK1016+998__DyK1017+098__af26553e49__369ac750.json",
+      "size_bytes": 16717,
+      "sha256": "3e4e2bfe7bdc5b0932590b3f442a8f359f97d0455e3778e891e63f1ede2d584c"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-23__DyK1017+088__DyK1017+188__febfa24e06__a0066155.json",
+      "size_bytes": 29956,
+      "sha256": "6e0da134d650f273e90cde23a404cbb710dd810df3ecf3f72f0d6d987bae989e"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-07-31__DyK1017+178__DyK1017+278__092be42916__df0db7f3.json",
+      "size_bytes": 25980,
+      "sha256": "57da6b3209a0f8e13bd868ca893b23d53a003124e4105419f169390ee13cdf4f"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-08-25__DyK1017+268__DyK1017+368__3005c9678d__a23ee8f5.json",
+      "size_bytes": 21927,
+      "sha256": "16d4d3ccb3b3aae4c5256e5b184eefd05f020f073eb2fa9e93cedc91d22c7c7f"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-09-18__DyK1017+358__DyK1017+458__ae64f32c37__0ad5e50c.json",
+      "size_bytes": 26087,
+      "sha256": "7620dd9e8e1970aaf06d65acbae37c71047732b90b435fd19622b7fa32cd35a8"
+    },
+    {
+      "path": "geology/extracted/reports/HSP__2024-11-16__DyK1017+444__DyK1017+544__850998bf16__52a8e660.json",
+      "size_bytes": 31699,
+      "sha256": "7cf1d6964427a319c6a4511cca8cc85adfcde851f29d7378491c69bd29213703"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-09__DyK1013+184.2__DyK1013+184.2__9b1d57858b__fbcf273b.json",
+      "size_bytes": 9389,
+      "sha256": "a209e1115208a9fa2e8255c87031d662e7c80e5d835da227fe55b8f2c5bb45e0"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-16__DyK1013+190.2__DyK1013+190.2__df69359474__e437d80f.json",
+      "size_bytes": 9390,
+      "sha256": "52dd6e1960da4f1f9bf7e3781274372a9d1a75823633e0ba9a8112fd90ce0686"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-17__DyK1013+220.2__DyK1013+220.2__e7b3746aa6__d9b853fc.json",
+      "size_bytes": 9381,
+      "sha256": "ddb9bdb14b7d7c095d6181798d9bba0ee927959a146c8b75104282faee0bc079"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-19__DyK1013+250.2__DyK1013+250.2__77cc8b600c__972508b9.json",
+      "size_bytes": 9381,
+      "sha256": "09c6ac36aac536c14de027d51a141d1f425d921e6cd6e81e497c0a8c847cd295"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-21__DyK1013+280.2__DyK1013+280.2__84af027861__2a61e58f.json",
+      "size_bytes": 9381,
+      "sha256": "a7c70b612dff02b76dea876990c5f14b94b39ba8361919273e7a5f2932f557b0"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-24__DyK1013+290.2__DyK1013+290.2__fe01a7f4f7__12007328.json",
+      "size_bytes": 9300,
+      "sha256": "d6cfcab0450c8a8e7705ce8afd5d8a7c33e21d51d699b9f10d3243a3aea7582d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-26__DyK1013+320.2__DyK1013+320.2__56adc917fb__c3876570.json",
+      "size_bytes": 8907,
+      "sha256": "ce659b4b377e9c45a53a567126bf95cd7c074848052a8f134e2f92fbc1fbc3f0"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-28__DyK1013+350.2__DyK1013+350.2__0826e77cd3__8cd6bf5e.json",
+      "size_bytes": 9309,
+      "sha256": "9b2017380e4218841c742f08feddd78f6fa6f60cd7dfc5749063d3cdb52adbfa"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-09-30__DyK1013+373__DyK1013+373__c169cb1fea__fba593c9.json",
+      "size_bytes": 9272,
+      "sha256": "fe788ff31a0fa46649f78cff0ba1803a288fa13a0ed58bedbdf51aac10f15587"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-02__DyK1013+403__DyK1013+403__07cc4cf7ff__923dedad.json",
+      "size_bytes": 9233,
+      "sha256": "23c2da30b517c2505b9faa15b237eb1153afab6048f40ecf2b219b7fc6b66167"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-05__DyK1013+433__DyK1013+433__02bef17c68__8b20d0f9.json",
+      "size_bytes": 9224,
+      "sha256": "6d7f8c3c1ccb3cdc452a95f43352ed9ee5b9d38fb2a18c2fb4753d93f7d28ce9"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-07__DyK1013+455.2__DyK1013+455.2__6c12ef6e02__55c3a326.json",
+      "size_bytes": 9321,
+      "sha256": "5b26f912c671bbf5ac25cb025eada3e78b714fac3fa7def85c74e8a798f8dfde"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-10__DyK1013+485.2__DyK1013+485.2__5fe7a58f61__c02cbe2a.json",
+      "size_bytes": 9322,
+      "sha256": "d1aafcfc06c7ebcaba4e50ac6a461486cb1b114c0c80b91131712b722e9ec520"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-12__DyK1013+515.2__DyK1013+515.2__c4cde9a720__fdd7874b.json",
+      "size_bytes": 9322,
+      "sha256": "26ad4edaef9104d568b1663e04df7890a759692005ec3f1828baa08116c830c0"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-13__DyK1013+545__DyK1013+545__f107d384b7__9dfcfb17.json",
+      "size_bytes": 9294,
+      "sha256": "c6aa26df2e2d3f441db6e5d50684df52f8c36b74fd81d78bd4db33f39e6b639d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-14__DyK1013+575__DyK1013+575__eb05e778c7__517afcbb.json",
+      "size_bytes": 9294,
+      "sha256": "d66d63c24b6bd9666ee09ac351a37ffee9dff0afbd502a7ee99df387f4a01f24"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-15__DyK1013+605__DyK1013+605__95e979d312__ae0bbb67.json",
+      "size_bytes": 9294,
+      "sha256": "e9ce5c5e58aecaaf5303a86569ff47e19e2271be2ece1df080c2a06cd02dc667"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-17__DyK1013+621__DyK1013+621__b77cedad77__93fbe091.json",
+      "size_bytes": 9213,
+      "sha256": "8c612c87ab55826f6f6ebd669b7d3a347c9b4ca17be932b2512c503092ba35a5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-18__DyK1013+644.4__DyK1013+644.4__7423a104b1__2f1e9b47.json",
+      "size_bytes": 8881,
+      "sha256": "de46832cc4be54ac3c39e2bd27683ac5253a1cbac754edceffd4b3161e8af8cf"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-19__DyK1013+674.4__DyK1013+674.4__0b2259472d__8ad5bd76.json",
+      "size_bytes": 8881,
+      "sha256": "950b806da4c6bf8f9ae9f8ee17afdc45c64158e57215addd4d5e100d6cdffc36"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-20__DyK1013+701__DyK1013+701__8f2189c6e5__41b10f53.json",
+      "size_bytes": 8853,
+      "sha256": "7bdc68a2be79e21fc31d923185cdbb326303e56f67b23dfe57651d9dbcb590fd"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-21__DyK1013+723.6__DyK1013+723.6__a605b82898__5012a37d.json",
+      "size_bytes": 8881,
+      "sha256": "6b66786c80ca6dd0150da3fbc070efce7909cb765f392a0e2baf2fa799b9234a"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-22__DyK1013+747__DyK1013+747__07476ee364__6c48cfba.json",
+      "size_bytes": 8853,
+      "sha256": "f3dcb92949db8d55e0b79627798715083666ee04d09e933a8a849ad50661bf3c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-23__DyK1013+768.6__DyK1013+768.6__365e702501__78a43e0c.json",
+      "size_bytes": 8881,
+      "sha256": "150cbf98cebae68b83a0b724194340a17ef4c2ad1ca3bf55765b84f81d7bd00d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-24__DyK1013+790.2__DyK1013+790.2__d126011748__94ac7f6d.json",
+      "size_bytes": 8914,
+      "sha256": "d476b34f78ab83337ff7dc1343914d54431672d83f048d9dc9db509cd9f6cee1"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-25__DyK1013+813.6__DyK1013+813.6__ccf1e50b25__cd187f12.json",
+      "size_bytes": 8914,
+      "sha256": "9af7c5b94dbb43afca1592eda008e755d8d9f85714b7f14ddfe187ff0fb43e7e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-27__DyK1013+840.6__DyK1013+840.6__e3dd5effc1__10111895.json",
+      "size_bytes": 8998,
+      "sha256": "13df5ec7f0edea1a52d551334108d6c4c23f6fb1fb0d6883c94b3183f9a6a3cf"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-28__DyK1013+851.4__DyK1013+851.4__bbacad4209__f4dd976c.json",
+      "size_bytes": 8998,
+      "sha256": "eb535fe3315a37edbeba296f30753ecf87dde26b45fc5f3d5940a4206c9c3e6b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-10-31__DyK1013+869.4__DyK1013+869.4__5e424e905a__1ea20c36.json",
+      "size_bytes": 8998,
+      "sha256": "70c28f8926582b34219817085cbb1205010ecbf0efb4f87d0f8b7eb970eea42f"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-01__DyK1014+018.8__DyK1014+018.8__1fff802258__a808ace4.json",
+      "size_bytes": 10229,
+      "sha256": "362786711891d8618d149ff9b6b89228fbdf29167c1080509c66090ebd0e8225"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-03__DyK1013+894.6__DyK1013+894.6__98595fed3f__30bb7e8f.json",
+      "size_bytes": 8931,
+      "sha256": "6b5ccc7e5dd2817f38c58ed134bf460588bd1c38bc768a9102b03bdaf12397f9"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-06__DyK1013+924.6__DyK1013+924.6__e7ac59928e__58b1294d.json",
+      "size_bytes": 8820,
+      "sha256": "2c7302bd7e47eff962bc499feb8f0ece23cc9fc0467ed5a31f155771f7341edf"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-06__DyK1013+925.2__DyK1013+925.2__f16af59bfc__2b614b7e.json",
+      "size_bytes": 8820,
+      "sha256": "3453065e86ee140f8049008a2df254e24310409f4e981d4f310a1e5a94544fa9"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-10__DyK1013+943.2__DyK1013+943.2__4f29549f9d__cf4ff70c.json",
+      "size_bytes": 9478,
+      "sha256": "936c9e7d6be0d63cb92df946ff39381c34e778e7342bbe7450db6da0d2f15153"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-13__DyK1013+966.6__DyK1013+966.6__771d5cbe15__33214944.json",
+      "size_bytes": 9478,
+      "sha256": "861e54c066b5d9072b59897730954759c9163cccbc21bb4b9f602958c62ab974"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-15__DyK1013+979.2__DyK1013+979.2__3ca3378f9d__c79edb54.json",
+      "size_bytes": 9481,
+      "sha256": "862ac9cf11fb89fd845da968d474055a25c7a4cbea1359887bc9ae4730a7c062"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-17__DyK1014+004.4__DyK1014+004.4__a203d0296e__cab681c5.json",
+      "size_bytes": 9460,
+      "sha256": "bd4d1e8e19fe33f28dbb903fde538317d1f73aa71a431c00e13fcb2fda123587"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-19__DyK1014+038.6__DyK1014+038.6__17f4b3fb54__76c94d59.json",
+      "size_bytes": 10015,
+      "sha256": "5a5f96c8288d246b1cb9bf425018111f7eca82696832d52e7c53207c268c3eea"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-20__DyK1014+063.8__DyK1014+063.8__fb852f8607__277eab8e.json",
+      "size_bytes": 10015,
+      "sha256": "59bc1fcffa3932602b3a3cf7b3a1f0107bfd15bf8caab4c7e1a0c06c0520df63"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-21__DyK1014+081.8__DyK1014+081.8__d23d7e669b__0f8fc981.json",
+      "size_bytes": 10015,
+      "sha256": "ca295f63d2fbd57ce071db91251ee12cc796def074a4a2098a98bf6bdad0176f"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-22__DyK1014+099.8__DyK1014+099.8__dc346e4156__1453b13b.json",
+      "size_bytes": 10018,
+      "sha256": "395c7b7e94900e1f40abbcfc0aaa57f1ec0cb6b33c56ec776f85be91121bafef"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-22__DyK1014+119__DyK1014+119__00033241a1__4ad740f8.json",
+      "size_bytes": 8823,
+      "sha256": "13e7a391828c218bc9e573a82a42df60ec7d06046e8b510fbeca888b8c18a3b2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-24__DyK1014+130.4__DyK1014+130.4__1cebeff2ed__3220f01c.json",
+      "size_bytes": 9544,
+      "sha256": "dcebcaeee4075f2aac2fc57baa13079926880bfceb67b680e0d3d2ab0bab2995"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-25__DyK1014+152__DyK1014+152__eae91d7867__a568c099.json",
+      "size_bytes": 9536,
+      "sha256": "2c5b163d85df60146be490232358dc70e7cf9f7e9563573089891a0411f02b9b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-28__DyK1014+166.4__DyK1014+166.4__8a44b5685f__5806441a.json",
+      "size_bytes": 9565,
+      "sha256": "bdd0ce69ba462abf42ac81ea72f951a43d834035a473cfdebe47c58173f93158"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-29__DyK1014+196.4__DyK1014+196.4__59919150a6__85dc0c62.json",
+      "size_bytes": 9556,
+      "sha256": "6287772a71af66c012d8850ffd837d0619522dbe8f4d4c7655d5ee9a38bfd3ed"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-11-29__DyK1014+209__DyK1014+209__130b955df7__b47387f3.json",
+      "size_bytes": 9528,
+      "sha256": "e2240b87ff6c686ee5004e5f65724ad5913594bfafe89059e07beb910c5d1115"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-01__DyK1014+225.8__DyK1014+225.8__3577e38be7__2cb8e029.json",
+      "size_bytes": 9546,
+      "sha256": "e3e9cb106a9737d0dac04d8cd8f6d285eab704213a490088aee65af28295612e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-02__DyK1014+255.8__DyK1014+255.8__e527f25d4b__97b1786a.json",
+      "size_bytes": 9536,
+      "sha256": "43151ae3e3cb07219c8bc469f7008e2655662f4c489d35931774a80013169672"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-04__DyK1014+285.8__DyK1014+285.8__126ce37fdf__9c46262a.json",
+      "size_bytes": 9413,
+      "sha256": "04f360da9aa33939db1f9b278284f04f3ab095be2c693186062e23103f014af9"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-05__DyK1014+299__DyK1014+299__ce2a20857d__d5b344ae.json",
+      "size_bytes": 8656,
+      "sha256": "8a377f4804e96fe454dea2d43a44faabee54986acb0868d546cdc39f49ce44e5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-07__DyK1014+329__DyK1014+329__df3477890b__90c6d6da.json",
+      "size_bytes": 8812,
+      "sha256": "a499cd4377991f9bd02ec0501ec7d6cfa638245f93c9935765830f643cc96ad0"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-10__DyK1014+359__DyK1014+359__b85da05e40__f22ea8e5.json",
+      "size_bytes": 8676,
+      "sha256": "edebafe8aa752abf183399abcee4eeb5f3ca72b30264be7f102efb9010032850"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-11__DyK1014+359__DyK1014+359__67ad17967c__337632ed.json",
+      "size_bytes": 8678,
+      "sha256": "916a777499932fe25790fd8400451761d4a62f874023ae47b7fd724cf726642f"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-12__DyK1014+389__DyK1014+389__653b5460e5__6fc49cec.json",
+      "size_bytes": 8984,
+      "sha256": "92f3c8b567da0d8e58c96bad78e4e13fa877ddb2e4b2b8108949109a467dc7ed"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-14__DyK1014+419__DyK1014+419__afbb9ca00a__ba2411d0.json",
+      "size_bytes": 8690,
+      "sha256": "12d6d241cda0be48c9f76499244ab04b6a83b9df6468414c198184b819cf8a38"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-16__DyK1014+441__DyK1014+441__34bfa91d67__e47f9878.json",
+      "size_bytes": 8672,
+      "sha256": "a6dfca399a822d8300879c4e168a9e41f1462d5c9e9b9dd011a12bce5497e84b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-18__DyK1014+471__DyK1014+471__0ff0b53f98__7a27c18c.json",
+      "size_bytes": 8669,
+      "sha256": "d842acfdfe92460503f9fbfb5d338a069b7ed66748aa3db7970de1a795b02509"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-19__DyK1014+501__DyK1014+501__493cc8accc__4d5df4e7.json",
+      "size_bytes": 8669,
+      "sha256": "35c858cf2cfcc79ccaff49843d70fece36c31ef72c84d4c04578e1cdbf9fafc2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-21__DyK1014+531__DyK1014+531__f56e12b9bc__d90fa15a.json",
+      "size_bytes": 8945,
+      "sha256": "2fd942e3afd05650aa5daf2ee002b1e90510a9ff507e7e2aefff4a7c5c6adcf2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-23__DyK1014+555__DyK1014+555__e1f1a0fe35__20c465fb.json",
+      "size_bytes": 8948,
+      "sha256": "07b807756f206ceb766520c05b1b059000a64289026723e4ae7bfa4811a3d211"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-23__DyK1014+561__DyK1014+561__7147188538__7b2c9101.json",
+      "size_bytes": 9203,
+      "sha256": "47e4b1f15e1b5c588b3645c0b38e822d0fb12aac6f171b6f1feb50bdb16b40cc"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-26__DyK1014+591__DyK1014+591__bab4c1eb07__c8d1da31.json",
+      "size_bytes": 8360,
+      "sha256": "917567bf5dcef603a3375023a25d07f7eada8af8c2aec1c1516b3d2e24f4443b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-29__DyK1014+621__DyK1014+621__a6e9dc11fa__d6897ed9.json",
+      "size_bytes": 9020,
+      "sha256": "530f46e66466aadf15faa8d7668f149c47ad07fd67e663c1456a7ab27df0eba2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2023-12-30__DyK1014+645__DyK1014+645__4e9165fe1f__3d625531.json",
+      "size_bytes": 8906,
+      "sha256": "7ef408d4fb067354203481ff220cdb281f72a582c3d33c319dd3809175c26c1c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-01__DyK1014+675__DyK1014+675__a750de108d__72d4cd3d.json",
+      "size_bytes": 8722,
+      "sha256": "840fed64f44b27adf3a59f423dbc528ab071066baafbbdff5bc2de4333f425cd"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-05__DyK1014+705__DyK1014+705__0883429c2a__aaa0bbc9.json",
+      "size_bytes": 8701,
+      "sha256": "127740e8b5111570c4711446556d0bbc76ad3600dda29efda735ab0dfcfd4e1b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-14__DyK1014+735__DyK1014+735__afa2f9e0b1__af01ae86.json",
+      "size_bytes": 8737,
+      "sha256": "95849bc0b37a3292139b663bce2e3430997f2f73932f4be776e38e447a2ab9be"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-21__DyK1014+765__DyK1014+765__149f523fbe__6d300a92.json",
+      "size_bytes": 9405,
+      "sha256": "2ea31a41e83a13326c7b52914b8bf99b6cd4cd620eb2301490884c3eb0be3557"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-22__DyK1014+795__DyK1014+795__a3134a01fc__17c42345.json",
+      "size_bytes": 8857,
+      "sha256": "c4bc20eb171aad15e7f73964fbe0458c9a717f13e95dcf5c667e473ffaabde39"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-23__DyK1014+825__DyK1014+825__d3bc6d6b8d__3e93de9c.json",
+      "size_bytes": 8794,
+      "sha256": "807eefe09e909c69d83da71c465a85afb547bd6f40092bda32ab55423dd963ca"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-24__DyK1014+855__DyK1014+855__1fd06b0e7c__097a63ee.json",
+      "size_bytes": 8690,
+      "sha256": "14fb9ad8ff5eaefe79eb4981a0bdd69c2c8bfe11aef755abf0ee13b2c0cfbf4e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-26__DyK1014+885__DyK1014+885__5c02a142d8__0d317f38.json",
+      "size_bytes": 8513,
+      "sha256": "2a441280321cc93d5936c042ca5672ab8e3d6bdfa3481cb741093fcbd21e1061"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-27__DyK1014+906__DyK1014+906__f771c68ddb__0e24c096.json",
+      "size_bytes": 8612,
+      "sha256": "c8815a92a3bbfab3a894a2d9cae73c85a6839fc512cc2cd7375008ecc2e97e12"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-01-29__DyK1014+936__DyK1014+936__cd90affd8e__2bbe47f3.json",
+      "size_bytes": 8687,
+      "sha256": "aa004f29deaa67d7b0b8ccd1fdddaa89988b6aafb74054cb1ebc3d31176d2906"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-02__DyK1014+966__DyK1014+966__aa1172f19d__fc159755.json",
+      "size_bytes": 8758,
+      "sha256": "6de7d1f16c71979049edaefea84f96c54edf8eb399aba84ccfc18286d96ea99d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-04__DyK1014+996__DyK1014+996__73e68f1cfd__864bd70c.json",
+      "size_bytes": 8761,
+      "sha256": "0b516291a5bc6aadfb1a6b58fb5aa3e7f101737b2417aa49f39b2680412fe511"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-06__DyK1015+017__DyK1015+017__38f38cb6ca__47985e7e.json",
+      "size_bytes": 8986,
+      "sha256": "cf6c91da6e0684931cd36f89f0f6a4d135e757e19dadffb165131f12ba4d1122"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-13__DyK1015+047__DyK1015+047__a83c252dcd__d6555717.json",
+      "size_bytes": 9095,
+      "sha256": "902fe638cb0aefc07b39ece880f55fe2ded8765ca20bc19360eae5e91a93e550"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-17__DyK1015+077__DyK1015+077__4abf6bbf0c__8887089d.json",
+      "size_bytes": 8792,
+      "sha256": "6cd9710965e4c32dee5f57c49e524c786d34d334eadf095368900a41eb7306fa"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-20__DyK1015+107__DyK1015+107__df446adcf4__45bd076d.json",
+      "size_bytes": 8792,
+      "sha256": "e9da340c23572eba483520246affae5b2f070950ccbeb61a289d47c92703e491"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-23__DyK1015+137__DyK1015+137__fccc8152ec__d0bc5355.json",
+      "size_bytes": 8753,
+      "sha256": "a35b08d82f85e868d985fee7888f113d688c2f0668d20dede1d6da6c2ccafafb"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-24__DyK1015+167__DyK1015+167__1ca3deaf20__0a0b45ee.json",
+      "size_bytes": 9155,
+      "sha256": "0ec6b75a1a5ddeaeb09aa53cf084fc10216634d1037adda176bc0891bce36785"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-02-26__DyK1015+197__DyK1015+197__7560cc9d6b__2450912b.json",
+      "size_bytes": 9068,
+      "sha256": "878e27423d63478ccca2c6b0aec77971e5a110fc42084cd4d8debbab1de88092"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-08__DyK1015+227__DyK1015+227__98f8921dcf__6f733c72.json",
+      "size_bytes": 8863,
+      "sha256": "71a774ff31d1f8c4860a6ed57fdf7ab1751850956866daffe657e577209284dc"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-12__DyK1015+257__DyK1015+257__d5b6558ebe__4f0e82b5.json",
+      "size_bytes": 8972,
+      "sha256": "d7336c18c35afd6d1897358230949a21cbbef000e320a29d36f5a2158350533d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-13__DyK1015+283__DyK1015+283__768f6cc13a__42c8c1b9.json",
+      "size_bytes": 9497,
+      "sha256": "c7bfd61b331b3eb8a58cde0f88ec4e40d35c0bd437d067453e0903cef0bf606c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-14__DyK1015+313__DyK1015+313__d518357b56__5451b7a2.json",
+      "size_bytes": 9437,
+      "sha256": "7ce8ab3286e16b9c37a8086a491eb92835c0008d14609745438f2710f4d466ae"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-14__DyK1015+317__DyK1015+317__5064636028__821a1600.json",
+      "size_bytes": 9356,
+      "sha256": "4e0860e979dceedbc7efe15f61335e903593aeaca66e83ed6663b774840faf51"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-15__DyK1015+347__DyK1015+347__e08e73e82e__6fa44d3c.json",
+      "size_bytes": 9365,
+      "sha256": "a52a52dc527694cef5f97e73dce527ad74bfa033f41a03301e2599d7ffde70ba"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-16__DyK1015+377__DyK1015+377__ee55147484__5d0b3da3.json",
+      "size_bytes": 9359,
+      "sha256": "29bd2d3589ba75c6a80348a29d0af839cd5fd53950ca75d241023f00887096dc"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-17__DyK1015+407__DyK1015+407__b606fd92af__8262538e.json",
+      "size_bytes": 9119,
+      "sha256": "bdf14c22b53e3f43af8b5886ac44b292c0a673a84c80d6414a6762052c8e393d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-19__DyK1015+423__DyK1015+423__dcc5e301e2__6be1a1ce.json",
+      "size_bytes": 9539,
+      "sha256": "11cf48ad8b4d2ac336a42f30400e99117835dc144fe4b8715d5afaffe14ab275"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-21__DyK1015+453__DyK1015+453__bd86fe3412__d5d8e93a.json",
+      "size_bytes": 9692,
+      "sha256": "759247f9cf850cd6351a45f95209d05852d038cd4905cbf905be9b48b4a9f737"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-22__DyK1015+483__DyK1015+483__4677ea5dc8__4d873aaa.json",
+      "size_bytes": 9803,
+      "sha256": "d9bd54fc2e0c70e0511fd3a2953f0cdd784c638ed009dc6d3f714985c29d667b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-23__DyK1015+505__DyK1015+505__91602b4596__ffa67f40.json",
+      "size_bytes": 9827,
+      "sha256": "a0e3ef83134071481eccd07f8ae41307b7e7cfa5500760b591130e79a3c5a2c5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-24__DyK1015+535__DyK1015+535__6d7627dea9__ce597715.json",
+      "size_bytes": 9995,
+      "sha256": "df6674f9b501a072914c7ca01ef69beaa5d60e84061894dc2b4f60320bafd1e1"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-25__DyK1015+565__DyK1015+565__71543162eb__65f0e91a.json",
+      "size_bytes": 9977,
+      "sha256": "bd756a91fb5534775b530486eed827b3c3cbf30f7e1fc1ea6c0a2fa8fcd34d72"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-03-29__DyK1015+595__DyK1015+595__8fa22c259a__c06ffd7a.json",
+      "size_bytes": 10157,
+      "sha256": "d81865d8720d4d5ba7c686d17e083fcead478fdc303c35761535cf13879c25db"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-01__DyK1015+625__DyK1015+625__75fe2a345e__3d387884.json",
+      "size_bytes": 9923,
+      "sha256": "429be78cc225ec31b8464746749862f410e26762b413c95ce77c636d882a1a82"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-06__DyK1015+655__DyK1015+655__21fa55cba2__566544ea.json",
+      "size_bytes": 9935,
+      "sha256": "114948dc72c0db54b3703652dcaafa0080d7e772f24026e41c9520da91d233ac"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-09__DyK1015+683__DyK1015+683__a7c83f2adf__04bc2f18.json",
+      "size_bytes": 8867,
+      "sha256": "2683726bec097a92de3879798f41775acef0e122f6c2d88b03ccd30b096878e7"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-12__DyK1015+713__DyK1015+713__5de053db8b__4019f46f.json",
+      "size_bytes": 8859,
+      "sha256": "72f73adaaca2e33306c1a4526a55b2e32681a80728e4476e06d4ef16a50c2334"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-16__DyK1015+743__DyK1015+743__47cded48cf__199b1c5b.json",
+      "size_bytes": 9204,
+      "sha256": "d9dfaa80df685d6526205381ccc0d511165d01ba87cda3e931398fb1f6db81c5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-18__DyK1015+759__DyK1015+759__734b946e67__2b6bf393.json",
+      "size_bytes": 9099,
+      "sha256": "0eb34a2c689227524a73cf3f2f36852f89634220312b3e0886c0e5e0c12d9300"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-18__DyK1015+759__DyK1015+759__f8ac4c8e70__d20658fa.json",
+      "size_bytes": 9096,
+      "sha256": "c5faf5bd8ed89170069e45f37e981ce6db1ef27cc9f6fcffddf4293b78422c3b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-22__DyK1015+789__DyK1015+789__d08a5b7a7a__1c5e7faa.json",
+      "size_bytes": 8835,
+      "sha256": "1806d9d65580351b85d8632f2d81a85cfaf94b210343d3a9264b31517434767c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-25__DyK1015+819__DyK1015+819__4f9eb6d98e__0c01d133.json",
+      "size_bytes": 8835,
+      "sha256": "e430bdf5af7dfeeea84daeae58efe9b53f10d34220e9806c2c93460cf0da282b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-28__DyK1015+849__DyK1015+849__3b917e0362__335cb48f.json",
+      "size_bytes": 8808,
+      "sha256": "25066e2f23c3ba4d1a9a756e59b1a5c9de2ccf1c363f7c31cc2fd86a711e3bfd"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-04-30__DyK1015+879__DyK1015+879__559c1828be__04f8d684.json",
+      "size_bytes": 8445,
+      "sha256": "80104b5f7dff7b7797640d30c3754fefe34e3592e33df637cf6ebb696d14878e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-02__DyK1015+909__DyK1015+909__9130a04e13__a50d2741.json",
+      "size_bytes": 8447,
+      "sha256": "c1db60ece9d2f4e47ac7743af44146cd720acd17785f985fad033b4599b47b44"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-05__DyK1015+939__DyK1015+939__83474af6ea__4a9b8e3b.json",
+      "size_bytes": 8447,
+      "sha256": "3ff2da57941c8a53f84e11fe98ea52d1bd88578eb5a9ca23260d2ab4fd496805"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-08__DyK1015+969__DyK1015+969__2a23de255f__c421d2a7.json",
+      "size_bytes": 8447,
+      "sha256": "79ad352660857998b56391a32d39d296f6d332d8504f695d54a3f7d77d912783"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-10__DyK1015+999__DyK1015+999__aa133b91d9__9242a556.json",
+      "size_bytes": 9594,
+      "sha256": "b7a29fe7c5a8cc71048e7a4616eccd42775c995ee53decadde913e2e41a9065f"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-15__DyK1016+059__DyK1016+059__aebb0a2e56__a24a236b.json",
+      "size_bytes": 8667,
+      "sha256": "0cf4e75a6ce8626e77f831a8e07b83306687e2486189b700afdfec7f9d951d82"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-17__DyK1016+089__DyK1016+089__ac9df50782__7f3b88de.json",
+      "size_bytes": 8667,
+      "sha256": "2c47e2777b986f27a8440ec6465f73fb49b2c3b6e5644e619ba6c243a64c627c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-20__DyK1016+119__DyK1016+119__9300b16e8b__9a7130a3.json",
+      "size_bytes": 8667,
+      "sha256": "72ec012640d840d01728293a8b9a5f3c22250fb2b60f1271ef1dfad8fbb28710"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-22__DyK1016+149__DyK1016+149__23ed684be3__2f299392.json",
+      "size_bytes": 8667,
+      "sha256": "76ab1796eb6d00333e945061818b3a1edc7195fa0bceddaf45a8c9d4b0946e15"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-24__DyK1016+179__DyK1016+179__1490ee0329__9b69d79a.json",
+      "size_bytes": 8667,
+      "sha256": "df2c1c9505ec507fc380058f46ad12a58375637b2f1b9c65c3d8241fba7a5867"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-27__DyK1016+209__DyK1016+209__df448e1272__5c02ec43.json",
+      "size_bytes": 8667,
+      "sha256": "de0b28eb20750285204f6b5459a60c801e8230512cce3ae233ed783800be9361"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-29__DyK1016+239__DyK1016+239__23a719ce94__8b7cc231.json",
+      "size_bytes": 8667,
+      "sha256": "98af8ce4267a472eb01ae3e49a2b30a42d84319a1f8962bd5e05152ab27d7681"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-05-31__DyK1016+269__DyK1016+269__86ae85747c__92dbca3f.json",
+      "size_bytes": 8667,
+      "sha256": "d5920935d7284031a872c5a5ccfa2d997e226e6491c0c9221135e024b2133240"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-02__DyK1016+299__DyK1016+299__b057e761dc__16948a50.json",
+      "size_bytes": 8666,
+      "sha256": "0ccb165cbb74b12693434023876c557a41f65a1c01aaa0f086e06a57c903acf7"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-04__DyK1016+329__DyK1016+329__31fa27ac8c__217b6e89.json",
+      "size_bytes": 8666,
+      "sha256": "07726c428d1d778d67b08405003142374ef039c8f377802b4d355d956de8b9f3"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-08__DyK1016+359__DyK1016+359__6b028225d7__8192c305.json",
+      "size_bytes": 8666,
+      "sha256": "509caf1c6f72790fca1052b274ce63f67574ac0cd11bb913bfa1fb4d2d39aa98"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-12__DyK1016+389__DyK1016+389__85ee3c8106__53365da2.json",
+      "size_bytes": 8829,
+      "sha256": "b2ecef3ae28f0ae61635da28b4dbf7c68d9cf1b2889b8e5d5d2cff9125e2a405"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-15__DyK1016+419__DyK1016+419__d97ec4ca5a__9b1bc30f.json",
+      "size_bytes": 8829,
+      "sha256": "c68a62d6242fd3d52ad57ffe8a72339c1cf950de29591a70600fdf56e4cd8754"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-17__DyK1016+449__DyK1016+449__a5246a168e__daa4a32e.json",
+      "size_bytes": 8829,
+      "sha256": "7ab9699194951765727002d2b162a8e3a5458d01e9fe65e347fa926232e36ee5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-19__DyK1016+479__DyK1016+479__7d513cfa2d__363ad8a4.json",
+      "size_bytes": 8604,
+      "sha256": "4c458ca411855e1f1f38e2a2f274f8016f43bcc634afdba17676d7ae86f2f638"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-21__DyK1016+509__DyK1016+509__333289fbc9__201488af.json",
+      "size_bytes": 8604,
+      "sha256": "4f6248a3b95d1b9547c62568b6a8415e797efa9aab15064c77322ab6263a7e67"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-23__DyK1016+539__DyK1016+539__3c23a4f985__e00665a9.json",
+      "size_bytes": 8604,
+      "sha256": "46833de0fc73ac18f0691a202e322721bb5f0a49339fd41c4d3d940c962057e8"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-06-29__DyK1016+569__DyK1016+569__211fa30832__8a200edc.json",
+      "size_bytes": 8829,
+      "sha256": "f1ffa169a2c275ee8af99181aa50f5eff78880a1f440816322d7d223a84827e4"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-01__DyK1016+599__DyK1016+599__0c027b01a0__0b2d677a.json",
+      "size_bytes": 8828,
+      "sha256": "fd8c68c80e31ebb3a991730a17fe3d0cf09e8337ef0ca14fb250efd780c1808f"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-03__DyK1016+629__DyK1016+629__12eea720cd__f4096c07.json",
+      "size_bytes": 8603,
+      "sha256": "d499a088148d56b39eeba622ebc2d5a637c5a382fd383cab447b95d8a3c51d9d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-05__DyK1016+659__DyK1016+659__5949a8e18e__cbdbeca1.json",
+      "size_bytes": 8603,
+      "sha256": "5d65363a4375fd1ec8ae0ec60fba121ccad6d5b8a2fba0321b8f5d29b73b0d14"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-06__DyK1016+689__DyK1016+689__8f23c91ca4__3718706e.json",
+      "size_bytes": 8909,
+      "sha256": "628738c8cfff1aacd22bdde7ccd8dbaac71c0634c88ce33b3a72ca54a3d98bda"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-07__DyK1016+719__DyK1016+719__29b7b457df__2d084d6c.json",
+      "size_bytes": 9311,
+      "sha256": "eb9d7f730f3d546bc6bbb8db8755253a4a5e115dc22a5d4c90c35b1eb476441c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-08__DyK1016+749__DyK1016+749__7b2bfc1ea8__55826e82.json",
+      "size_bytes": 9398,
+      "sha256": "4807bd6421391975d9a7631834ce3d32f925c938f9edb37f7dc6cdc122358eb5"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-10__DyK1016+779__DyK1016+779__c3776e4afd__5d25a473.json",
+      "size_bytes": 9399,
+      "sha256": "c591cdb74912193f9d3bd7539a40966e14a701796f6b485d9d5636151b09c989"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-12__DyK1016+809__DyK1016+809__ba12398899__66535a47.json",
+      "size_bytes": 9399,
+      "sha256": "e8360d7b0bc1d0d916d688208894c564f133c9a54cd84a60961bfebd1ebb1f27"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-14__DyK1016+839__DyK1016+839__379d9d4a2f__0c194fbd.json",
+      "size_bytes": 9399,
+      "sha256": "72d5cbc901181f8022a70acbe7383dfd2a44cd22275da9be71028c4389561143"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-15__DyK1016+869__DyK1016+869__7575a71994__fa3b9e53.json",
+      "size_bytes": 9399,
+      "sha256": "69080c87a271d2d8847ae71167844d1940a425ce922fd1c6e99e99b19cc6737d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-16__DyK1016+899__DyK1016+899__c91274d2a9__58e04bdf.json",
+      "size_bytes": 9399,
+      "sha256": "612d72ddc2362ab71b33d387c1c09e432ab197627393cf764df4987471772c5e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-17__DyK1016+929__DyK1016+929__1e278bacac__2dba7b9f.json",
+      "size_bytes": 9624,
+      "sha256": "64e4766a1e5870abaf78196e39f83f8807fddb5c69e718e60815438ba9b1aa3c"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-18__DyK1016+959__DyK1016+959__96c9b4906c__59d4da63.json",
+      "size_bytes": 9624,
+      "sha256": "84ee610a9b7a71092bc5a795b482d8fcf6bcafe79084a3a14610c13f44dd9afd"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-19__DyK1016+989__DyK1016+989__e7160733d5__335307c5.json",
+      "size_bytes": 9399,
+      "sha256": "f3cd5cdf5e4654bfb78d9b86180933a160fc253554c26c0fb4417cc783a5e155"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-21__DyK1017+019__DyK1017+019__9067075839__700b91ee.json",
+      "size_bytes": 9399,
+      "sha256": "867eccb35f8a1041ffe5c552f36910f2a98e4dd19ec0cfc8e8564beabb8ddc65"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-22__DyK1017+049__DyK1017+049__281952eae4__4fb938fc.json",
+      "size_bytes": 9546,
+      "sha256": "5844f803b3c45c8a3f4837b3f72c19a2b8713289fa871556a2c59ccc03e5f84d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-24__DyK1017+079__DyK1017+079__747dca48f1__4843fe53.json",
+      "size_bytes": 9471,
+      "sha256": "c6b0b782d2615e7b04648c733d8e733cb5fad6d070649c5b491e141de1ab90f2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-25__DyK1017+109__DyK1017+109__fcb52635e3__f4643136.json",
+      "size_bytes": 9471,
+      "sha256": "a97ed6c1a0548a088f9e026a54a3e850009d140bb394651ba78a06427971d92e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-29__DyK1017+156__DyK1017+156__66619d6153__e15d0dbb.json",
+      "size_bytes": 9411,
+      "sha256": "fc8d6939fbb0673069ca33d89c3f2e74b532d853be694b221c1813f54de3e327"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-07-29__DyK1017+178__DyK1017+178__69e639a506__46403ecd.json",
+      "size_bytes": 9411,
+      "sha256": "e5408146933c0106f18f2eea9675e761873b8f3c26c25ed780dc73996f6bd059"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-08-06__DyK1017+208__DyK1017+208__fd36889e94__47e869ed.json",
+      "size_bytes": 9455,
+      "sha256": "d019a43338d1c0030c074a42abce32e0f1e5a159bef02e4ccf860f400f623a8d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-08-08__DyK1017+216__DyK1017+216__9d528f16b8__2db87686.json",
+      "size_bytes": 9491,
+      "sha256": "89e40d30d0a0377002e4b654bc3fa24994098f10699539c38c8ad289484e85a2"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-08-15__DyK1017+222__DyK1017+222__c3b8df4377__4ab4ece1.json",
+      "size_bytes": 10239,
+      "sha256": "ffde4c6bb287d031e3a28a5e1cc6cb834380de50a8d44aea0031a5c8a118ee20"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-08-18__DyK1017+237__DyK1017+237__2b57c491fe__da256e8e.json",
+      "size_bytes": 9966,
+      "sha256": "2ede49c118907abfb15f5a095404e6378af267cea11430f53196a53603980244"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-08-26__DyK1017+267__DyK1017+267__29a35de210__c6f74927.json",
+      "size_bytes": 9966,
+      "sha256": "81fd394ada068118399099b93ff73c18a26177865a8cce0385881399b6ca9c28"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-09-01__DyK1017+297__DyK1017+297__b64ebaaa54__eefd2a4a.json",
+      "size_bytes": 9659,
+      "sha256": "d3bf925e1459efae602aee40673c714757c483036380c0ba4aff301cdeee8d5d"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-09-02__DyK1017+317__DyK1017+317__2f37628326__0c1468a2.json",
+      "size_bytes": 9548,
+      "sha256": "b55c34dd3ec818e185cb102feecb01ef72ef2692d8fa8e2899166b67d307b3a3"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-09-08__DyK1017+327__DyK1017+327__968b4d60a9__b5499be3.json",
+      "size_bytes": 9557,
+      "sha256": "3a0a5df3f4d46ef07bee096757dc50d0a896382347ba618b40d5104f2082fe6b"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-09-15__DyK1017+347__DyK1017+347__e436e9d739__b5aa9859.json",
+      "size_bytes": 10256,
+      "sha256": "b563683636c1c17d2b37cfa721e1e2c4523164d405404688b74ab246c7426877"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-09-16__DyK1017+357__DyK1017+357__522f3690e0__c3d19b1c.json",
+      "size_bytes": 9509,
+      "sha256": "b3df739ef4676df43b76f41cd6f4cdf5d94988d66c32b648d4069991cf08ab3e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-10-09__DyK1017+377__DyK1017+377__641a87a788__427ab28d.json",
+      "size_bytes": 9458,
+      "sha256": "d8e110d5120abe97908674ff83b33f9cd3dbd13bb9bf630b8cc39f73fbd9d138"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-10-28__DyK1017+387__DyK1017+387__dc0fc7356f__fdce0d74.json",
+      "size_bytes": 9459,
+      "sha256": "9aef167b60eeba9541657c02c9a8885e3198543207bbb03d21c31277c7ba064e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-11-01__DyK1017+397__DyK1017+397__b50d098975__4a7be98b.json",
+      "size_bytes": 9458,
+      "sha256": "3ea0b193d21fac8ede9c46653fb5207c3b4606733c96d0ce50ed01493991f033"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-11-04__DyK1017+407__DyK1017+407__78bc4485f4__4cd59b7d.json",
+      "size_bytes": 9485,
+      "sha256": "7f571cbc06d01e0969f203112bb4e3a9db6e4f32079eaba62bfd4833b4c26d2e"
+    },
+    {
+      "path": "geology/extracted/reports/SKETCH__2024-11-09__DyK1017+417__DyK1017+417__f2d21e56a6__a1863e3e.json",
+      "size_bytes": 9485,
+      "sha256": "b0bfdef4b401325682fca7d86bc5d772714576b59f5f40195b645fb1ebb753d7"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2023-06-02__DyK1013+080.2__DyK1013+200.2__7ccf428505__b03f67f5.json",
+      "size_bytes": 44274,
+      "sha256": "4f24497c345521797a5751f5047349aebc36db5904bc83f6aa348c384e9668a9"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-04-05__DyK1015+660__DyK1015+760__f50b33f5db__41ecefd2.json",
+      "size_bytes": 55624,
+      "sha256": "b5b93d545e1366622140a85cde03286c8b59d31bd03694d4c333be179cb25d52"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-04-15__DyK1015+750__DyK1015+850__3f0bde2ed1__8258d0df.json",
+      "size_bytes": 58163,
+      "sha256": "01a915a21766f6860243142a0402ccad82517f2fc961e23780a86e945a17bc15"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-07-26__DyK1017+125__DyK1017+225__ac7160c73c__4aa0b219.json",
+      "size_bytes": 53978,
+      "sha256": "0698357d522be6337ef4610bc1a80230c67d362c95a272a93d5d361c5a9c69b3"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-08-07__DyK1017+215__DyK1017+315__1901b024e5__f7a9f3a5.json",
+      "size_bytes": 45419,
+      "sha256": "1e6aa4bed1c7d6b616d97d4e361f40951fe9527ce25eac92939e14cd020f8af7"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-08-31__DyK1017+305__DyK1017+405__7bf6dc7af4__f74be189.json",
+      "size_bytes": 67255,
+      "sha256": "698910db90d667198b7b0218ebed91259aa86686f354017b7568c45fce08c211"
+    },
+    {
+      "path": "geology/extracted/reports/TSP__2024-11-06__DyK1017+423__DyK1017+523__ff3a1eabf5__c0fdcdac.json",
+      "size_bytes": 78278,
+      "sha256": "060ab65644ee6df72f45d6d544c23f2f6004cbfc86c315909ae9bd70095ffc5a"
+    }
+  ]
+}

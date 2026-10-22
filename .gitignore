@@ -8,6 +8,7 @@ htmlcov/
 # Local environments and secrets
 .env
 .env.*
+!.env.example
 .venv/
 venv/
 *.pem
@@ -21,6 +22,8 @@ venv/
 # Raw data and generated analysis results at the repository root
 /data/
 /raw_data/
+/datasets/*
+!/datasets/portable_30/
 /outputs/*
 !/outputs/README.md
 

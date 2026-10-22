@@ -18,6 +18,7 @@ def render_report_html(
     parameter_path: Path,
     geology_axis_path: Path,
     output_path: Path,
+    narrative: dict[str, Any] | None = None,
 ) -> None:
     overview = plc["daily_overview"]
     advance = overview["daily_advance"]
@@ -43,6 +44,13 @@ def render_report_html(
         f"{overview['utilization_percent']:.1f}%。PLC记录覆盖{coverage_start}～"
         f"{coverage_end}，共{overview['record_count']}条。{gap_text}"
     )
+    chapter1_html = (
+        _narrative_html(narrative, "1")
+        if narrative is not None
+        else f'<p class="lead">{html.escape(chapter1)}</p>'
+    )
+    chapter2_narrative = _narrative_html(narrative, "2") if narrative is not None else ""
+    chapter3_narrative = _narrative_html(narrative, "3") if narrative is not None else ""
     parameter_rows = _parameter_rows(plc["daily_parameter_statistics"])
     interval_rows = _interval_rows(plc["platforms"])
     changes = _changes_html(plc["major_construction_changes"])
@@ -88,17 +96,19 @@ tr {{ break-inside: avoid; }}
 </style></head><body><main>
 <h1>{date_cn} TBM施工日报</h1>
 <h2>一、当日施工总体情况</h2>
-<p class="lead">{html.escape(chapter1)}</p>
+{chapter1_html}
 <h3>主要掘进参数统计</h3>
 <table class="parameter"><thead><tr><th>参数</th><th>有效样本</th><th>有效比例</th><th>均值</th><th>中位数</th><th>P10～P90</th></tr></thead><tbody>{parameter_rows}</tbody></table>
 <p class="note">统计范围：程序识别运行时段内的非停止记录；停机零值不纳入。表中数值为{unit_note}，不得据此补写未经确认的工程单位。</p>
 <h2>二、主要施工过程</h2>
 <table class="interval"><thead><tr><th>起止时间</th><th>工作时长</th><th>区间进尺（m）</th><th>主要运行情况</th></tr></thead><tbody>{interval_rows}</tbody></table>
+{chapter2_narrative}
 <p class="note">区间进尺取PLC“开累进尺”字段首末差并执行既有质量检查，仅用于区间记录；当日进尺仍以导向盾首里程首末差为准。运行时段是算法识别结果，不等同于经人工确认的完整掘进循环。</p>
 <section class="figure"><img src="{html.escape(timeline_rel)}" alt="全天运行时间轴"><div class="caption">全天运行时间轴（空白处不据此推断现场全部工序停止）</div></section>
 <section class="figure"><img src="{html.escape(parameter_rel)}" alt="当日主要运行参数变化"></section>
 <h3>主要施工变化</h3>{changes}
 <h2>三、地质信息汇总</h2>
+{chapter3_narrative}
 <h3>A. 地质信息里程轴</h3>
 <section class="figure"><img src="{html.escape(geology_axis_rel)}" alt="地质信息里程轴"><div class="caption">TSP/HSP色带表示原报告预测围岩等级，风险几何独立显示；历史素描为既往单点记录，不向邻段外推。浅绿色范围仅表示当日导向盾首起止里程，不等同于已确认掌子面范围。</div></section>
 <h3>B. 关键地质信息</h3>
@@ -108,6 +118,20 @@ tr {{ break-inside: avoid; }}
 </main></body></html>"""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(document, encoding="utf-8")
+
+
+def _narrative_html(narrative: dict[str, Any], chapter_id: str) -> str:
+    chapter = next(
+        (row for row in narrative.get("chapters", []) if row.get("chapter_id") == chapter_id),
+        None,
+    )
+    if chapter is None:
+        raise ValueError(f"Missing narrative chapter {chapter_id}")
+    paragraphs = []
+    for paragraph in chapter["paragraphs"]:
+        text = "".join(str(claim["text"]).strip() for claim in paragraph["claims"])
+        paragraphs.append(f"<p>{html.escape(text)}</p>")
+    return "\n".join(paragraphs)
 
 
 def export_pdf(html_path: Path, pdf_path: Path, chrome_path: Path) -> None:

@@ -1,90 +1,11 @@
-# 分层架构与扩展规则
+# 当前架构
 
-## 架构身份
+正式三章日报只有一个入口：`scripts/run_integrated_report.py`。上游PLC分析是独立的一条链，地质PDF提取和V2内容单元准备目前在外部项目完成；本仓库附带30天已处理地质输入以便跨电脑开发。
 
-- 软件架构版本：`tbm_process_layered_v1_2026-10-13`
-- 当前过程方法：`tbm_platform_first_experiment_v1`
-- 四阶段方法版本：`tbm_four_phase_v1_2026-10-12`
-- 工程语义版本：`tbm_construction_semantics_v3`
+1. `ingestion -> quality -> process -> dynamics -> facts -> orchestration -> outputs`：原始PLC到冻结分析结果。`run_analysis.py`及`scripts/run_current_analysis.py`负责上游重建；便携数据可跳过重建。
+2. `reporting.front_sections`与`final_reporting.plc`：只读处理后的逐点CSV、平台/阶段表和结构化日结果，构建日报PLC事实。
+3. `final_reporting.integrated_facts`：将PLC事实和同日地质内容单元合入一个带来源、时间、里程、用途约束的事实包，建立空间交集链接；链接本身不说明因果或预报准确性。
+4. `final_reporting.integrated_llm`：一个联合事实包进入全文内容规划；模型按计划写三章文字。程序检查计划、正文与引用，必要时各允许一次修订。
+5. `final_reporting.plots`、`geology_axis`、`rendering`：确定性生成平台表、参数图、地质轴、HTML和PDF。`validation`检查结构与呈现完整性。
 
-软件架构版本与研究方法版本分开管理。重命名、移动或拆分模块不等于改变四阶段方法。
-
-## 单向处理链
-
-```text
-ingestion -> quality -> process -> dynamics -> facts -> reporting
-                    \______________________________/
-                               orchestration
-
-facts/reporting -> deterministic tables and figures -> constrained narrative -> HTML/PDF
-
-reporting -> llm_reporting -> A-E comparison experiments
-
-reporting + approved geology facts -> final_reporting -> three-chapter HTML/PDF and audit
-```
-
-各层只能读取上游的标准结果，不能修改上游事实，也不能反向调用下游。`tests/test_architecture.py` 会检查主要包之间的依赖方向。
-
-## 各层职责
-
-| 层 | 输入 | 输出 | 不负责 |
-|---|---|---|---|
-| `ingestion` | 原始 CSV/Excel、字段配置 | 统一字段采样表 | 异常判断、阶段识别 |
-| `quality` | 统一字段采样表 | 质量受控采样表、质量事件 | 施工阶段、报告表达 |
-| `process` | 质量受控采样表 | 运行状态、平台、四阶段、分析范围 | 参数趋势、工程解释 |
-| `dynamics` | 分析范围和参数注册表 | 趋势、波动、转折、共同变化 | 修改阶段边界、因果诊断 |
-| `facts` | 全日过程和动态结果 | 完整及精简可追溯事实包 | 中文修辞、LLM调用 |
-| `reporting` | 完整事实包和逐点分析结果 | 工程语义、日报数值事实、受约束正文、图表和HTML/PDF | 重新分段、修改PLC事实 |
-| `orchestration` | 各层公开接口 | 日级和全量执行顺序 | 拥有具体算法规则 |
-| `outputs` | 正式结果对象 | CSV、JSON、图表和方法清单 | 修改分析结果 |
-| `llm_reporting` | 只读日报事实包 | A-E论文对照实验的内容计划、草稿、核验和局部修订 | 生成正式日报的必经流程、读取原始PLC、重新分段、反写分析事实 |
-| `final_reporting` | 冻结PLC事实、已规划地质内容单元 | 三章日报、地质里程轴、事实映射和成品审计 | 重新提取PDF、改变平台和四阶段、修改地质内容计划、调用LLM |
-
-## 稳定数据契约
-
-`tbm_process/contracts/` 定义层间最低字段要求：
-
-- `CanonicalSamples`：统一字段、来源文件和原始行号；
-- `QualityControlledSamples`：增加质量状态、受控分析字段和连续块；
-- `ProcessSamples`：增加运行状态、循环、阶段和动态分析范围；
-- `CompleteDailyResult`：工程语义层唯一允许读取的完整事实包。
-
-某层缺少必需字段时应立即失败，而不是由下游静默猜测字段含义。
-
-## 配置隔离
-
-四阶段及质量参数保存在根目录`config.json`，平台识别参数保存在`configs/platform_analysis.json`。运行时`layer_config()`只向每层提供其拥有的键：
-
-- 质量层不能读取稳定阶段阈值；
-- 四阶段层不能读取报告筛选规则；
-- 动态层不能修改字段映射；
-- 工程语义使用独立的 `report_semantics_config.json`。
-
-## 接入另一台 TBM
-
-1. 复制 `configs/field_profiles/tbm9_2023.json`；
-2. 修改原始字段别名，不改变统一字段名称；
-3. 根据新设备单位和信号定义建立独立质量规则验证；
-4. 使用 `run_analysis.py --field-profile <配置路径>` 运行；
-5. 先运行`run_analysis.py`生成基础质量数据，再运行`scripts/run_current_analysis.py`。
-
-字段相同不代表单位和物理含义相同。跨TBM使用前仍需确认点位表、单位、采样频率和量程。
-
-## 增加气体等新参数
-
-1. 在字段配置中加入原始字段映射；
-2. 在质量层生成独立的质量受控字段；
-3. 在 `configs/dynamic_parameters.json` 注册分析字段；
-4. 为趋势和质量行为增加测试；
-5. 仅在需要对外表达时修改工程语义规则。
-
-气体参数进入动态分析不要求修改四阶段识别。当前四阶段仍只按冻结方法使用推力、扭矩和质量受控贯入度。
-
-## 变更纪律
-
-- 修改任一层前先确认输入和输出契约；
-- 不在编排层加入新的算法判据；
-- 不让报告层重新读取原始 PLC；
-- 不用字段缺失时的隐式默认值掩盖数据源差异；
-- 四阶段核心代码或参数变化必须产生新的方法版本；
-- 纯架构重组必须通过单元测试和当前10天研究样本回归；跨TBM验证另行开展。
+没有“先写两章再补一章”的默认路径。`outputs/`仅存本地生成物，GitHub附带的`datasets/portable_30/`是跨电脑实验输入，不是新算法版本。模型文本检查通过仍表示候选报告，需要独立语义审查。完整运行细节见[联合流程](INTEGRATED_REPORTING.md)。

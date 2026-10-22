@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -24,6 +25,22 @@ def write_json(path: Path, payload: Any) -> None:
         json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False),
         encoding="utf-8",
     )
+
+
+def load_deepseek_api_key(env_file: Path | None = None) -> str | None:
+    value = os.environ.get("DEEPSEEK_API_KEY", "").strip()
+    if value:
+        return value
+    if env_file is None or not env_file.is_file():
+        return None
+    for raw_line in env_file.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, value = line.split("=", 1)
+        if name.strip() == "DEEPSEEK_API_KEY":
+            return value.strip().strip('"').strip("'") or None
+    return None
 
 
 def normalize_text(value: Any) -> str:

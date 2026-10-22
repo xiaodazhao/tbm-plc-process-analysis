@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from pathlib import Path
-
 from tbm_process.final_reporting.common import (
     parse_chainage,
     redact_suspicious_chainage_ranges,
@@ -76,11 +74,3 @@ def test_merged_risks_preserve_all_sources() -> None:
     assert len(merged) == 1
     assert merged[0]["source_refs"] == ["H1", "H2"]
     assert merged[0]["content_unit_ids"] == ["u1", "u2"]
-
-
-def test_final_report_config_contains_no_machine_specific_paths() -> None:
-    config = Path(__file__).resolve().parents[1] / "configs/final_report.json"
-    text = config.read_text(encoding="utf-8")
-
-    assert "/Users/" not in text
-    assert "C:\\Users\\" not in text

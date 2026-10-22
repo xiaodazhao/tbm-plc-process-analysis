@@ -1,11 +1,9 @@
 # Generated outputs
 
-该目录只保存本地运行结果，不提交Git。
+该目录只保存本地运行结果，不提交Git。克隆仓库后可直接用`datasets/portable_30/`在这里生成新的结果。
 
 - `base_analysis/`：`run_analysis.py`生成的基础质量控制数据。
 - `current_analysis/`：`scripts/run_current_analysis.py`生成的当前平台优先分析和LLM事实输入。
-- `llm_experiment/`：A-E受约束日报实验结果。
-- `daily_reports/`：前两章HTML/PDF和一致性检查。
-- `final_reports/`：融合已规划地质事实的最终三章日报和成品审计。
+- `integrated_reports/<日期>/`：联合事实、全文计划、三章正文、图表、HTML/PDF及检查记录。
 
-仓库不保留历史输出。换电脑后应使用原始PLC重新生成。
+历史模型实验及旧报告不在正式工作目录；如需追溯，请使用项目清理前的备份。

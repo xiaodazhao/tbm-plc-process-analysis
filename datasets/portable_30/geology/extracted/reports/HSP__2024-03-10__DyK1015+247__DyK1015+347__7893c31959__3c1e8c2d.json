@@ -1,0 +1,399 @@
+{
+  "schema_version": "tbm_geology_evidence_v2",
+  "document_type": "HSP超前地质预报",
+  "extraction_scope": "第7章结论文字及表格，不处理图片",
+  "report_metadata": {
+    "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+    "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+    "source_type": "hsp",
+    "tunnel_name": "伯舒拉岭隧道进口右线",
+    "alignment": "right",
+    "chainage_prefix": "DyK",
+    "coverage_start_m": 1015247.0,
+    "coverage_end_m": 1015347.0,
+    "coverage_start": "DyK1015+247",
+    "coverage_end": "DyK1015+347",
+    "coverage_source_quote": "（DyK1015+247～DyK1015+347）",
+    "test_date": "2024-03-10",
+    "test_date_source": {
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 2,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": null,
+      "source_section": "报告基本信息/预报表",
+      "source_quote": "检测日期：2024 年03 月10 日"
+    },
+    "cover_date": "2024-03-11",
+    "cover_date_source": {
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 1,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": null,
+      "source_section": "封面",
+      "source_quote": "二〇二四年三月十一日"
+    },
+    "submission_date": "2024-03-11",
+    "submission_date_source": {
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 7,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 4,
+      "source_section": "正文现场探测工作说明",
+      "source_quote": "探测结束后随即对资料进行处理分析，并于03月11日提交了预报结果",
+      "year_resolution_note": "原文仅写月日；年份取自同一报告明确记载的检测日期。"
+    },
+    "observation_date": null,
+    "observation_date_source": null,
+    "date_conflicts": [],
+    "identifier_conflicts": [],
+    "actual_distribution_time_verified": false,
+    "page_count": 12,
+    "source_sha256": "7893c31959c1889ec8ced2255eb03eeebe15545da9e521b2d5f781c8a4d71dcc",
+    "source_bytes": 1099746,
+    "chainage_reference": "DyK",
+    "chainage_alignment_note": "当前项目统一采用地质报告中的DyK里程，不进行DK/DyK转换。"
+  },
+  "forecast_intervals": [
+    {
+      "interval_id": "HSP-I01",
+      "semantics": "forecast",
+      "start_m": 1015247.0,
+      "end_m": 1015260.0,
+      "start_chainage": "DyK1015+247",
+      "end_chainage": "DyK1015+260",
+      "stated_length_m": 13.0,
+      "computed_length_m": 13.0,
+      "geophysical_result": "该段存在较明显反射异常",
+      "forecast_conclusion": "该段围岩与当前掌子面相当。岩性为变质砂岩夹板岩，弱风化，岩质软硬不均，节理裂隙发育-较发育，岩体较破碎-破碎",
+      "recommended_grade_table": "Ⅲ",
+      "recommended_grade_summary": null,
+      "grade_conflict": false,
+      "recommended_grade_for_use": "Ⅲ",
+      "grade_resolution_rule": "table_value",
+      "risk_record_ids": [
+        "HSP-R01",
+        "HSP-R02"
+      ],
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程范围：DyK1015+247 ~ DyK1015+260 （13m）；物探探测结果：该段存在 较明显反 射异常；预报结论：该段围岩与当前掌子面相当。岩 性为变质砂岩夹板岩，弱风化， 岩质软硬不均，节理裂隙发育-较 发育，岩体较破碎-破碎；风险提示：里程+250、 +260 附近存 在掉块风险；建议围岩等级：Ⅲ级围岩",
+      "source_cells": {
+        "里程范围": "DyK1015+247\n~\nDyK1015+260\n（13m）",
+        "物探探测结果": "该段存在\n较明显反\n射异常",
+        "预报结论": "该段围岩与当前掌子面相当。岩\n性为变质砂岩夹板岩，弱风化，\n岩质软硬不均，节理裂隙发育-较\n发育，岩体较破碎-破碎",
+        "风险提示": "里程+250、\n+260 附近存\n在掉块风险",
+        "建议围岩等级": "Ⅲ级围岩"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "reflection_result": "该段存在较明显反射异常",
+        "rock_mass_forecast": "该段围岩与当前掌子面相当。岩性为变质砂岩夹板岩，弱风化，岩质软硬不均，节理裂隙发育-较发育，岩体较破碎-破碎"
+      }
+    },
+    {
+      "interval_id": "HSP-I02",
+      "semantics": "forecast",
+      "start_m": 1015260.0,
+      "end_m": 1015290.0,
+      "start_chainage": "DyK1015+260",
+      "end_chainage": "DyK1015+290",
+      "stated_length_m": 30.0,
+      "computed_length_m": 30.0,
+      "geophysical_result": "该段无明显反射异常",
+      "forecast_conclusion": "该段围岩较前段稍变好。岩性为变质砂岩夹板岩，弱风化，岩质硬，节理裂隙较发育-发育，岩体较完整-较破碎",
+      "recommended_grade_table": "Ⅲ",
+      "recommended_grade_summary": null,
+      "grade_conflict": false,
+      "recommended_grade_for_use": "Ⅲ",
+      "grade_resolution_rule": "table_value",
+      "risk_record_ids": [],
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程范围：DyK1015+260 ~ DyK1015+290 （30m）；物探探测结果：该段无明 显反射异 常；预报结论：该段围岩较前段稍变好。岩性为 变质砂岩夹板岩，弱风化，岩质 硬，节理裂隙较发育-发育，岩体 较完整-较破碎；风险提示：；建议围岩等级：Ⅲ级围岩",
+      "source_cells": {
+        "里程范围": "DyK1015+260\n~\nDyK1015+290\n（30m）",
+        "物探探测结果": "该段无明\n显反射异\n常",
+        "预报结论": "该段围岩较前段稍变好。岩性为\n变质砂岩夹板岩，弱风化，岩质\n硬，节理裂隙较发育-发育，岩体\n较完整-较破碎",
+        "风险提示": "",
+        "建议围岩等级": "Ⅲ级围岩"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "reflection_result": "该段无明显反射异常",
+        "rock_mass_forecast": "该段围岩较前段稍变好。岩性为变质砂岩夹板岩，弱风化，岩质硬，节理裂隙较发育-发育，岩体较完整-较破碎"
+      }
+    },
+    {
+      "interval_id": "HSP-I03",
+      "semantics": "forecast",
+      "start_m": 1015290.0,
+      "end_m": 1015312.0,
+      "start_chainage": "DyK1015+290",
+      "end_chainage": "DyK1015+312",
+      "stated_length_m": 22.0,
+      "computed_length_m": 22.0,
+      "geophysical_result": "该段存在明显反射异常",
+      "forecast_conclusion": "该段围岩较前段变差。岩性为变质砂岩夹板岩，弱风化，岩质软硬不均，层间结合度差，节理裂隙发育，岩体破碎",
+      "recommended_grade_table": "Ⅳ",
+      "recommended_grade_summary": null,
+      "grade_conflict": false,
+      "recommended_grade_for_use": "Ⅳ",
+      "grade_resolution_rule": "table_value",
+      "risk_record_ids": [
+        "HSP-R03",
+        "HSP-R04"
+      ],
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程范围：DyK1015+290 ~ DyK1015+312 （22m）；物探探测结果：该段存在 明显反射 异常；预报结论：该段围岩较前段变差。岩性为变 质砂岩夹板岩，弱风化，岩质软 硬不均，层间结合度差，节理裂 隙发育，岩体破碎；风险提示：里程+295、 +304、312 附 近存在掉块 风险；建议围岩等级：Ⅳ级围岩",
+      "source_cells": {
+        "里程范围": "DyK1015+290\n~\nDyK1015+312\n（22m）",
+        "物探探测结果": "该段存在\n明显反射\n异常",
+        "预报结论": "该段围岩较前段变差。岩性为变\n质砂岩夹板岩，弱风化，岩质软\n硬不均，层间结合度差，节理裂\n隙发育，岩体破碎",
+        "风险提示": "里程+295、\n+304、312 附\n近存在掉块\n风险",
+        "建议围岩等级": "Ⅳ级围岩"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "reflection_result": "该段存在明显反射异常",
+        "rock_mass_forecast": "该段围岩较前段变差。岩性为变质砂岩夹板岩，弱风化，岩质软硬不均，层间结合度差，节理裂隙发育，岩体破碎"
+      }
+    },
+    {
+      "interval_id": "HSP-I04",
+      "semantics": "forecast",
+      "start_m": 1015312.0,
+      "end_m": 1015347.0,
+      "start_chainage": "DyK1015+312",
+      "end_chainage": "DyK1015+347",
+      "stated_length_m": 35.0,
+      "computed_length_m": 35.0,
+      "geophysical_result": "该段无明显反射异常",
+      "forecast_conclusion": "该段围岩较前段稍变好。岩性为变质砂岩夹板岩，弱风化，岩质硬，节理裂隙较发育-发育，岩体较完整-较破碎",
+      "recommended_grade_table": "Ⅲ",
+      "recommended_grade_summary": null,
+      "grade_conflict": false,
+      "recommended_grade_for_use": "Ⅲ",
+      "grade_resolution_rule": "table_value",
+      "risk_record_ids": [],
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程范围：DyK1015+312 ~ DyK1015+347 （35m）；物探探测结果：该段无明 显反射异 常；预报结论：该段围岩较前段稍变好。岩性为 变质砂岩夹板岩，弱风化，岩质 硬，节理裂隙较发育-发育，岩体 较完整-较破碎；风险提示：；建议围岩等级：Ⅲ级围岩",
+      "source_cells": {
+        "里程范围": "DyK1015+312\n~\nDyK1015+347\n（35m）",
+        "物探探测结果": "该段无明\n显反射异\n常",
+        "预报结论": "该段围岩较前段稍变好。岩性为\n变质砂岩夹板岩，弱风化，岩质\n硬，节理裂隙较发育-发育，岩体\n较完整-较破碎",
+        "风险提示": "",
+        "建议围岩等级": "Ⅲ级围岩"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "reflection_result": "该段无明显反射异常",
+        "rock_mass_forecast": "该段围岩较前段稍变好。岩性为变质砂岩夹板岩，弱风化，岩质硬，节理裂隙较发育-发育，岩体较完整-较破碎"
+      }
+    }
+  ],
+  "risk_records": [
+    {
+      "risk_id": "HSP-R01",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "point",
+      "chainage_m": 1015250.0,
+      "chainage": "DyK1015+250",
+      "parent_interval_id": "HSP-I01",
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程+250、 +260 附近存 在掉块风险",
+      "normalized_fact": {
+        "type": "forecast_risk_position",
+        "risk_type": "掉块风险",
+        "chainage": "DyK1015+250"
+      }
+    },
+    {
+      "risk_id": "HSP-R02",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "point",
+      "chainage_m": 1015260.0,
+      "chainage": "DyK1015+260",
+      "parent_interval_id": "HSP-I01",
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程+250、 +260 附近存 在掉块风险",
+      "normalized_fact": {
+        "type": "forecast_risk_position",
+        "risk_type": "掉块风险",
+        "chainage": "DyK1015+260"
+      }
+    },
+    {
+      "risk_id": "HSP-R03",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "point",
+      "chainage_m": 1015295.0,
+      "chainage": "DyK1015+295",
+      "parent_interval_id": "HSP-I03",
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程+295、 +304、312 附 近存在掉块 风险",
+      "normalized_fact": {
+        "type": "forecast_risk_position",
+        "risk_type": "掉块风险",
+        "chainage": "DyK1015+295"
+      }
+    },
+    {
+      "risk_id": "HSP-R04",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "point",
+      "chainage_m": 1015304.0,
+      "chainage": "DyK1015+304",
+      "parent_interval_id": "HSP-I03",
+      "source_file": "DyK1015+247.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+247～DyK1015+347)-202400311.pdf",
+      "source_report_id": "CL-HSP-(七)-8-DyK1015+247",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章表1",
+      "source_quote": "里程+295、 +304、312 附 近存在掉块 风险",
+      "normalized_fact": {
+        "type": "forecast_risk_position",
+        "risk_type": "掉块风险",
+        "chainage": "DyK1015+304"
+      }
+    }
+  ],
+  "source_table_segment_count": 4,
+  "quality_validation": {
+    "status": "validated",
+    "checks": [
+      {
+        "check": "test_date_present",
+        "status": "pass",
+        "detail": "test_date=2024-03-10"
+      },
+      {
+        "check": "cover_date_present",
+        "status": "pass",
+        "detail": "cover_date=2024-03-11"
+      },
+      {
+        "check": "submission_date_present",
+        "status": "pass",
+        "detail": "submission_date=2024-03-11"
+      },
+      {
+        "check": "forecast_segments_present",
+        "status": "pass",
+        "detail": "segments=4"
+      },
+      {
+        "check": "source_rows_equal_extracted_segments",
+        "status": "pass",
+        "detail": "source_rows=4, extracted=4"
+      },
+      {
+        "check": "length_HSP-I01",
+        "status": "pass",
+        "detail": "stated=13.0, computed=13.0"
+      },
+      {
+        "check": "length_HSP-I02",
+        "status": "pass",
+        "detail": "stated=30.0, computed=30.0"
+      },
+      {
+        "check": "length_HSP-I03",
+        "status": "pass",
+        "detail": "stated=22.0, computed=22.0"
+      },
+      {
+        "check": "length_HSP-I04",
+        "status": "pass",
+        "detail": "stated=35.0, computed=35.0"
+      },
+      {
+        "check": "segments_continuous",
+        "status": "pass",
+        "detail": "Adjacent boundaries must be equal."
+      },
+      {
+        "check": "segments_not_overlapping",
+        "status": "pass",
+        "detail": "No positive-length overlap is allowed."
+      },
+      {
+        "check": "segments_not_duplicated",
+        "status": "pass",
+        "detail": "Each segment boundary pair must be unique."
+      },
+      {
+        "check": "segments_cover_report_range",
+        "status": "pass",
+        "detail": "report=1015247.0-1015347.0, segments=1015247.0-1015347.0"
+      },
+      {
+        "check": "segment_total_length",
+        "status": "pass",
+        "detail": "total=100.0, expected=100.0"
+      },
+      {
+        "check": "risk_inside_parent_HSP-R01",
+        "status": "pass",
+        "detail": "risk=1015250.0, parent=HSP-I01"
+      },
+      {
+        "check": "risk_inside_parent_HSP-R02",
+        "status": "pass",
+        "detail": "risk=1015260.0, parent=HSP-I01"
+      },
+      {
+        "check": "risk_inside_parent_HSP-R03",
+        "status": "pass",
+        "detail": "risk=1015295.0, parent=HSP-I03"
+      },
+      {
+        "check": "risk_inside_parent_HSP-R04",
+        "status": "pass",
+        "detail": "risk=1015304.0, parent=HSP-I03"
+      }
+    ],
+    "issues": [],
+    "failed_check_count": 0
+  }
+}

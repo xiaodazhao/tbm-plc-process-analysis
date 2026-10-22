@@ -1,0 +1,1174 @@
+{
+  "schema_version": "tbm_geology_evidence_v2",
+  "document_type": "TSP超前地质预报",
+  "extraction_scope": "第7章结论文字及表格，不处理图片",
+  "report_metadata": {
+    "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+    "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+    "source_type": "tsp",
+    "tunnel_name": "伯舒拉岭隧道进口右线",
+    "alignment": "right",
+    "chainage_prefix": "DyK",
+    "coverage_start_m": 1017423.0,
+    "coverage_end_m": 1017523.0,
+    "coverage_start": "DyK1017+423",
+    "coverage_end": "DyK1017+523",
+    "coverage_source_quote": "（DyK1017+423～DyK1017+523）",
+    "test_date": "2024-11-06",
+    "test_date_source": {
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 2,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": null,
+      "source_section": "报告基本信息/预报表",
+      "source_quote": "检测日期：2024 年11 月6 日"
+    },
+    "cover_date": "2024-11-07",
+    "cover_date_source": {
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 1,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": null,
+      "source_section": "封面",
+      "source_quote": "二〇二四年十一月七日"
+    },
+    "submission_date": "2024-11-07",
+    "submission_date_source": {
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 8,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 5,
+      "source_section": "正文现场探测工作说明",
+      "source_quote": "探测结束后随即对资料进行处理分析，并于11月7日提交了预报结果",
+      "year_resolution_note": "原文仅写月日；年份取自同一报告明确记载的检测日期。"
+    },
+    "observation_date": null,
+    "observation_date_source": null,
+    "date_conflicts": [],
+    "identifier_conflicts": [],
+    "actual_distribution_time_verified": false,
+    "page_count": 23,
+    "source_sha256": "ff3a1eabf5f78a0cc606b2a270ad481b6065351433cb845975656bb66281d2d7",
+    "source_bytes": 1945215,
+    "chainage_reference": "DyK",
+    "chainage_alignment_note": "当前项目统一采用地质报告中的DyK里程，不进行DK/DyK转换。"
+  },
+  "chapter_7_summary": [
+    {
+      "summary_id": "TSP-S01",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。",
+      "normalized_fact": "DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+    },
+    {
+      "summary_id": "TSP-S02",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": "DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7"
+    }
+  ],
+  "forecast_intervals": [
+    {
+      "interval_id": "TSP-I01",
+      "semantics": "forecast",
+      "start_m": 1017423.0,
+      "end_m": 1017436.0,
+      "start_chainage": "DyK1017+423",
+      "end_chainage": "DyK1017+436",
+      "stated_length_m": 13.0,
+      "computed_length_m": 13.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4106~4230m/s 横波速度Vs： 2190~2390m/s 速度比Vp/Vs： 1.71~1.88 泊松比υ： 0.24~0.30 静态杨氏模量Es： 16~20GPa 动态杨氏模量Ed： 29~35GPa",
+        "vp_m_per_s": {
+          "min": 4106.0,
+          "max": 4230.0
+        },
+        "vs_m_per_s": {
+          "min": 2190.0,
+          "max": 2390.0
+        },
+        "vp_vs": {
+          "min": 1.71,
+          "max": 1.88
+        },
+        "poisson_ratio": {
+          "min": 0.24,
+          "max": 0.3
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较测试段呈震荡降低趋势，Vp/Vs和υ均较测试段呈震荡上升趋势，地震反射界面数量较多，且发育相对密集以负反射为主。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，建议该段按Ⅴ级围岩施工。DyK1017+433位置附近存在掉块坍塌及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R01"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 12,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 9,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+423 ~ DyK1017+436 （13m）；物性参数：纵波速度Vp： 4106~4230m/s 横波速度Vs： 2190~2390m/s 速度比Vp/Vs： 1.71~1.88 泊松比υ： 0.24~0.30 静态杨氏模量Es： 16~20GPa 动态杨氏模量Ed： 29~35GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较测试段呈 震荡降低趋势，Vp/Vs 和υ均较测试段呈震 荡上升趋势，地震反射 界面数量较多，且发育 相对密集以负反射为 主。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育 -极发育，岩体破碎-极破碎，掌子 面存在滴渗水，建议该段按Ⅴ级围 岩施工。 DyK1017+433 位置附近存在 掉块坍塌及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+423\n~\nDyK1017+436\n（13m）",
+        "物性参数": "纵波速度Vp：\n4106~4230m/s\n横波速度Vs：\n2190~2390m/s\n速度比Vp/Vs：\n1.71~1.88\n泊松比υ：\n0.24~0.30\n静态杨氏模量Es：\n16~20GPa\n动态杨氏模量Ed：\n29~35GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较测试段呈\n震荡降低趋势，Vp/Vs\n和υ均较测试段呈震\n荡上升趋势，地震反射\n界面数量较多，且发育\n相对密集以负反射为\n主。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育\n-极发育，岩体破碎-极破碎，掌子\n面存在滴渗水，建议该段按Ⅴ级围\n岩施工。\nDyK1017+433 位置附近存在\n掉块坍塌及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，建议该段按Ⅴ级围岩施工。DyK1017+433位置附近存在掉块坍塌及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I02",
+      "semantics": "forecast",
+      "start_m": 1017436.0,
+      "end_m": 1017447.0,
+      "start_chainage": "DyK1017+436",
+      "end_chainage": "DyK1017+447",
+      "stated_length_m": 11.0,
+      "computed_length_m": 11.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4611m/s 横波速度Vs： 2676m/s 速度比Vp/Vs： 1.72 泊松比υ： 0.25 静态杨氏模量Es： 30GPa 动态杨氏模量Ed： 46GPa",
+        "vp_m_per_s": 4611.0,
+        "vs_m_per_s": 2676.0,
+        "vp_vs": 1.72,
+        "poisson_ratio": 0.25,
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段有所升高，Vp/Vs和υ均较前一段有所降低，地震反射界面数量较前一段有所减少。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 12,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 9,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+436 ~ DyK1017+447 （11m）；物性参数：纵波速度Vp： 4611m/s 横波速度Vs： 2676m/s 速度比Vp/Vs： 1.72 泊松比υ： 0.25 静态杨氏模量Es： 30GPa 动态杨氏模量Ed： 46GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段有 所升高，Vp/Vs 和υ均 较前一段有所降低，地 震反射界面数量较前 一段有所减少。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育，岩体较破碎- 破碎，建议该段按Ⅴ级围岩施工。",
+      "source_cells": {
+        "里程范围": "DyK1017+436\n~\nDyK1017+447\n（11m）",
+        "物性参数": "纵波速度Vp：\n4611m/s\n横波速度Vs：\n2676m/s\n速度比Vp/Vs：\n1.72\n泊松比υ：\n0.25\n静态杨氏模量Es：\n30GPa\n动态杨氏模量Ed：\n46GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段有\n所升高，Vp/Vs 和υ均\n较前一段有所降低，地\n震反射界面数量较前\n一段有所减少。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育，岩体较破碎-\n破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I03",
+      "semantics": "forecast",
+      "start_m": 1017447.0,
+      "end_m": 1017454.0,
+      "start_chainage": "DyK1017+447",
+      "end_chainage": "DyK1017+454",
+      "stated_length_m": 7.0,
+      "computed_length_m": 7.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4649~4776m/s 横波速度Vs： 2352~2496m/s 速度比Vp/Vs： 1.82~2.03 泊松比υ： 0.28~0.34 静态杨氏模量Es： 22~26GPa 动态杨氏模量Ed： 37~41GPa",
+        "vp_m_per_s": {
+          "min": 4649.0,
+          "max": 4776.0
+        },
+        "vs_m_per_s": {
+          "min": 2352.0,
+          "max": 2496.0
+        },
+        "vp_vs": {
+          "min": 1.82,
+          "max": 2.03
+        },
+        "poisson_ratio": {
+          "min": 0.28,
+          "max": 0.34
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vp/Vs和υ均较前一段呈震荡上升趋势，Vs和E均较前一段呈震荡降低趋势，地震反射界面数量较前一段有所增加，且发育相对密集以负反射为主。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，建议该段按Ⅴ级围岩施工。DyK1017+447位置附近存在掉块坍塌、出水及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R02"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 13,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 10,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+447 ~ DyK1017+454 （7m）；物性参数：纵波速度Vp： 4649~4776m/s 横波速度Vs： 2352~2496m/s 速度比Vp/Vs： 1.82~2.03 泊松比υ： 0.28~0.34 静态杨氏模量Es： 22~26GPa 动态杨氏模量Ed： 37~41GPa；物探分析：该段围岩的 Vp、 Vp/Vs 和υ均较前一段 呈震荡上升趋势，Vs 和 E 均较前一段呈震 荡降低趋势，地震反射 界面数量较前一段有 所增加，且发育相对密 集以负反射为主。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育 -极发育，岩体破碎-极破碎，掌子 面存在线状出水，建议该段按Ⅴ级 围岩施工。 DyK1017+447 位置附近存在 掉块坍塌、出水及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+447\n~\nDyK1017+454\n（7m）",
+        "物性参数": "纵波速度Vp：\n4649~4776m/s\n横波速度Vs：\n2352~2496m/s\n速度比Vp/Vs：\n1.82~2.03\n泊松比υ：\n0.28~0.34\n静态杨氏模量Es：\n22~26GPa\n动态杨氏模量Ed：\n37~41GPa",
+        "物探分析": "该段围岩的 Vp、\nVp/Vs 和υ均较前一段\n呈震荡上升趋势，Vs\n和 E 均较前一段呈震\n荡降低趋势，地震反射\n界面数量较前一段有\n所增加，且发育相对密\n集以负反射为主。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育\n-极发育，岩体破碎-极破碎，掌子\n面存在线状出水，建议该段按Ⅴ级\n围岩施工。\nDyK1017+447 位置附近存在\n掉块坍塌、出水及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，建议该段按Ⅴ级围岩施工。DyK1017+447位置附近存在掉块坍塌、出水及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I04",
+      "semantics": "forecast",
+      "start_m": 1017454.0,
+      "end_m": 1017464.0,
+      "start_chainage": "DyK1017+454",
+      "end_chainage": "DyK1017+464",
+      "stated_length_m": 10.0,
+      "computed_length_m": 10.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4898~5164m/s 横波速度Vs： 2690~2712m/s 速度比Vp/Vs： 1.81~1.92 泊松比υ： 0.28~0.31 静态杨氏模量Es： 33~34GPa 动态杨氏模量Ed： 49~50GPa",
+        "vp_m_per_s": {
+          "min": 4898.0,
+          "max": 5164.0
+        },
+        "vs_m_per_s": {
+          "min": 2690.0,
+          "max": 2712.0
+        },
+        "vp_vs": {
+          "min": 1.81,
+          "max": 1.92
+        },
+        "poisson_ratio": {
+          "min": 0.28,
+          "max": 0.31
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段有所升高，Vp/Vs和υ均较前一段有所降低，地震反射界面数量较前一段有所减少。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 13,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 10,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+454 ~ DyK1017+464 （10m）；物性参数：纵波速度Vp： 4898~5164m/s 横波速度Vs： 2690~2712m/s 速度比Vp/Vs： 1.81~1.92 泊松比υ： 0.28~0.31 静态杨氏模量Es： 33~34GPa 动态杨氏模量Ed： 49~50GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段有 所升高，Vp/Vs 和υ均 较前一段有所降低，地 震反射界面数量较前 一段有所减少。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育，岩体较破碎- 破碎，建议该段按Ⅴ级围岩施工。",
+      "source_cells": {
+        "里程范围": "DyK1017+454\n~\nDyK1017+464\n（10m）",
+        "物性参数": "纵波速度Vp：\n4898~5164m/s\n横波速度Vs：\n2690~2712m/s\n速度比Vp/Vs：\n1.81~1.92\n泊松比υ：\n0.28~0.31\n静态杨氏模量Es：\n33~34GPa\n动态杨氏模量Ed：\n49~50GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段有\n所升高，Vp/Vs 和υ均\n较前一段有所降低，地\n震反射界面数量较前\n一段有所减少。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育，岩体较破碎-\n破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I05",
+      "semantics": "forecast",
+      "start_m": 1017464.0,
+      "end_m": 1017470.0,
+      "start_chainage": "DyK1017+464",
+      "end_chainage": "DyK1017+470",
+      "stated_length_m": 6.0,
+      "computed_length_m": 6.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4793~4891m/s 横波速度Vs： 2395~2471m/s 速度比Vp/Vs： 1.98~2.00 泊松比υ： 0.33~0.34 静态杨氏模量Es： 23~26GPa 动态杨氏模量Ed： 38~41GPa",
+        "vp_m_per_s": {
+          "min": 4793.0,
+          "max": 4891.0
+        },
+        "vs_m_per_s": {
+          "min": 2395.0,
+          "max": 2471.0
+        },
+        "vp_vs": {
+          "min": 1.98,
+          "max": 2.0
+        },
+        "poisson_ratio": {
+          "min": 0.33,
+          "max": 0.34
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段有所降低，Vp/Vs和υ均较前一段有所升高，地震反射界面数量较前一段有所增加。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，掌子面存在线状出水，建议该段按Ⅴ级围岩施工。DyK1017+464位置附近存在掉块坍塌、出水及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R03"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 13,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 10,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+464 ~ DyK1017+470 （6m）；物性参数：纵波速度Vp： 4793~4891m/s 横波速度Vs： 2395~2471m/s 速度比Vp/Vs： 1.98~2.00 泊松比υ： 0.33~0.34 静态杨氏模量Es： 23~26GPa 动态杨氏模量Ed： 38~41GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段有 所降低，Vp/Vs 和υ均 较前一段有所升高，地 震反射界面数量较前 一段有所增加。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育， 岩体破碎，掌子面存在线状出水， 建议该段按Ⅴ级围岩施工。 DyK1017+464 位置附近存在 掉块坍塌、出水及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+464\n~\nDyK1017+470\n（6m）",
+        "物性参数": "纵波速度Vp：\n4793~4891m/s\n横波速度Vs：\n2395~2471m/s\n速度比Vp/Vs：\n1.98~2.00\n泊松比υ：\n0.33~0.34\n静态杨氏模量Es：\n23~26GPa\n动态杨氏模量Ed：\n38~41GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段有\n所降低，Vp/Vs 和υ均\n较前一段有所升高，地\n震反射界面数量较前\n一段有所增加。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育，\n岩体破碎，掌子面存在线状出水，\n建议该段按Ⅴ级围岩施工。\nDyK1017+464 位置附近存在\n掉块坍塌、出水及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，掌子面存在线状出水，建议该段按Ⅴ级围岩施工。DyK1017+464位置附近存在掉块坍塌、出水及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I06",
+      "semantics": "forecast",
+      "start_m": 1017470.0,
+      "end_m": 1017475.0,
+      "start_chainage": "DyK1017+470",
+      "end_chainage": "DyK1017+475",
+      "stated_length_m": 5.0,
+      "computed_length_m": 5.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4717~5075m/s 横波速度Vs： 2719~2822m/s 速度比Vp/Vs： 1.67~1.87 泊松比υ： 0.22~0.30 静态杨氏模量Es： 35~36GPa 动态杨氏模量Ed： 50~51GPa",
+        "vp_m_per_s": {
+          "min": 4717.0,
+          "max": 5075.0
+        },
+        "vs_m_per_s": {
+          "min": 2719.0,
+          "max": 2822.0
+        },
+        "vp_vs": {
+          "min": 1.67,
+          "max": 1.87
+        },
+        "poisson_ratio": {
+          "min": 0.22,
+          "max": 0.3
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp较前一段稍降低，Vs和E均较前一段有所升高，Vp/Vs和υ均较前一段有所降低，地震反射界面数量较前一段有所减少。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 14,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 11,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+470 ~ DyK1017+475 （5m）；物性参数：纵波速度Vp： 4717~5075m/s 横波速度Vs： 2719~2822m/s 速度比Vp/Vs： 1.67~1.87 泊松比υ： 0.22~0.30 静态杨氏模量Es： 35~36GPa 动态杨氏模量Ed： 50~51GPa；物探分析：该段围岩的Vp 较 前一段稍降低，Vs 和E 均较前一段有所升高， Vp/Vs 和υ均较前一段 有所降低，地震反射界 面数量较前一段有所 减少。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育，岩体较破碎- 破碎，建议该段按Ⅴ级围岩施工。",
+      "source_cells": {
+        "里程范围": "DyK1017+470\n~\nDyK1017+475\n（5m）",
+        "物性参数": "纵波速度Vp：\n4717~5075m/s\n横波速度Vs：\n2719~2822m/s\n速度比Vp/Vs：\n1.67~1.87\n泊松比υ：\n0.22~0.30\n静态杨氏模量Es：\n35~36GPa\n动态杨氏模量Ed：\n50~51GPa",
+        "物探分析": "该段围岩的Vp 较\n前一段稍降低，Vs 和E\n均较前一段有所升高，\nVp/Vs 和υ均较前一段\n有所降低，地震反射界\n面数量较前一段有所\n减少。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育，岩体较破碎-\n破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I07",
+      "semantics": "forecast",
+      "start_m": 1017475.0,
+      "end_m": 1017482.0,
+      "start_chainage": "DyK1017+475",
+      "end_chainage": "DyK1017+482",
+      "stated_length_m": 7.0,
+      "computed_length_m": 7.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4693~5129m/s 横波速度Vs： 2443~2610m/s 速度比Vp/Vs： 1.97~2.06 泊松比υ： 0.32~0.33 静态杨氏模量Es： 25~30GPa 动态杨氏模量Ed： 39~45GPa",
+        "vp_m_per_s": {
+          "min": 4693.0,
+          "max": 5129.0
+        },
+        "vs_m_per_s": {
+          "min": 2443.0,
+          "max": 2610.0
+        },
+        "vp_vs": {
+          "min": 1.97,
+          "max": 2.06
+        },
+        "poisson_ratio": {
+          "min": 0.32,
+          "max": 0.33
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段呈震荡降低趋势，Vp/Vs和υ均较前一段呈震荡上升趋势，地震反射界面数量较前一段有所增加。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+475位置附近存在掉块坍塌、出水及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R04"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 14,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 11,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+475 ~ DyK1017+482 （7m）；物性参数：纵波速度Vp： 4693~5129m/s 横波速度Vs： 2443~2610m/s 速度比Vp/Vs： 1.97~2.06 泊松比υ： 0.32~0.33 静态杨氏模量Es： 25~30GPa 动态杨氏模量Ed： 39~45GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段呈 震荡降低趋势，Vp/Vs 和υ均较前一段呈震 荡上升趋势，地震反射 界面数量较前一段有 所增加。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育 -极发育，岩体破碎-极破碎，掌子 面存在滴渗水-线状出水，建议该 段按Ⅴ级围岩施工。 DyK1017+475 位置附近存在 掉块坍塌、出水及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+475\n~\nDyK1017+482\n（7m）",
+        "物性参数": "纵波速度Vp：\n4693~5129m/s\n横波速度Vs：\n2443~2610m/s\n速度比Vp/Vs：\n1.97~2.06\n泊松比υ：\n0.32~0.33\n静态杨氏模量Es：\n25~30GPa\n动态杨氏模量Ed：\n39~45GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段呈\n震荡降低趋势，Vp/Vs\n和υ均较前一段呈震\n荡上升趋势，地震反射\n界面数量较前一段有\n所增加。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育\n-极发育，岩体破碎-极破碎，掌子\n面存在滴渗水-线状出水，建议该\n段按Ⅴ级围岩施工。\nDyK1017+475 位置附近存在\n掉块坍塌、出水及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+475位置附近存在掉块坍塌、出水及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I08",
+      "semantics": "forecast",
+      "start_m": 1017482.0,
+      "end_m": 1017490.0,
+      "start_chainage": "DyK1017+482",
+      "end_chainage": "DyK1017+490",
+      "stated_length_m": 8.0,
+      "computed_length_m": 8.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 5175m/s 横波速度Vs： 2595m/s 速度比Vp/Vs： 1.99 泊松比υ： 0.33 静态杨氏模量Es： 31GPa 动态杨氏模量Ed： 46GPa",
+        "vp_m_per_s": 5175.0,
+        "vs_m_per_s": 2595.0,
+        "vp_vs": 1.99,
+        "poisson_ratio": 0.33,
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段有所升高，Vp/Vs和υ均较前一段有所降低，地震反射界面数量较前一段有所减少。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 14,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 11,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+482 ~ DyK1017+490 （8m）；物性参数：纵波速度Vp： 5175m/s 横波速度Vs： 2595m/s 速度比Vp/Vs： 1.99 泊松比υ： 0.33 静态杨氏模量Es： 31GPa 动态杨氏模量Ed： 46GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段有 所升高，Vp/Vs 和υ均 较前一段有所降低，地 震反射界面数量较前 一段有所减少。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育，岩体较破碎- 破碎，建议该段按Ⅴ级围岩施工。",
+      "source_cells": {
+        "里程范围": "DyK1017+482\n~\nDyK1017+490\n（8m）",
+        "物性参数": "纵波速度Vp：\n5175m/s\n横波速度Vs：\n2595m/s\n速度比Vp/Vs：\n1.99\n泊松比υ：\n0.33\n静态杨氏模量Es：\n31GPa\n动态杨氏模量Ed：\n46GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段有\n所升高，Vp/Vs 和υ均\n较前一段有所降低，地\n震反射界面数量较前\n一段有所减少。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育，岩体较破碎-\n破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I09",
+      "semantics": "forecast",
+      "start_m": 1017490.0,
+      "end_m": 1017494.0,
+      "start_chainage": "DyK1017+490",
+      "end_chainage": "DyK1017+494",
+      "stated_length_m": 4.0,
+      "computed_length_m": 4.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4699~4901m/s 横波速度Vs： 2722~2724m/s 速度比Vp/Vs： 1.73~1.80 泊松比υ： 0.25~0.28 静态杨氏模量Es： 32~34GPa 动态杨氏模量Ed： 48~49GPa",
+        "vp_m_per_s": {
+          "min": 4699.0,
+          "max": 4901.0
+        },
+        "vs_m_per_s": {
+          "min": 2722.0,
+          "max": 2724.0
+        },
+        "vp_vs": {
+          "min": 1.73,
+          "max": 1.8
+        },
+        "poisson_ratio": {
+          "min": 0.25,
+          "max": 0.28
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vp/Vs和υ均较前一段有所降低，Vs和E均较前一段有所升高，地震反射界面数量较前一段有所增加。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，建议该段按Ⅴ级围岩施工。DyK1017+490位置附近存在掉块坍塌及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R05"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 15,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 12,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+490 ~ DyK1017+494 （4m）；物性参数：纵波速度Vp： 4699~4901m/s 横波速度Vs： 2722~2724m/s 速度比Vp/Vs： 1.73~1.80 泊松比υ： 0.25~0.28 静态杨氏模量Es： 32~34GPa 动态杨氏模量Ed： 48~49GPa；物探分析：该段围岩的 Vp、 Vp/Vs 和υ均较前一段 有所降低，Vs 和 E 均 较前一段有所升高，地 震反射界面数量较前 一段有所增加。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育， 岩体破碎，建议该段按Ⅴ级围岩施 工。 DyK1017+490 位置附近存在 掉块坍塌及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+490\n~\nDyK1017+494\n（4m）",
+        "物性参数": "纵波速度Vp：\n4699~4901m/s\n横波速度Vs：\n2722~2724m/s\n速度比Vp/Vs：\n1.73~1.80\n泊松比υ：\n0.25~0.28\n静态杨氏模量Es：\n32~34GPa\n动态杨氏模量Ed：\n48~49GPa",
+        "物探分析": "该段围岩的 Vp、\nVp/Vs 和υ均较前一段\n有所降低，Vs 和 E 均\n较前一段有所升高，地\n震反射界面数量较前\n一段有所增加。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育，\n岩体破碎，建议该段按Ⅴ级围岩施\n工。\nDyK1017+490 位置附近存在\n掉块坍塌及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，建议该段按Ⅴ级围岩施工。DyK1017+490位置附近存在掉块坍塌及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I10",
+      "semantics": "forecast",
+      "start_m": 1017494.0,
+      "end_m": 1017500.0,
+      "start_chainage": "DyK1017+494",
+      "end_chainage": "DyK1017+500",
+      "stated_length_m": 6.0,
+      "computed_length_m": 6.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 5092~5466m/s 横波速度Vs： 2581~2625m/s 速度比Vp/Vs： 1.97~2.08 泊松比υ： 0.33~0.35 静态杨氏模量Es： 30~34GPa 动态杨氏模量Ed： 46~49GPa",
+        "vp_m_per_s": {
+          "min": 5092.0,
+          "max": 5466.0
+        },
+        "vs_m_per_s": {
+          "min": 2581.0,
+          "max": 2625.0
+        },
+        "vp_vs": {
+          "min": 1.97,
+          "max": 2.08
+        },
+        "poisson_ratio": {
+          "min": 0.33,
+          "max": 0.35
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vp/Vs和υ均较前一段有所升高，Vs和E均较前一段有所降低，地震反射界面数量较前一段稍增加。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+497位置附近存在掉块坍塌、出水及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R06"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 15,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 12,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+494 ~ DyK1017+500 （6m）；物性参数：纵波速度Vp： 5092~5466m/s 横波速度Vs： 2581~2625m/s 速度比Vp/Vs： 1.97~2.08 泊松比υ： 0.33~0.35 静态杨氏模量Es： 30~34GPa 动态杨氏模量Ed： 46~49GPa；物探分析：该段围岩的 Vp、 Vp/Vs 和υ均较前一段 有所升高，Vs 和 E 均 较前一段有所降低，地 震反射界面数量较前 一段稍增加。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育， 岩体破碎，掌子面存在滴渗水-线 状出水，建议该段按Ⅴ级围岩施 工。 DyK1017+497 位置附近存在 掉块坍塌、出水及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+494\n~\nDyK1017+500\n（6m）",
+        "物性参数": "纵波速度Vp：\n5092~5466m/s\n横波速度Vs：\n2581~2625m/s\n速度比Vp/Vs：\n1.97~2.08\n泊松比υ：\n0.33~0.35\n静态杨氏模量Es：\n30~34GPa\n动态杨氏模量Ed：\n46~49GPa",
+        "物探分析": "该段围岩的 Vp、\nVp/Vs 和υ均较前一段\n有所升高，Vs 和 E 均\n较前一段有所降低，地\n震反射界面数量较前\n一段稍增加。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育，\n岩体破碎，掌子面存在滴渗水-线\n状出水，建议该段按Ⅴ级围岩施\n工。\nDyK1017+497 位置附近存在\n掉块坍塌、出水及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+497位置附近存在掉块坍塌、出水及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I11",
+      "semantics": "forecast",
+      "start_m": 1017500.0,
+      "end_m": 1017509.0,
+      "start_chainage": "DyK1017+500",
+      "end_chainage": "DyK1017+509",
+      "stated_length_m": 9.0,
+      "computed_length_m": 9.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 4820~5120m/s 横波速度Vs： 2440~2609m/s 速度比Vp/Vs： 1.98~2.01 泊松比υ： 0.33~0.34 静态杨氏模量Es： 25~28GPa 动态杨氏模量Ed： 40~43GPa",
+        "vp_m_per_s": {
+          "min": 4820.0,
+          "max": 5120.0
+        },
+        "vs_m_per_s": {
+          "min": 2440.0,
+          "max": 2609.0
+        },
+        "vp_vs": {
+          "min": 1.98,
+          "max": 2.01
+        },
+        "poisson_ratio": {
+          "min": 0.33,
+          "max": 0.34
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段呈震荡降低趋势，Vp/Vs和υ均较前一段呈震荡上升趋势，地震反射界面数量较前一段有所增加，且发育相对密集。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+500位置附近存在掉块坍塌、出水及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [
+        "TSP-R07"
+      ],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 15,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 12,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+500 ~ DyK1017+509 （9m）；物性参数：纵波速度Vp： 4820~5120m/s 横波速度Vs： 2440~2609m/s 速度比Vp/Vs： 1.98~2.01 泊松比υ： 0.33~0.34 静态杨氏模量Es： 25~28GPa 动态杨氏模量Ed： 40~43GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段呈 震荡降低趋势，Vp/Vs 和υ均较前一段呈震 荡上升趋势，地震反射 界面数量较前一段有 所增加，且发育相对密 集。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，夹少量断层泥，原岩主 要为板岩，岩质软，节理裂隙发育 -极发育，岩体破碎-极破碎，掌子 面存在滴渗水-线状出水，建议该 段按Ⅴ级围岩施工。 DyK1017+500 位置附近存在 掉块坍塌、出水及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+500\n~\nDyK1017+509\n（9m）",
+        "物性参数": "纵波速度Vp：\n4820~5120m/s\n横波速度Vs：\n2440~2609m/s\n速度比Vp/Vs：\n1.98~2.01\n泊松比υ：\n0.33~0.34\n静态杨氏模量Es：\n25~28GPa\n动态杨氏模量Ed：\n40~43GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段呈\n震荡降低趋势，Vp/Vs\n和υ均较前一段呈震\n荡上升趋势，地震反射\n界面数量较前一段有\n所增加，且发育相对密\n集。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，夹少量断层泥，原岩主\n要为板岩，岩质软，节理裂隙发育\n-极发育，岩体破碎-极破碎，掌子\n面存在滴渗水-线状出水，建议该\n段按Ⅴ级围岩施工。\nDyK1017+500 位置附近存在\n掉块坍塌、出水及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，夹少量断层泥，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，建议该段按Ⅴ级围岩施工。DyK1017+500位置附近存在掉块坍塌、出水及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I12",
+      "semantics": "forecast",
+      "start_m": 1017509.0,
+      "end_m": 1017516.0,
+      "start_chainage": "DyK1017+509",
+      "end_chainage": "DyK1017+516",
+      "stated_length_m": 7.0,
+      "computed_length_m": 7.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 5239m/s 横波速度Vs： 2570m/s 速度比Vp/Vs： 2.04 泊松比υ： 0.34 静态杨氏模量Es： 31GPa 动态杨氏模量Ed： 46GPa",
+        "vp_m_per_s": 5239.0,
+        "vs_m_per_s": 2570.0,
+        "vp_vs": 2.04,
+        "poisson_ratio": 0.34,
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs、Vp/Vs、υ和E均较前一段有所升高，地震反射界面数量较前一段有所减少。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 16,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 13,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+509 ~ DyK1017+516 （7m）；物性参数：纵波速度Vp： 5239m/s 横波速度Vs： 2570m/s 速度比Vp/Vs： 2.04 泊松比υ： 0.34 静态杨氏模量Es： 31GPa 动态杨氏模量Ed： 46GPa；物探分析：该段围岩的 Vp、 Vs、Vp/Vs、υ和E 均 较前一段有所升高，地 震反射界面数量较前 一段有所减少。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育，岩体较破碎- 破碎，建议该段按Ⅴ级围岩施工。",
+      "source_cells": {
+        "里程范围": "DyK1017+509\n~\nDyK1017+516\n（7m）",
+        "物性参数": "纵波速度Vp：\n5239m/s\n横波速度Vs：\n2570m/s\n速度比Vp/Vs：\n2.04\n泊松比υ：\n0.34\n静态杨氏模量Es：\n31GPa\n动态杨氏模量Ed：\n46GPa",
+        "物探分析": "该段围岩的 Vp、\nVs、Vp/Vs、υ和E 均\n较前一段有所升高，地\n震反射界面数量较前\n一段有所减少。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育，岩体较破碎-\n破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育，岩体较破碎-破碎，建议该段按Ⅴ级围岩施工。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    },
+    {
+      "interval_id": "TSP-I13",
+      "semantics": "forecast",
+      "start_m": 1017516.0,
+      "end_m": 1017523.0,
+      "start_chainage": "DyK1017+516",
+      "end_chainage": "DyK1017+523",
+      "stated_length_m": 7.0,
+      "computed_length_m": 7.0,
+      "physical_parameters": {
+        "raw_text": "纵波速度Vp： 5068~5218m/s 横波速度Vs： 2519~2586m/s 速度比Vp/Vs： 2.01~2.07 泊松比υ： 0.33~0.35 静态杨氏模量Es： 29~30GPa 动态杨氏模量Ed： 44~45GPa",
+        "vp_m_per_s": {
+          "min": 5068.0,
+          "max": 5218.0
+        },
+        "vs_m_per_s": {
+          "min": 2519.0,
+          "max": 2586.0
+        },
+        "vp_vs": {
+          "min": 2.01,
+          "max": 2.07
+        },
+        "poisson_ratio": {
+          "min": 0.33,
+          "max": 0.35
+        },
+        "dynamic_young_modulus_gpa": null
+      },
+      "geophysical_analysis": "该段围岩的Vp、Vs和E均较前一段呈震荡降低趋势，Vp/Vs和υ均较前一段呈震荡上升趋势，地震反射界面数量较前一段有所增加，且发育相对密集。",
+      "forecast_conclusion": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，建议该段按Ⅴ级围岩施工。DyK1017+516位置附近存在掉块坍塌及卡机风险。",
+      "recommended_grade_table": "Ⅴ",
+      "recommended_grade_summary": "Ⅴ",
+      "recommended_grade_for_use": "Ⅴ",
+      "grade_resolution_rule": "table_value",
+      "grade_conflict": false,
+      "risk_record_ids": [],
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 16,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 13,
+      "source_section": "第7章表2",
+      "source_quote": "里程范围：DyK1017+516 ~ DyK1017+523 （7m）；物性参数：纵波速度Vp： 5068~5218m/s 横波速度Vs： 2519~2586m/s 速度比Vp/Vs： 2.01~2.07 泊松比υ： 0.33~0.35 静态杨氏模量Es： 29~30GPa 动态杨氏模量Ed： 44~45GPa；物探分析：该段围岩的 Vp、 Vs 和 E 均较前一段呈 震荡降低趋势，Vp/Vs 和υ均较前一段呈震 荡上升趋势，地震反射 界面数量较前一段有 所增加，且发育相对密 集。；预报结论：推测该段地层岩性为压碎岩、 断层角砾，原岩主要为板岩，岩质 软，节理裂隙发育-极发育，岩体 破碎-极破碎，掌子面存在滴渗水， 建议该段按Ⅴ级围岩施工。 DyK1017+516 位置附近存在 掉块坍塌及卡机风险。",
+      "source_cells": {
+        "里程范围": "DyK1017+516\n~\nDyK1017+523\n（7m）",
+        "物性参数": "纵波速度Vp：\n5068~5218m/s\n横波速度Vs：\n2519~2586m/s\n速度比Vp/Vs：\n2.01~2.07\n泊松比υ：\n0.33~0.35\n静态杨氏模量Es：\n29~30GPa\n动态杨氏模量Ed：\n44~45GPa",
+        "物探分析": "该段围岩的 Vp、\nVs 和 E 均较前一段呈\n震荡降低趋势，Vp/Vs\n和υ均较前一段呈震\n荡上升趋势，地震反射\n界面数量较前一段有\n所增加，且发育相对密\n集。",
+        "预报结论": "推测该段地层岩性为压碎岩、\n断层角砾，原岩主要为板岩，岩质\n软，节理裂隙发育-极发育，岩体\n破碎-极破碎，掌子面存在滴渗水，\n建议该段按Ⅴ级围岩施工。\nDyK1017+516 位置附近存在\n掉块坍塌及卡机风险。"
+      },
+      "normalized_fact": {
+        "type": "forecast_segment",
+        "rock_mass_forecast": "推测该段地层岩性为压碎岩、断层角砾，原岩主要为板岩，岩质软，节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，建议该段按Ⅴ级围岩施工。DyK1017+516位置附近存在掉块坍塌及卡机风险。"
+      },
+      "grade_summary_source": {
+        "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+        "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+        "source_page": 10,
+        "source_page_type": "pdf_actual_page_1_based",
+        "source_page_printed": 7,
+        "source_section": "第7章结论",
+        "source_quote": "（1）DyK1017+423～DyK1017+523段建议按Ⅴ级围岩施工。"
+      }
+    }
+  ],
+  "risk_records": [
+    {
+      "risk_id": "TSP-R01",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017423.0,
+      "end_m": 1017436.0,
+      "start_chainage": "DyK1017+423",
+      "end_chainage": "DyK1017+436",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+423～DyK1017+436"
+      }
+    },
+    {
+      "risk_id": "TSP-R02",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017447.0,
+      "end_m": 1017454.0,
+      "start_chainage": "DyK1017+447",
+      "end_chainage": "DyK1017+454",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+447～DyK1017+454"
+      }
+    },
+    {
+      "risk_id": "TSP-R03",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017464.0,
+      "end_m": 1017470.0,
+      "start_chainage": "DyK1017+464",
+      "end_chainage": "DyK1017+470",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+464～DyK1017+470"
+      }
+    },
+    {
+      "risk_id": "TSP-R04",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017475.0,
+      "end_m": 1017482.0,
+      "start_chainage": "DyK1017+475",
+      "end_chainage": "DyK1017+482",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+475～DyK1017+482"
+      }
+    },
+    {
+      "risk_id": "TSP-R05",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017490.0,
+      "end_m": 1017494.0,
+      "start_chainage": "DyK1017+490",
+      "end_chainage": "DyK1017+494",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+490～DyK1017+494"
+      }
+    },
+    {
+      "risk_id": "TSP-R06",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017494.0,
+      "end_m": 1017500.0,
+      "start_chainage": "DyK1017+494",
+      "end_chainage": "DyK1017+500",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+494～DyK1017+500"
+      }
+    },
+    {
+      "risk_id": "TSP-R07",
+      "semantics": "forecast",
+      "risk_type": "掉块风险",
+      "geometry": "interval",
+      "start_m": 1017500.0,
+      "end_m": 1017509.0,
+      "start_chainage": "DyK1017+500",
+      "end_chainage": "DyK1017+509",
+      "source_file": "DyK1017+423.00_伯舒拉岭隧道进口右线地震波反射法超前地质预报报告(DyK1017+423～DyK1017+523)-20241107.pdf",
+      "source_report_id": "CL-TSP-(七)-8-DyK1017+423",
+      "source_page": 10,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 7,
+      "source_section": "第7章结论",
+      "source_quote": "（2）DyK1017+423～DyK1017+436段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水，其中DyK1017+433位置附近存在掉块坍塌及卡机风险；DyK1017+447～DyK1017+454段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在线状出水，其中DyK1017+447位置附近存在掉块坍塌、出水及卡机风险；DyK1017+464～DyK1017+470段围岩节理裂隙发育，岩体破碎，掌子面存在线状出水，其中DyK1017+464位置附近存在掉块坍塌、出水及卡机风险；DyK1017+475～DyK1017+482段围岩节理裂隙发育-极发育，岩体破碎-极破碎，掌子面存在滴渗水-线状出水，其中DyK1017+475位置附近存在掉块坍塌、出水及卡机风险；DyK1017+490～DyK1017+494段围岩节理裂隙发育，岩体破碎，其中DyK1017+490位置附近存在掉块坍塌及卡机风险；DyK1017+494～DyK1017+500段围岩节理裂隙发育，岩体破碎，掌子面存在滴渗水-线状出水，其中DyK1017+497位置附近存在掉块坍塌、出水及卡机风险；DyK1017+500～DyK1017+509段围7",
+      "normalized_fact": {
+        "type": "forecast_risk_range",
+        "risk_type": "掉块风险",
+        "range": "DyK1017+500～DyK1017+509"
+      }
+    }
+  ],
+  "source_table_segment_count": 13,
+  "quality_validation": {
+    "status": "validated",
+    "checks": [
+      {
+        "check": "test_date_present",
+        "status": "pass",
+        "detail": "test_date=2024-11-06"
+      },
+      {
+        "check": "cover_date_present",
+        "status": "pass",
+        "detail": "cover_date=2024-11-07"
+      },
+      {
+        "check": "submission_date_present",
+        "status": "pass",
+        "detail": "submission_date=2024-11-07"
+      },
+      {
+        "check": "forecast_segments_present",
+        "status": "pass",
+        "detail": "segments=13"
+      },
+      {
+        "check": "source_rows_equal_extracted_segments",
+        "status": "pass",
+        "detail": "source_rows=13, extracted=13"
+      },
+      {
+        "check": "length_TSP-I01",
+        "status": "pass",
+        "detail": "stated=13.0, computed=13.0"
+      },
+      {
+        "check": "length_TSP-I02",
+        "status": "pass",
+        "detail": "stated=11.0, computed=11.0"
+      },
+      {
+        "check": "length_TSP-I03",
+        "status": "pass",
+        "detail": "stated=7.0, computed=7.0"
+      },
+      {
+        "check": "length_TSP-I04",
+        "status": "pass",
+        "detail": "stated=10.0, computed=10.0"
+      },
+      {
+        "check": "length_TSP-I05",
+        "status": "pass",
+        "detail": "stated=6.0, computed=6.0"
+      },
+      {
+        "check": "length_TSP-I06",
+        "status": "pass",
+        "detail": "stated=5.0, computed=5.0"
+      },
+      {
+        "check": "length_TSP-I07",
+        "status": "pass",
+        "detail": "stated=7.0, computed=7.0"
+      },
+      {
+        "check": "length_TSP-I08",
+        "status": "pass",
+        "detail": "stated=8.0, computed=8.0"
+      },
+      {
+        "check": "length_TSP-I09",
+        "status": "pass",
+        "detail": "stated=4.0, computed=4.0"
+      },
+      {
+        "check": "length_TSP-I10",
+        "status": "pass",
+        "detail": "stated=6.0, computed=6.0"
+      },
+      {
+        "check": "length_TSP-I11",
+        "status": "pass",
+        "detail": "stated=9.0, computed=9.0"
+      },
+      {
+        "check": "length_TSP-I12",
+        "status": "pass",
+        "detail": "stated=7.0, computed=7.0"
+      },
+      {
+        "check": "length_TSP-I13",
+        "status": "pass",
+        "detail": "stated=7.0, computed=7.0"
+      },
+      {
+        "check": "segments_continuous",
+        "status": "pass",
+        "detail": "Adjacent boundaries must be equal."
+      },
+      {
+        "check": "segments_not_overlapping",
+        "status": "pass",
+        "detail": "No positive-length overlap is allowed."
+      },
+      {
+        "check": "segments_not_duplicated",
+        "status": "pass",
+        "detail": "Each segment boundary pair must be unique."
+      },
+      {
+        "check": "segments_cover_report_range",
+        "status": "pass",
+        "detail": "report=1017423.0-1017523.0, segments=1017423.0-1017523.0"
+      },
+      {
+        "check": "segment_total_length",
+        "status": "pass",
+        "detail": "total=100.0, expected=100.0"
+      }
+    ],
+    "issues": [],
+    "failed_check_count": 0
+  }
+}

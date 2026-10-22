@@ -1,149 +1,59 @@
-# TBM PLC施工过程与日报事实生成
+# TBM施工日报：PLC与地质联合生成
 
-本项目当前只保留一条研究主线：
-
-```text
-原始PLC
-  -> 字段映射与质量控制
-  -> machine_state
-  -> 平台优先施工过程识别
-  -> startup / rising / stable / declining
-  -> 阶段内动态语义
-  -> 完整结构化事实
-  -> 日报数值事实、明细表和图形
-  -> 受约束LLM组织正文
-  -> 事实一致性校验
-  -> HTML / PDF日报
-```
-
-平台识别方法版本为`tbm_platform_first_experiment_v1`，四阶段方法版本为`tbm_four_phase_v1_2026-10-12`。版本字符串是方法标识，不代表项目中仍保留多套历史实现。
-
-当前方法仍属于研究方法，尚未经过人工真值标注和跨TBM定量验证。算法平台不能直接解释为现场确认的真实掘进循环。A-E生成与验证代码作为论文对照实验保留，不是正式日报的必经路径。
-
-## 目录
+本仓库的正式报告入口是 `scripts/run_integrated_report.py`。PLC和地质资料分别处理为结构化事实，**先合并为同一事实包，再由模型规划并撰写完整三章**。不存在“先生成两章、再补第一章/第三章”的正式运行路径。
 
 ```text
-tbm-plc-process-analysis/
-├── tbm_process/
-│   ├── ingestion/          # 原始字段读取与字段配置
-│   ├── quality/            # 数据质量、采样连续性和暂定转速映射
-│   ├── process/            # machine_state、平台识别和四阶段
-│   ├── dynamics/           # 趋势、波动、转折和多参数共同变化
-│   ├── facts/              # 完整及精简结构化事实
-│   ├── reporting/          # 工程事实、日报正文约束、图表和HTML/PDF
-│   ├── llm_reporting/      # A-E论文对照实验与事实验证器
-│   ├── orchestration/      # 基础流程与当前平台优先流程
-│   └── outputs/            # 确定性文件写出
-├── configs/
-├── scripts/
-├── tests/
-├── docs/
-├── outputs/                # 本地生成，不提交Git
-├── config.json
-└── run_analysis.py
+PLC原始记录 -> 质量控制 -> 运行平台/四阶段/动态分析 -> PLC事实 --+
+                                                            +-> 联合事实JSON
+TSP/HSP/素描PDF -> 既有提取与时空筛选 -> 地质内容单元 -----------+
+联合事实JSON -> 全文内容计划 -> 三章文字 -> 程序核验 -> HTML/PDF
+                         表格、PLC曲线和地质里程轴由程序绘制 ----+
 ```
 
-## 安装
+本次代码整理未改动冻结的PLC清洗、状态识别、平台识别、四阶段和动态分析规则。处理后的30天实验材料位于 `datasets/portable_30/`，可以在没有原始PLC和PDF的Windows电脑上继续开发联合日报。它不是329天全量数据，也不能替代原始资料核验。
 
-```bash
-conda create -n LLMenv python=3.11 -y
-conda run -n LLMenv python -m pip install -r requirements.txt
-conda run -n LLMenv python -m pytest -q
+## Windows快速开始
+
+在PowerShell中，从GitHub克隆仓库后执行：
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pytest -q
+python scripts/run_integrated_report.py --date 2024-01-06 --dry-run
 ```
 
-## 当前运行流程
+`--dry-run` 不调用API，只在 `outputs/integrated_reports/2024-01-06/` 写入联合事实包和规划请求。30个可用日期见 [`DAYS.txt`](datasets/portable_30/DAYS.txt)。切换日期只需改 `--date`。
 
-### 1. 生成基础质量控制数据
+需要实际调用模型时，把自己的 `DEEPSEEK_API_KEY` 设为环境变量，或者从 `.env.example` 创建本地 `.env` 并填写；`.env` 已被Git忽略。然后去掉 `--dry-run`：
 
-```bash
-conda run -n LLMenv python run_analysis.py \
-  --plc-dir /path/to/TBM9_2023
+```powershell
+python scripts/run_integrated_report.py --date 2024-01-06
 ```
 
-输出到`outputs/base_analysis/`。这是当前平台分析的输入层，不是另一套对外方法。
+需要Chrome/Chromium导出PDF；自动查找失败时传入 `--chrome "C:\Program Files\Google\Chrome\Application\chrome.exe"`。只调试事实与HTML时可用 `--skip-pdf`。模型失败会保存请求、原始响应、Token与错误；不会用模板冒充模型结果。`--resume` 可复用同日期已经保存的模型输出。**实际API调用会产生费用**，默认测试不调用。
 
-### 2. 运行当前平台优先分析
+## 便携数据
 
-```bash
-conda run -n LLMenv python scripts/run_current_analysis.py
-```
+`datasets/portable_30/analysis/processed_samples/`：30天质量控制后的逐点PLC CSV，保留时间、来源行号、状态、参数、质量标记与平台/阶段标签。不是原始PLC文件。
 
-输出到`outputs/current_analysis/`，包括逐点结果、全部平台、四阶段、动态语义、完整事实、定量事实和LLM输入。
+`datasets/portable_30/analysis/tables/`：同30天的平台与四阶段明细，从329天既有结果按日期筛出；只用于读取，不重新分段。
 
-默认处理`configs/platform_analysis.json`中的10天研究样本，可通过`--dates`指定其他已生成日期。
+`datasets/portable_30/analysis/structured_full_days/`：同30天完整结构化PLC分析结果，供施工响应选择使用。
 
-### 3. 运行A-E受约束日报对照实验（可选）
+`datasets/portable_30/geology/evidence/prepared_days/`：同30天已准备好的地质V2内容单元，是联合日报的直接地质输入。
 
-只准备输入和Prompt，不调用API：
+`datasets/portable_30/geology/extracted/`：已提取的右线地质目录与223份结构化报告JSON，供追溯与后续开发；**原始PDF未随仓库提供**。部分来源字段仍记录Mac原路径，它们是出处线索，不保证Windows端能打开原PDF。
 
-```bash
-conda run -n LLMenv python scripts/run_llm_report_experiment.py \
-  --date 2023-11-03 --groups A,B,C,D,E --dry-run
-```
+`datasets/portable_30/MANIFEST.json` 保存日期清单、文件大小与SHA-256。仓库**不包含**原始PLC、原始PDF、API密钥、329天逐点全量结果或旧模型实验输出。需要更新便携数据时，使用 `scripts/prepare_portable_dataset.py --help`，从已验证的上游结果重新导出，不要手工改写冻结值。
 
-调用DeepSeek时只从环境变量读取密钥：
+## 当前代码路径
 
-```bash
-export DEEPSEEK_API_KEY="..."
-conda run -n LLMenv python scripts/run_llm_report_experiment.py \
-  --all --groups A,B,C,D,E --resume --max-api-calls 30
-```
+- `run_analysis.py`、`scripts/run_current_analysis.py`：从原始PLC重建上游分析，只有取得原始数据时才需要运行。
+- `tbm_process/ingestion/`、`quality/`、`process/`、`dynamics/`、`facts/`、`orchestration/`、`outputs/`：冻结PLC分析链。
+- `tbm_process/reporting/front_sections.py`：读取处理后的逐点数据和平台表，构建日报PLC事实。它是辅助模块，不单独生成两章日报。
+- `tbm_process/final_reporting/`：联合事实、全文规划与生成、地质展示、绘图、HTML/PDF、自动检查。
+- `scripts/run_integrated_report.py`：唯一正式三章日报入口。
 
-输出到`outputs/llm_experiment/`。该入口只用于论文对照实验，不是生成正式日报的前置步骤。当前严格验证器直接用于核验和E组局部修订；规则通过率不能称为工程事实准确率。
-
-### 4. 生成施工日报前两章
-
-先完成基础分析和当前平台优先分析，再运行：
-
-```bash
-conda run -n LLMenv python scripts/build_daily_report_front_sections.py \
-  --date 2023-11-03 \
-  --analysis-dir outputs/current_analysis \
-  --output-dir outputs/daily_reports/2023-11-03 \
-  --report-text-mode llm
-```
-
-该入口只读取现有逐点结果、平台表和四阶段表，不重新识别施工过程。输出包括日报事实JSON、全部平台明细CSV、短句证据JSON、两章正文JSON、时间轴、三参数曲线、HTML、PDF和一致性验证结果。表格“主要情况”始终由确定性事实规则生成；默认正文使用确定性回退文本，使用`--report-text-mode llm`时由LLM依据结构化事实组织两章正文。密钥从环境变量或被Git忽略的`.env`读取，请求、响应和核验元数据保存在`report_narrative_generation/`；调用失败或输出越界时自动回退。
-
-### 5. 生成最终三章日报
-
-先生成`outputs/current_analysis/`，再提供地质 V2 候选结果目录：
-
-```bash
-conda run -n LLMenv python scripts/run_final_reports.py \
-  --date 2024-04-26 \
-  --analysis-dir outputs/current_analysis \
-  --geology-candidate-root /path/to/TBM9_geology_v2_candidate
-```
-
-该入口复用冻结 PLC 事实与已经通过规划检查的地质内容单元，确定性生成三章 HTML/PDF、地质里程轴、事实映射和成品审计，不调用 LLM。默认输出到`outputs/final_reports/`。Chrome/Chromium会自动发现，也可用`--chrome`指定；只有HTML时可加`--skip-pdf`。完整方法和外部数据目录要求见[最终三章日报](docs/FINAL_REPORTING.md)。
-
-## 当前入口
-
-- `run_analysis.py`：基础字段统一、质量控制、状态和基础结构化分析。
-- `scripts/run_current_analysis.py`：唯一的平台优先施工过程、四阶段、动态语义和日报事实入口。
-- `scripts/run_llm_report_experiment.py`：A-E受约束生成实验。
-- `scripts/build_daily_report_front_sections.py`：基于现有分析结果生成日报前两章。
-- `scripts/run_final_reports.py`：读取冻结 PLC 与地质 V2 证据，生成并审计最终三章日报。
-- `tbm_process/llm_reporting/verifier.py`：当前类型化事实验证器。
-
-## 配置
-
-- `config.json`：质量控制、四阶段和动态分析参数。
-- `configs/platform_analysis.json`：平台优先识别参数及研究日期。
-- `configs/field_profiles/tbm9_2023.json`：TBM9原始字段映射。
-- `configs/dynamic_parameters.json`：动态参数注册表。
-- `configs/report_parameter_units.json`：工程单位和报告使用限制。
-- `configs/llm_report_experiment.json`：A-E实验与模型配置。
-- `configs/final_report.json`：最终三章日报的可移植路径、日期和地质轴配置。
-
-## 研究边界
-
-- 原始PLC表头未提供可靠工程单位；没有PLC点位表时不得猜测单位。
-- 刀盘统一转速是暂定映射，仍需现场点位资料确认。
-- 约20秒采样可能遗漏极短启动或下降过程。
-- 参数响应不能自动解释为地质、刀具或设备故障。
-- 当前10天样本属于方法开发和目视检查集，不是定量准确率验证集。
-- 生成输出均位于`outputs/`并被Git忽略；新电脑克隆后应从原始PLC重新运行。
-
-方法说明见[当前架构](docs/ARCHITECTURE.md)、[阶段方法](docs/PHASE_METHOD.md)、[输出结构](docs/OUTPUT_SCHEMA.md)、[受约束生成](docs/LLM_CONSTRAINED_REPORTING.md)、[事实验证器](docs/FACT_VERIFIER.md)和[最终三章日报](docs/FINAL_REPORTING.md)。本轮删除与保留内容见[项目清理记录](docs/CLEANUP_2026-10-16.md)。
+程序检查可验证结构、数字候选、引用和部分表达禁令；所有自由文本陈述仍须语义审阅。自动通过率不是工程事实准确率。数据来源、方法及限制详见[联合流程](docs/INTEGRATED_REPORTING.md)、[阶段方法](docs/PHASE_METHOD.md)、[清理与数据记录](docs/CLEANUP_2026-10-22.md)。

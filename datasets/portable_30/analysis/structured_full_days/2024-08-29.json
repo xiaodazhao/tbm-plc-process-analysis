@@ -1,0 +1,243 @@
+{
+  "schema_version": "tbm_process_analysis_v3",
+  "date": "2024-08-29",
+  "source_file": "tbm_data_20240829.csv",
+  "result_type": "complete_traceable_fact_package",
+  "overall": {
+    "row_count": 165,
+    "timestamp_start": "2024-08-29T19:14:00",
+    "timestamp_end": "2024-08-29T23:58:30",
+    "sample_interval_seconds_median": 35.0,
+    "data_coverage": {
+      "continuity_block_count": 10,
+      "hard_sampling_gap_count": 9,
+      "observed_duration_seconds": 6990.0,
+      "hard_gap_elapsed_seconds_total": 9840.0,
+      "hard_gaps_excluded_from_state_duration": true
+    },
+    "chainage_start": 1017292.0,
+    "chainage_end": 1017292.0,
+    "chainage_change_m": 0.0,
+    "chainage_quality_status": "usable",
+    "cumulative_advance_change_m": 0.0,
+    "valid_speed_integrated_distance_m": 0.0,
+    "distance_evidence_note": "separate_evidence_not_automatically_reconciled",
+    "machine_state_duration_seconds": {
+      "stopped": 6990.0
+    },
+    "valid_advance_interval_count": 0,
+    "valid_advance_duration_seconds": 0,
+    "core_parameter_distribution": {
+      "advance_speed_count": 0,
+      "advance_speed_p10": null,
+      "advance_speed_p50": null,
+      "advance_speed_p90": null,
+      "advance_speed_mean": null,
+      "advance_speed_std": null,
+      "thrust_count": 0,
+      "thrust_p10": null,
+      "thrust_p50": null,
+      "thrust_p90": null,
+      "thrust_mean": null,
+      "thrust_std": null,
+      "torque_count": 0,
+      "torque_p10": null,
+      "torque_p50": null,
+      "torque_p90": null,
+      "torque_mean": null,
+      "torque_std": null,
+      "rpm_count": 0,
+      "rpm_p10": null,
+      "rpm_p50": null,
+      "rpm_p90": null,
+      "rpm_mean": null,
+      "rpm_std": null
+    },
+    "data_quality": {
+      "invalid_or_missing_speed_sample_count": 0,
+      "invalid_or_missing_speed_sample_ratio": 0.0,
+      "rpm_provisional_mapping_sample_count": 165,
+      "quality_event_count": 9,
+      "quality_event_types": {
+        "sampling_gap": 9
+      }
+    }
+  },
+  "data_coverage": {
+    "row_count": 165,
+    "continuity_block_count": 10,
+    "hard_sampling_gap_count": 9,
+    "observed_capped_duration_seconds": 6990.0,
+    "hard_gaps_not_inferred_as_stopped": true
+  },
+  "machine_states": {
+    "duration_seconds": {
+      "stopped": 6990.0
+    },
+    "sample_count": {
+      "stopped": 165
+    },
+    "separate_from_excavation_phase_labels": true
+  },
+  "excavation_cycles": [],
+  "construction_response_events": [],
+  "data_quality_events": [
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T19:36:30",
+      "end_time": "2024-08-29T19:42:20",
+      "duration_seconds": 350.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 35,
+      "source_row_end": 36,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ001",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T19:42:20",
+      "end_time": "2024-08-29T19:50:00",
+      "duration_seconds": 460.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 36,
+      "source_row_end": 37,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ002",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T19:57:10",
+      "end_time": "2024-08-29T20:00:50",
+      "duration_seconds": 220.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 43,
+      "source_row_end": 44,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ003",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T21:08:00",
+      "end_time": "2024-08-29T23:02:00",
+      "duration_seconds": 6840.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 133,
+      "source_row_end": 134,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ004",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T23:02:00",
+      "end_time": "2024-08-29T23:10:20",
+      "duration_seconds": 500.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 134,
+      "source_row_end": 135,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ005",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T23:10:30",
+      "end_time": "2024-08-29T23:20:30",
+      "duration_seconds": 600.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 136,
+      "source_row_end": 137,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ006",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T23:20:30",
+      "end_time": "2024-08-29T23:24:00",
+      "duration_seconds": 210.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 137,
+      "source_row_end": 138,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ007",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T23:24:00",
+      "end_time": "2024-08-29T23:31:50",
+      "duration_seconds": 470.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 138,
+      "source_row_end": 139,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ008",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    },
+    {
+      "event_type": "data_quality",
+      "subtype": "sampling_gap",
+      "start_time": "2024-08-29T23:38:00",
+      "end_time": "2024-08-29T23:41:10",
+      "duration_seconds": 190.0,
+      "action": "do_not_bridge_process_intervals_across_gap",
+      "source_file": "tbm_data_20240829.csv",
+      "source_row_start": 143,
+      "source_row_end": 144,
+      "date": "2024-08-29",
+      "event_id": "2024-08-29-PEQ009",
+      "interpretation": "data_quality_issue_not_machine_fault"
+    }
+  ],
+  "selection_metadata": {
+    "result_type": "complete_unfiltered_analysis",
+    "cycle_count": 0,
+    "all_accepted_cycles_included": true,
+    "filtered_summary_saved_separately": true
+  },
+  "method_limits": [
+    "rpm_canonical_is_a_provisional_mapping_pending_plc_point_table_confirmation",
+    "four_phase_labels_are_rule_based_candidates_for_manual_validation",
+    "free_rotation_and_free_advancing_are_merged_into_startup_for_low_frequency_data",
+    "cycles_without_low_slope_low_variance_stable_evidence_are_left_unsegmented",
+    "unsegmented_cycles_still_receive_interval_level_dynamic_analysis",
+    "unidentified_parts_of_segmented_cycles_receive_separate_dynamic_analysis_scopes",
+    "construction_events_describe_machine_response_not_geology_or_fault_causes",
+    "invalid_speed_values_are_excluded_not_imputed",
+    "cycle_splitting_requires_sustained_multivariate_unload_and_reload_evidence",
+    "missing_calendar_dates_are_not_interpreted_as_stopped_operation",
+    "platform_first_segmentation_is_an_experimental_candidate_not_the_frozen_baseline",
+    "instantaneous_stop_boundaries_are_traceability_markers_not_sustained_declining_processes",
+    "termination_during_sampling_gaps_or_after_daily_record_end_is_not_inferred"
+  ],
+  "analysis_variant": {
+    "method": "tbm_platform_first_downstream_v1",
+    "status": "experimental_not_frozen",
+    "source": "frozen_quality_controlled_samples_with_recomputed_process_layer",
+    "frozen_outputs_modified": false,
+    "termination_observation_counts": {},
+    "instantaneous_stop_boundaries_excluded_from_dynamic_analysis": true,
+    "llm_invoked": false
+  },
+  "termination_observations": []
+}

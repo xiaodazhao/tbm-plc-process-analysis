@@ -1,0 +1,653 @@
+{
+  "schema_version": "tbm_geology_content_units_v2",
+  "method_version": "tbm_geology_reporting_v2_2026-10-18_r5",
+  "date": "2023-10-09",
+  "report_structure": {
+    "chapter_title": "三、地质预报与已有地质观察",
+    "section_titles": {
+      "3.1": "当日施工范围相关地质信息",
+      "3.2": "前方地质预报"
+    }
+  },
+  "plc_context": {
+    "source_file": "tbm_data_20231009.csv",
+    "guide_shield_start_m": 1013475.0,
+    "guide_shield_end_m": 1013482.0,
+    "guide_shield_start": "DyK1013+475",
+    "guide_shield_end": "DyK1013+482",
+    "daily_chainage_change_m": 7.0,
+    "spatial_status": "usable_with_existing_daily_range",
+    "spatial_matching_allowed": true,
+    "spatial_audit_note": "采用逐记录字段映射统一后的导向盾首里程首末范围。",
+    "spatial_usage_limit": "施工范围采用PLC导向盾首里程；未掌握导向盾首至掌子面的可靠偏移量，不得把两者认定为完全相同位置。"
+  },
+  "content_units": [
+    {
+      "unit_id": "CU001",
+      "source_fact_id": "observation::CZXZZQ-8-SM-DyK1013+455.2::SKETCH-O01",
+      "unit_type": "historical_observation_context",
+      "semantics": "observation",
+      "source_type": "sketch",
+      "allowed_section": "3.1",
+      "required_for_plan": true,
+      "requirement_reason": "nearest_available_prior_observation_context",
+      "reporting_role": "historical_context",
+      "evidence": {
+        "observation_chainage": "DyK1013+455.2",
+        "observation_date": "2023-10-07",
+        "date_source": "observation_date",
+        "availability_time_status": "date_only_actual_distribution_time_unverified",
+        "distance_behind_day_start_m": 19.8,
+        "usage_limit": "这是此前特定里程的观察记录；不得外推为当日施工范围的实际揭露，也不得假设导向盾首与掌子面的固定偏移。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1013+455.2",
+        "source_type": "sketch",
+        "source_file": "DyK1013+455.20_伯舒拉岭进口右线DyK10+455.2洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "6c12ef6e02ceefe8fbe3681dd8a5ba8cd8f50ba0cbc0b9c4c0f45ac0c0b22467"
+      },
+      "trace_id": "unit::observation::CZXZZQ-8-SM-DyK1013+455.2::SKETCH-O01::observation-context",
+      "source_ref": "SRC002"
+    },
+    {
+      "unit_id": "CU002",
+      "source_fact_id": "observation::CZXZZQ-8-SM-DyK1013+455.2::SKETCH-O01",
+      "unit_type": "historical_observation_summary",
+      "semantics": "observation",
+      "source_type": "sketch",
+      "allowed_section": "3.1",
+      "required_for_plan": true,
+      "requirement_reason": "compact_summary_of_nearest_prior_observation",
+      "reporting_role": "historical_background",
+      "evidence": {
+        "observation_chainage": "DyK1013+455.2",
+        "observation_date": "2023-10-07",
+        "source_geological_summary": "进口右线DyK1013+455.2 洞身段出露岩性为石炭二叠系板岩夹变质砂岩，板岩为变余结构，板状构造，板 状劈理发育，变质砂岩为变余砂状结构，中厚层状构造，矿物成分以石英、长石为主，钙质胶结；围岩整体弱 风化，岩质软硬不均，节理裂隙发育，岩体破碎，呈碎石状压碎结构，拱顶节理裂隙发育密集，存在掉块现象， 岩体相对破碎，拱顶见滴渗水-线状出水，围岩自稳性较差",
+        "selected_observation_fields": {
+          "face_state": [
+            "正面掉块"
+          ],
+          "excavated_surface_state": [
+            "随时间松弛、掉块"
+          ],
+          "rock_strength_category": "30＜R≤60",
+          "weathering_degree": "弱风化",
+          "structural_plane_spacing_m": "0.2～0.6",
+          "structural_plane_persistence": "中等",
+          "structural_plane_roughness": "平整光滑有擦痕",
+          "structural_plane_aperture_mm": "部分张开0.1～0.5",
+          "karst_development": "无"
+        },
+        "water_entry": {
+          "selected_category": "其它",
+          "raw_value": "5008",
+          "value": 5008.0,
+          "unit_raw": "L/min1·10m",
+          "source_quote": "其它5008"
+        },
+        "source_assessed_grade": "Ⅳ",
+        "grade_conflict": false,
+        "usage_limit": "仅作历史背景，保持观察、原报告推测和等级判定的语义边界。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1013+455.2",
+        "source_type": "sketch",
+        "source_file": "DyK1013+455.20_伯舒拉岭进口右线DyK10+455.2洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "6c12ef6e02ceefe8fbe3681dd8a5ba8cd8f50ba0cbc0b9c4c0f45ac0c0b22467"
+      },
+      "trace_id": "unit::observation::CZXZZQ-8-SM-DyK1013+455.2::SKETCH-O01::observation-core",
+      "source_ref": "SRC002"
+    },
+    {
+      "unit_id": "CU003",
+      "source_fact_id": "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03",
+      "unit_type": "forecast_segment_portion",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.1",
+      "required_for_plan": true,
+      "requirement_reason": "forecast_has_positive_length_overlap_with_daily_range|member_of_retained_difference",
+      "reporting_role": "forecast_core",
+      "evidence": {
+        "original_start_chainage": "DyK1013+466",
+        "original_end_chainage": "DyK1013+506",
+        "geophysical_result": "该段未见明显反射异常",
+        "forecast_conclusion": "该段围岩较前段稍有变好。岩性为板岩夹变质砂岩，弱风化，岩质软硬不均，节理裂隙发育，岩体破碎，围岩整体稳定性较差",
+        "recommended_grade": "Ⅳ",
+        "report_date_basis": {
+          "status": "eligible",
+          "basis_field": "submission_date",
+          "basis_date": "2023-10-06",
+          "reason": "strictly_before_report_date"
+        },
+        "grade_conflict": false,
+        "scope_relation": "current",
+        "applicable_start_chainage": "DyK1013+475",
+        "applicable_end_chainage": "DyK1013+482",
+        "crosses_day_end": true,
+        "usage_limit": "原始预测分段跨越当日终点；本内容单元仅用于相应章节的适用部分，正文仍须保留原始预测分段范围。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03::forecast-current",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU004",
+      "source_fact_id": "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03",
+      "unit_type": "forecast_segment_portion",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": true,
+      "requirement_reason": "forecast_has_positive_length_overlap_with_daily_range|member_of_retained_difference",
+      "reporting_role": "forecast_core",
+      "evidence": {
+        "original_start_chainage": "DyK1013+466",
+        "original_end_chainage": "DyK1013+506",
+        "geophysical_result": "该段未见明显反射异常",
+        "forecast_conclusion": "该段围岩较前段稍有变好。岩性为板岩夹变质砂岩，弱风化，岩质软硬不均，节理裂隙发育，岩体破碎，围岩整体稳定性较差",
+        "recommended_grade": "Ⅳ",
+        "report_date_basis": {
+          "status": "eligible",
+          "basis_field": "submission_date",
+          "basis_date": "2023-10-06",
+          "reason": "strictly_before_report_date"
+        },
+        "grade_conflict": false,
+        "scope_relation": "ahead",
+        "applicable_start_chainage": "DyK1013+482",
+        "applicable_end_chainage": "DyK1013+506",
+        "crosses_day_end": true,
+        "usage_limit": "原始预测分段跨越当日终点；本内容单元仅用于相应章节的适用部分，正文仍须保留原始预测分段范围。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03::forecast-ahead",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU005",
+      "source_fact_id": "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R03",
+      "unit_type": "forecast_risk_point",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": true,
+      "requirement_reason": "nearest_explicit_risk_per_selected_forecast_and_risk_type",
+      "reporting_role": "risk",
+      "evidence": {
+        "risk_type": "掉块风险",
+        "risk_chainage": "DyK1013+492",
+        "risk_chainage_m": 1013492.0,
+        "scope_relation": "ahead",
+        "original_risk_geometry": "point",
+        "original_start_chainage": null,
+        "original_end_chainage": null,
+        "related_forecast_fact_ids": [
+          "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03"
+        ],
+        "source_excerpt": "里程+492 附 近有掉块风 险",
+        "usage_limit": "仅作为原报告预测性风险提示，不得写成已经发生。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::risk::CL-HSP-(七)-8-DyK1013+445::HSP-R03::risk-point-1-1013492000",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU006",
+      "source_fact_id": "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04",
+      "unit_type": "forecast_segment_portion",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": true,
+      "requirement_reason": "tied_at_minimum_non_negative_gap_from_day_end|member_of_retained_difference",
+      "reporting_role": "forecast_core",
+      "evidence": {
+        "original_start_chainage": "DyK1013+506",
+        "original_end_chainage": "DyK1013+545",
+        "geophysical_result": "该段存在较明显反射异常",
+        "forecast_conclusion": "该段围岩较前段变差。岩性以板岩为主，弱风化，岩质软，节理裂隙发育密集，岩体破碎-极破碎，围岩整体稳定性差",
+        "recommended_grade": "Ⅴ",
+        "report_date_basis": {
+          "status": "eligible",
+          "basis_field": "submission_date",
+          "basis_date": "2023-10-06",
+          "reason": "strictly_before_report_date"
+        },
+        "grade_conflict": false,
+        "scope_relation": "ahead",
+        "applicable_start_chainage": "DyK1013+506",
+        "applicable_end_chainage": "DyK1013+545",
+        "crosses_day_end": false,
+        "usage_limit": "按原始预测分段范围表达，不得改写为实际揭露。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04::forecast-ahead",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU007",
+      "source_fact_id": "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R04",
+      "unit_type": "forecast_risk_point",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": true,
+      "requirement_reason": "nearest_explicit_risk_per_selected_forecast_and_risk_type",
+      "reporting_role": "risk",
+      "evidence": {
+        "risk_type": "掉块风险",
+        "risk_chainage": "DyK1013+512",
+        "risk_chainage_m": 1013512.0,
+        "scope_relation": "ahead",
+        "original_risk_geometry": "point",
+        "original_start_chainage": null,
+        "original_end_chainage": null,
+        "related_forecast_fact_ids": [
+          "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04"
+        ],
+        "source_excerpt": "里程+512、 +520、+527、 +535 附近有 掉块风险",
+        "usage_limit": "仅作为原报告预测性风险提示，不得写成已经发生。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::risk::CL-HSP-(七)-8-DyK1013+445::HSP-R04::risk-point-1-1013512000",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU008",
+      "source_fact_id": "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R05",
+      "unit_type": "forecast_risk_point",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": false,
+      "requirement_reason": null,
+      "reporting_role": "risk",
+      "evidence": {
+        "risk_type": "掉块风险",
+        "risk_chainage": "DyK1013+520",
+        "risk_chainage_m": 1013520.0,
+        "scope_relation": "ahead",
+        "original_risk_geometry": "point",
+        "original_start_chainage": null,
+        "original_end_chainage": null,
+        "related_forecast_fact_ids": [
+          "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04"
+        ],
+        "source_excerpt": "里程+512、 +520、+527、 +535 附近有 掉块风险",
+        "usage_limit": "仅作为原报告预测性风险提示，不得写成已经发生。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::risk::CL-HSP-(七)-8-DyK1013+445::HSP-R05::risk-point-1-1013520000",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU009",
+      "source_fact_id": "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R06",
+      "unit_type": "forecast_risk_point",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": false,
+      "requirement_reason": null,
+      "reporting_role": "risk",
+      "evidence": {
+        "risk_type": "掉块风险",
+        "risk_chainage": "DyK1013+527",
+        "risk_chainage_m": 1013527.0,
+        "scope_relation": "ahead",
+        "original_risk_geometry": "point",
+        "original_start_chainage": null,
+        "original_end_chainage": null,
+        "related_forecast_fact_ids": [
+          "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04"
+        ],
+        "source_excerpt": "里程+512、 +520、+527、 +535 附近有 掉块风险",
+        "usage_limit": "仅作为原报告预测性风险提示，不得写成已经发生。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::risk::CL-HSP-(七)-8-DyK1013+445::HSP-R06::risk-point-1-1013527000",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU010",
+      "source_fact_id": "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R07",
+      "unit_type": "forecast_risk_point",
+      "semantics": "prediction",
+      "source_type": "hsp",
+      "allowed_section": "3.2",
+      "required_for_plan": false,
+      "requirement_reason": null,
+      "reporting_role": "risk",
+      "evidence": {
+        "risk_type": "掉块风险",
+        "risk_chainage": "DyK1013+535",
+        "risk_chainage_m": 1013535.0,
+        "scope_relation": "ahead",
+        "original_risk_geometry": "point",
+        "original_start_chainage": null,
+        "original_end_chainage": null,
+        "related_forecast_fact_ids": [
+          "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04"
+        ],
+        "source_excerpt": "里程+512、 +520、+527、 +535 附近有 掉块风险",
+        "usage_limit": "仅作为原报告预测性风险提示，不得写成已经发生。",
+        "daily_guide_shield_start_chainage": "DyK1013+475",
+        "daily_guide_shield_end_chainage": "DyK1013+482"
+      },
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      },
+      "trace_id": "unit::risk::CL-HSP-(七)-8-DyK1013+445::HSP-R07::risk-point-1-1013535000",
+      "source_ref": "SRC001"
+    }
+  ],
+  "required_content_unit_ids": [
+    "CU001",
+    "CU002",
+    "CU003",
+    "CU004",
+    "CU005",
+    "CU006",
+    "CU007"
+  ],
+  "optional_content_unit_ids": [
+    "CU008",
+    "CU009",
+    "CU010"
+  ],
+  "planning_obligations": [
+    {
+      "obligation_id": "coverage::CU001",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.1",
+      "content_unit_ids": [
+        "CU001"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU002",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.1",
+      "content_unit_ids": [
+        "CU002"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU003",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.1",
+      "content_unit_ids": [
+        "CU003"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU004",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.2",
+      "content_unit_ids": [
+        "CU004"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU005",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.2",
+      "content_unit_ids": [
+        "CU005"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU006",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.2",
+      "content_unit_ids": [
+        "CU006"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU007",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.2",
+      "content_unit_ids": [
+        "CU007"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    }
+  ],
+  "source_fact_index": {
+    "observation::CZXZZQ-8-SM-DyK1013+455.2::SKETCH-O01": {
+      "fact_type": "face_observation",
+      "semantics": "observation",
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1013+455.2",
+        "source_type": "sketch",
+        "source_file": "DyK1013+455.20_伯舒拉岭进口右线DyK10+455.2洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "6c12ef6e02ceefe8fbe3681dd8a5ba8cd8f50ba0cbc0b9c4c0f45ac0c0b22467"
+      }
+    },
+    "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I03": {
+      "fact_type": "forecast_segment",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R03": {
+      "fact_type": "forecast_risk",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "forecast::CL-HSP-(七)-8-DyK1013+445::HSP-I04": {
+      "fact_type": "forecast_segment",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R04": {
+      "fact_type": "forecast_risk",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R05": {
+      "fact_type": "forecast_risk",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R06": {
+      "fact_type": "forecast_risk",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    },
+    "risk::CL-HSP-(七)-8-DyK1013+445::HSP-R07": {
+      "fact_type": "forecast_risk",
+      "semantics": "prediction",
+      "source": {
+        "source_report_id": "CL-HSP-(七)-8-DyK1013+445",
+        "source_type": "hsp",
+        "source_file": "DyK1013+445.00_伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1013+445～DyK1013+545)-20231006.pdf",
+        "source_page": 10,
+        "source_section": "第7章表1",
+        "source_sha256": "98645499eef688d28268337eac91be462e58ec8a71a5baeb2f294972944f5f0f"
+      }
+    }
+  },
+  "scope_exclusions": [],
+  "generation_constraints": [
+    "TSP和HSP只能写成原报告预测，不得写成当日实际揭露。",
+    "掌子面素描只代表此前特定日期、特定里程的观察；不得外推为当日整段地质。",
+    "风险按具体点位或原始风险区间相对当日终点分类，不得自行制造风险点。",
+    "跨越当日终点的预测分段可在两节分别表达适用部分，但必须保留原始分段范围。",
+    "多来源预测有实质差异时必须并列表达，不得擅自判定哪一来源正确。",
+    "只能使用validated_plan选中的content_unit，不能从完整source_quote恢复已排除内容。",
+    "原报告建议必须明确来源，不得写成当日已实施措施。",
+    "缺乏资料时允许简短说明，不得为了填充章节扩写历史背景。"
+  ],
+  "provenance_limits": {
+    "report_date_rule": "资料日期严格早于日报日期才可进入；实际分发时刻尚未核实。",
+    "chainage_reference": "施工范围使用修复后的PLC导向盾首里程。",
+    "geometry_limit": "导向盾首至实际掌子面的几何偏移尚未核实。"
+  },
+  "legacy_organized_package_schema": "tbm_geology_30day_organization_v2",
+  "package_check": {
+    "passed": true,
+    "errors": [],
+    "statistics": {
+      "content_unit_count": 10,
+      "required_content_unit_count": 7,
+      "optional_content_unit_count": 3,
+      "planning_obligation_count": 7
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "tbm_geology_content_units_v2",
+  "method_version": "tbm_geology_reporting_v2_2026-10-18_r5",
+  "date": "2024-03-15",
+  "report_structure": {
+    "chapter_title": "三、地质预报与已有地质观察",
+    "section_titles": {
+      "3.1": "当日施工范围相关地质信息",
+      "3.2": "前方地质预报"
+    }
+  },
+  "plc_context": {
+    "source_file": "tbm_data_20240315.csv",
+    "guide_shield_start_m": 1015392.0,
+    "guide_shield_end_m": 1015411.0,
+    "guide_shield_start": "DyK1015+392",
+    "guide_shield_end": "DyK1015+411",
+    "daily_chainage_change_m": 19.0,
+    "spatial_status": "usable_with_existing_daily_range",
+    "spatial_matching_allowed": true,
+    "spatial_audit_note": "采用逐记录字段映射统一后的导向盾首里程首末范围。",
+    "spatial_usage_limit": "施工范围采用PLC导向盾首里程；未掌握导向盾首至掌子面的可靠偏移量，不得把两者认定为完全相同位置。"
+  },
+  "content_units": [
+    {
+      "unit_id": "CU001",
+      "source_fact_id": "observation::CZXZZQ-8-SM-DyK1015+317::SKETCH-O01",
+      "unit_type": "historical_observation_context",
+      "semantics": "observation",
+      "source_type": "sketch",
+      "allowed_section": "3.1",
+      "required_for_plan": true,
+      "requirement_reason": "nearest_available_prior_observation_context",
+      "reporting_role": "historical_context",
+      "evidence": {
+        "observation_chainage": "DyK1015+317",
+        "observation_date": "2024-03-14",
+        "date_source": "observation_date",
+        "availability_time_status": "date_only_actual_distribution_time_unverified",
+        "distance_behind_day_start_m": 75.0,
+        "usage_limit": "这是此前特定里程的观察记录；不得外推为当日施工范围的实际揭露，也不得假设导向盾首与掌子面的固定偏移。",
+        "daily_guide_shield_start_chainage": "DyK1015+392",
+        "daily_guide_shield_end_chainage": "DyK1015+411"
+      },
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1015+317",
+        "source_type": "sketch",
+        "source_file": "DyK1015+317.00_伯舒拉岭右线DyK1015+317洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "5064636028caf4edc74bb3a0157a45d761cf1e92d23bb6b0e03e566e07ce0217"
+      },
+      "trace_id": "unit::observation::CZXZZQ-8-SM-DyK1015+317::SKETCH-O01::observation-context",
+      "source_ref": "SRC001"
+    },
+    {
+      "unit_id": "CU002",
+      "source_fact_id": "observation::CZXZZQ-8-SM-DyK1015+317::SKETCH-O01",
+      "unit_type": "historical_observation_summary",
+      "semantics": "observation",
+      "source_type": "sketch",
+      "allowed_section": "3.1",
+      "required_for_plan": true,
+      "requirement_reason": "compact_summary_of_nearest_prior_observation",
+      "reporting_role": "historical_background",
+      "evidence": {
+        "observation_chainage": "DyK1015+317",
+        "observation_date": "2024-03-14",
+        "source_geological_summary": "伯舒拉岭隧道进口右线DyK1015+317~DyK1015+347洞身推测岩性为石炭二叠系变质砂岩夹板岩 ，矿物成分以石英、长石为主，钙质胶结；围岩整体弱风化，锤击声较清脆，有轻微回弹，稍震手， 较难击碎，为硬岩，节理裂隙发育，岩体较破碎-破碎，拱顶部分节理裂隙发育相对密集，岩体破碎， 呈碎石状压碎结构，存在掉块风险，掌子面见线状出水",
+        "selected_observation_fields": {
+          "face_state": [
+            "正面掉块"
+          ],
+          "excavated_surface_state": [
+            "随时间松弛、掉块"
+          ],
+          "rock_strength_category": "30＜R≤60",
+          "weathering_degree": "弱风化",
+          "structural_plane_spacing_m": "0.2～0.6",
+          "structural_plane_persistence": "差",
+          "structural_plane_roughness": "平整光滑有擦痕",
+          "structural_plane_aperture_mm": "部分张开0.1～0.5",
+          "karst_development": "无"
+        },
+        "water_entry": {
+          "selected_category": "其它",
+          "raw_value": "8",
+          "value": 8.0,
+          "unit_raw": "L/min1·10m",
+          "source_quote": "其它；8"
+        },
+        "source_assessed_grade": "Ⅳ",
+        "grade_conflict": false,
+        "usage_limit": "仅作历史背景，保持观察、原报告推测和等级判定的语义边界。",
+        "daily_guide_shield_start_chainage": "DyK1015+392",
+        "daily_guide_shield_end_chainage": "DyK1015+411"
+      },
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1015+317",
+        "source_type": "sketch",
+        "source_file": "DyK1015+317.00_伯舒拉岭右线DyK1015+317洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "5064636028caf4edc74bb3a0157a45d761cf1e92d23bb6b0e03e566e07ce0217"
+      },
+      "trace_id": "unit::observation::CZXZZQ-8-SM-DyK1015+317::SKETCH-O01::observation-core",
+      "source_ref": "SRC001"
+    }
+  ],
+  "required_content_unit_ids": [
+    "CU001",
+    "CU002"
+  ],
+  "optional_content_unit_ids": [],
+  "planning_obligations": [
+    {
+      "obligation_id": "coverage::CU001",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.1",
+      "content_unit_ids": [
+        "CU001"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    },
+    {
+      "obligation_id": "coverage::CU002",
+      "obligation_type": "required_content_coverage",
+      "section_id": "3.1",
+      "content_unit_ids": [
+        "CU002"
+      ],
+      "must_preserve": [
+        "semantics",
+        "source",
+        "chainage_or_interval"
+      ]
+    }
+  ],
+  "source_fact_index": {
+    "observation::CZXZZQ-8-SM-DyK1015+317::SKETCH-O01": {
+      "fact_type": "face_observation",
+      "semantics": "observation",
+      "source": {
+        "source_report_id": "CZXZZQ-8-SM-DyK1015+317",
+        "source_type": "sketch",
+        "source_file": "DyK1015+317.00_伯舒拉岭右线DyK1015+317洞身素描记录表.pdf",
+        "source_page": 1,
+        "source_section": "洞身段地质素描记录表",
+        "source_sha256": "5064636028caf4edc74bb3a0157a45d761cf1e92d23bb6b0e03e566e07ce0217"
+      }
+    }
+  },
+  "scope_exclusions": [],
+  "generation_constraints": [
+    "TSP和HSP只能写成原报告预测，不得写成当日实际揭露。",
+    "掌子面素描只代表此前特定日期、特定里程的观察；不得外推为当日整段地质。",
+    "风险按具体点位或原始风险区间相对当日终点分类，不得自行制造风险点。",
+    "跨越当日终点的预测分段可在两节分别表达适用部分，但必须保留原始分段范围。",
+    "多来源预测有实质差异时必须并列表达，不得擅自判定哪一来源正确。",
+    "只能使用validated_plan选中的content_unit，不能从完整source_quote恢复已排除内容。",
+    "原报告建议必须明确来源，不得写成当日已实施措施。",
+    "缺乏资料时允许简短说明，不得为了填充章节扩写历史背景。"
+  ],
+  "provenance_limits": {
+    "report_date_rule": "资料日期严格早于日报日期才可进入；实际分发时刻尚未核实。",
+    "chainage_reference": "施工范围使用修复后的PLC导向盾首里程。",
+    "geometry_limit": "导向盾首至实际掌子面的几何偏移尚未核实。"
+  },
+  "legacy_organized_package_schema": "tbm_geology_30day_organization_v2",
+  "package_check": {
+    "passed": true,
+    "errors": [],
+    "statistics": {
+      "content_unit_count": 2,
+      "required_content_unit_count": 2,
+      "optional_content_unit_count": 0,
+      "planning_obligation_count": 2
+    }
+  }
+}

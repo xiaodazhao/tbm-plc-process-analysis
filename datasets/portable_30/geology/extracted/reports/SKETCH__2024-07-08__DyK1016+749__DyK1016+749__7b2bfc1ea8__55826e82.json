@@ -1,0 +1,151 @@
+{
+  "schema_version": "tbm_geology_evidence_v2",
+  "document_type": "掌子面素描记录",
+  "extraction_scope": "表格及地质描述文字，不处理示意图",
+  "report_metadata": {
+    "source_report_id": "CZXZZQ-8-SM-DyK1016+749",
+    "source_file": "DyK1016+749.00_伯舒拉岭右线洞身素描记录表 38.pdf",
+    "source_type": "sketch",
+    "tunnel_name": "伯舒拉岭隧道进口右线",
+    "alignment": "right",
+    "chainage_prefix": "DyK",
+    "coverage_start_m": 1016749.0,
+    "coverage_end_m": 1016749.0,
+    "coverage_start": "DyK1016+749",
+    "coverage_end": "DyK1016+749",
+    "coverage_source_quote": "里程：DyK1016+749",
+    "test_date": null,
+    "test_date_source": null,
+    "cover_date": null,
+    "cover_date_source": null,
+    "submission_date": null,
+    "submission_date_source": null,
+    "observation_date": "2024-07-08",
+    "observation_date_source": {
+      "source_file": "DyK1016+749.00_伯舒拉岭右线洞身素描记录表 38.pdf",
+      "source_report_id": "CZXZZQ-8-SM-DyK1016+749",
+      "source_page": 1,
+      "source_page_type": "pdf_actual_page_1_based",
+      "source_page_printed": 1,
+      "source_section": "素描记录表签署栏",
+      "source_quote": "日期：2024年7月8日"
+    },
+    "date_conflicts": [],
+    "identifier_conflicts": [],
+    "actual_distribution_time_verified": false,
+    "page_count": 1,
+    "source_sha256": "7b2bfc1ea8d513c2ce8c3360428afb08a52a8545777873a72cde044eb96739a9",
+    "source_bytes": 262757,
+    "chainage_reference": "DyK",
+    "chainage_alignment_note": "当前项目统一采用地质报告中的DyK里程，不进行DK/DyK转换。"
+  },
+  "observation": {
+    "observation_id": "SKETCH-O01",
+    "semantics": "observation",
+    "geometry": "point",
+    "chainage_m": 1016749.0,
+    "chainage": "DyK1016+749",
+    "face_dimensions": {
+      "excavation_width_m": null,
+      "excavation_height_m": null,
+      "excavation_area_m2": null,
+      "excavation_method": "全断面",
+      "cell_evidence": {
+        "width": {
+          "raw_fragments": [],
+          "raw_joined": "",
+          "value": null,
+          "character_boxes": [],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        },
+        "height": {
+          "raw_fragments": [],
+          "raw_joined": "",
+          "value": null,
+          "character_boxes": [],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        },
+        "area": {
+          "raw_fragments": [],
+          "raw_joined": "",
+          "value": null,
+          "character_boxes": [],
+          "extraction_method": "coordinate_bounded_cell_reconstruction"
+        }
+      }
+    },
+    "selected_fields": {
+      "face_state": [
+        "正面掉块"
+      ],
+      "excavated_surface_state": [
+        "随时间松弛、掉块"
+      ],
+      "rock_strength_category": "15＜R≤30",
+      "weathering_degree": "弱风化",
+      "structural_plane_spacing_m": "0.2～0.6",
+      "structural_plane_persistence": "中等",
+      "structural_plane_roughness": "平整光滑有擦痕",
+      "structural_plane_aperture_mm": "密闭＜0.1",
+      "karst_development": "无"
+    },
+    "water_entry": {
+      "selected_category": "其它",
+      "raw_value": "96",
+      "value": 96.0,
+      "unit_raw": "L/min1 · 10m",
+      "source_quote": "其它；96"
+    },
+    "design_grade": "Ⅲ",
+    "table_suggested_grade": "Ⅲ",
+    "narrative_conclusion_grade": "Ⅲ",
+    "grade_conflict": false,
+    "geological_description": "伯舒拉岭隧道进口右线 DyK1016+749~DyK1016+779 段洞身推测岩性为石炭二叠系板岩夹变质砂 岩，围岩整体弱风化，板岩为变余结构，板状构造，板状劈理发育，锤击易碎、声闷，为软岩；变 质砂岩为变余砂状结构，薄层状构造，矿物成分以石英、长石为主，钙质胶结。节理裂隙较发育， 岩体较破碎，锤击声脆、不易碎，为硬岩；当前开挖段落DyK1016+719~DyK1016+749 段岩体较破 碎，岩质软硬不均，两侧边墙存在线状出水。目前洞身处于设计的低高地温带，当前洞内温度约3 1℃。 板理产状：N45°E/52°S。同时发育3组节理裂隙，产状如下： J1 ：N61°E/73°N，d=0.5~1m ，L= 20m，平直、光滑、微张、无充填； J2 ：N32°E/31°N，d=0.2~0.4m ，L=2~4m ，平直、光滑、密闭、无充填； J3 ：N42°E/58°N，d=0.2~0.4m ，L=3~6m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅲ级。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位置应 提前支护， 防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机。 当前开挖段落见线状出水，建议做好拱底防排水措施。 目前处于设计的低高地温带，洞内温度约31℃，现场应实时测量洞内温度，做好人员、机具的防 护工作，如有高温异常，及时与建设各方联系。",
+    "source_file": "DyK1016+749.00_伯舒拉岭右线洞身素描记录表 38.pdf",
+    "source_report_id": "CZXZZQ-8-SM-DyK1016+749",
+    "source_page": 1,
+    "source_page_type": "pdf_actual_page_1_based",
+    "source_page_printed": 1,
+    "source_section": "洞身段地质素描记录表",
+    "source_quote": "伯舒拉岭隧道进口右线 DyK1016+749~DyK1016+779 段洞身推测岩性为石炭二叠系板岩夹变质砂 岩，围岩整体弱风化，板岩为变余结构，板状构造，板状劈理发育，锤击易碎、声闷，为软岩；变 质砂岩为变余砂状结构，薄层状构造，矿物成分以石英、长石为主，钙质胶结。节理裂隙较发育， 岩体较破碎，锤击声脆、不易碎，为硬岩；当前开挖段落DyK1016+719~DyK1016+749 段岩体较破 碎，岩质软硬不均，两侧边墙存在线状出水。目前洞身处于设计的低高地温带，当前洞内温度约3 1℃。 板理产状：N45°E/52°S。同时发育3组节理裂隙，产状如下： J1 ：N61°E/73°N，d=0.5~1m ，L= 20m，平直、光滑、微张、无充填； J2 ：N32°E/31°N，d=0.2~0.4m ，L=2~4m ，平直、光滑、密闭、无充填； J3 ：N42°E/58°N，d=0.2~0.4m ，L=3~6m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅲ级。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位置应 提前支护， 防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机。 当前开挖段落见线状出水，建议做好拱底防排水措施。 目前处于设计的低高地温带，洞内温度约31℃，现场应实时测量洞内温度，做好人员、机具的防 护工作，如有高温异常，及时与建设各方联系。",
+    "normalized_fact": {
+      "type": "face_observation_at_point",
+      "chainage": "DyK1016+749",
+      "description": "伯舒拉岭隧道进口右线 DyK1016+749~DyK1016+779 段洞身推测岩性为石炭二叠系板岩夹变质砂 岩，围岩整体弱风化，板岩为变余结构，板状构造，板状劈理发育，锤击易碎、声闷，为软岩；变 质砂岩为变余砂状结构，薄层状构造，矿物成分以石英、长石为主，钙质胶结。节理裂隙较发育， 岩体较破碎，锤击声脆、不易碎，为硬岩；当前开挖段落DyK1016+719~DyK1016+749 段岩体较破 碎，岩质软硬不均，两侧边墙存在线状出水。目前洞身处于设计的低高地温带，当前洞内温度约3 1℃。 板理产状：N45°E/52°S。同时发育3组节理裂隙，产状如下： J1 ：N61°E/73°N，d=0.5~1m ，L= 20m，平直、光滑、微张、无充填； J2 ：N32°E/31°N，d=0.2~0.4m ，L=2~4m ，平直、光滑、密闭、无充填； J3 ：N42°E/58°N，d=0.2~0.4m ，L=3~6m ，平直、光滑、密闭、无充填。 综上所述，判定洞身围岩为Ⅲ级。 建议：在开挖后及时对左右两侧边墙处松动的岩块进行处理，对局部岩体破碎、易掉块的位置应 提前支护， 防止掉块，如有异常及时上报，确保隧道施工和人员安全，避免设备受损和卡机。 当前开挖段落见线状出水，建议做好拱底防排水措施。 目前处于设计的低高地温带，洞内温度约31℃，现场应实时测量洞内温度，做好人员、机具的防 护工作，如有高温异常，及时与建设各方联系。"
+    }
+  },
+  "forecast_intervals": [],
+  "risk_records": [],
+  "quality_validation": {
+    "status": "validated",
+    "checks": [
+      {
+        "check": "observation_date_present",
+        "status": "pass",
+        "detail": "observation_date=2024-07-08"
+      },
+      {
+        "check": "observation_chainage_present",
+        "status": "pass",
+        "detail": "Point chainage required."
+      },
+      {
+        "check": "sketch_is_point_not_interval",
+        "status": "pass",
+        "detail": "Sketch must remain a point observation."
+      },
+      {
+        "check": "sketch_description_present",
+        "status": "pass",
+        "detail": "Narrative description required."
+      },
+      {
+        "check": "sketch_grade_present",
+        "status": "pass",
+        "detail": "Suggested grade required."
+      }
+    ],
+    "issues": [],
+    "failed_check_count": 0
+  }
+}
