@@ -39,6 +39,7 @@ from tbm_process.final_reporting.validation import validate_report
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--date", required=True)
+    parser.add_argument("--profile", choices=["portable"], help="Explicitly replay the historical portable baseline, not the current engineering method.")
     parser.add_argument(
         "--analysis-dir", type=Path,
         default=ROOT / "datasets/portable_30/analysis",
@@ -181,7 +182,7 @@ def _render(
     return {"html": str(html_path), "pdf": str(pdf_path) if not args.skip_pdf else None, "validation_passed": validation["passed"]}
 
 
-def main() -> None:
+def portable_main() -> None:
     args = parse_args()
     date = args.date
     output = args.output_dir.expanduser().resolve() / date
@@ -303,6 +304,14 @@ def main() -> None:
     }
     write_json(output / "run_summary.json", result)
     print(json.dumps(result, ensure_ascii=False))
+
+
+def main() -> None:
+    if any(arg == "--profile" or arg.startswith("--profile=") for arg in sys.argv[1:]):
+        portable_main()
+    else:
+        from tbm_process.engineering_reporting.cli import main as engineering_main
+        engineering_main()
 
 
 if __name__ == "__main__":

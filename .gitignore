@@ -43,3 +43,8 @@ venv/
 *.tar.gz
 *.tmp
 *.log
+# Machine-local source documents, retrieval indexes and credentials are never published.
+local_data/
+archives/
+.cache/
+tmp/

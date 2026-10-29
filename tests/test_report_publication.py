@@ -188,7 +188,7 @@ def test_pdf_check_handles_unavailable_stable_statistics(tmp_path):
 
 @pytest.mark.parametrize('day',['2023-12-20','2024-01-24','2024-04-19'])
 def test_saved_real_days_replay_without_algorithms_or_API(day):
-    root=Path.home()/'Desktop/TBM_论文研究候选冻结版_20261028/run1/selection_preflight'/day
+    root=Path(__file__).resolve().parents[1]/'local_data/publication_regression'/day
     if not (root/'report_facts.json').exists():pytest.skip('Local research evidence not distributed with unit tests')
     package=json.loads((root/'report_facts.json').read_text());pack=json.loads((root/'evidence_pack.json').read_text())
     frame=pd.read_csv(package['source']['samples']);frame.time=pd.to_datetime(frame.time)

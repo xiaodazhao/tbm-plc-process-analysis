@@ -31,6 +31,7 @@ def test_integrated_dry_run_uses_packaged_data_without_api(tmp_path: Path) -> No
         [
             sys.executable,
             str(ROOT / "scripts/run_integrated_report.py"),
+            "--profile", "portable",
             "--date", "2024-01-06",
             "--dry-run",
             "--output-dir", str(tmp_path),
