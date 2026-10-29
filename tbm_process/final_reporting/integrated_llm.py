@@ -361,10 +361,11 @@ def validate_draft(draft: dict[str, Any], plan: dict[str, Any], package: dict[st
     return {"passed": not errors, "errors": errors, "review_items": review_items, "covered_fact_ids": sorted(covered)}
 
 
-def call_json_model(request: dict[str, Any], *, api_key: str, base_url: str, timeout_seconds: float) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+def call_json_model(request: dict[str, Any], *, api_key: str, base_url: str, timeout_seconds: float,
+                    max_retries: int = 1) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     from openai import OpenAI
 
-    client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds, max_retries=1)
+    client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds, max_retries=max_retries)
     started = time.monotonic()
     response = client.chat.completions.create(**request)
     raw_response = response.model_dump(mode="json")

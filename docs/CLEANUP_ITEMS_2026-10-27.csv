@@ -1,0 +1,54 @@
+﻿path,reason,files,bytes
+.DS_Store,Automatically generated cache or macOS directory metadata.,1,18436
+.pytest_cache,Automatically generated cache or macOS directory metadata.,5,30949
+experiments/.DS_Store,Automatically generated cache or macOS directory metadata.,1,12292
+experiments/geo_evidence_alignment_v1,Independent historical research branch; not imported by retained report/data-repair code.,12,177589
+experiments/geology_dwg_read_pilot,Independent historical research branch; not imported by retained report/data-repair code.,29,307639450
+experiments/geology_machine_response,Independent historical research branch; not imported by retained report/data-repair code.,210,99648198
+experiments/geology_model_feasibility_20261024,Independent historical research branch; not imported by retained report/data-repair code.,1,9360
+experiments/geology_model_trial_20261025,Independent historical research branch; not imported by retained report/data-repair code.,2,42669
+experiments/hsp_waveform_replay_20261024,Independent historical research branch; not imported by retained report/data-repair code.,2,41310
+experiments/plc_event_pilot,Independent historical research branch; not imported by retained report/data-repair code.,108,22744759
+experiments/plc_extended_analysis,Independent historical research branch; not imported by retained report/data-repair code.,325,63272741
+experiments/plc_schema_alignment_audit,Independent historical research branch; not imported by retained report/data-repair code.,17,47422870
+experiments/sketch_numeric_response_v1,Independent historical research branch; not imported by retained report/data-repair code.,74,17936614
+experiments/tsp_velocity_inference_20261025,Independent historical research branch; not imported by retained report/data-repair code.,6,103180
+scripts/__pycache__,Automatically generated cache or macOS directory metadata.,3,47489
+tbm_process/.DS_Store,Automatically generated cache or macOS directory metadata.,1,8196
+tbm_process/__pycache__,Automatically generated cache or macOS directory metadata.,4,9750
+tests/.DS_Store,Automatically generated cache or macOS directory metadata.,1,6148
+tests/__pycache__,Automatically generated cache or macOS directory metadata.,39,775365
+tests/test_plc_event_pilot.py,Archived with the retired standalone anomaly experiment; not a report dependency.,1,4397
+tests/test_plc_event_pilot_round2.py,Archived with the retired standalone anomaly experiment; not a report dependency.,1,3705
+experiments/plc_mapping_repair_v1/.DS_Store,Automatically generated cache or macOS directory metadata.,1,6148
+experiments/plc_mapping_repair_v1/PACKAGE_MANIFEST.csv,Old package inventory would no longer describe this working tree.,1,846874
+experiments/plc_mapping_repair_v1/__pycache__,Automatically generated cache or macOS directory metadata.,3,61292
+experiments/plc_mapping_repair_v1/assess_impact.py,Historical before/after impact evaluator uses an external old project; existing after facts are retained.,1,11886
+experiments/plc_mapping_repair_v1/build_delivery.py,Historical delivery packager; not used by current reports or data repair.,1,27075
+experiments/plc_mapping_repair_v1/package_verification.json,"Verification of an old delivery, not of this working tree.",1,538
+experiments/plc_mapping_repair_v1/refine_v1r2.py,One-time migration already applied; current repair.py contains the r2 rules.,1,3348
+experiments/plc_mapping_repair_v1/rerun_30.py,Historical 30-day model rerun depends on archived experiments; not used by current reports.,1,26788
+experiments/plc_mapping_repair_v1/rerun_outputs,"Historical model reruns, retained in the verified external snapshot.",365,33143913
+experiments/plc_mapping_repair_v1/source_snapshots,Duplicate historical source copies; live source and complete external snapshot are retained.,56,574086
+experiments/plc_standardized_export_20261025/__pycache__,Automatically generated cache or macOS directory metadata.,2,64430
+tbm_process/contracts/__pycache__,Automatically generated cache or macOS directory metadata.,6,12455
+tbm_process/dynamics/__pycache__,Automatically generated cache or macOS directory metadata.,8,111065
+tbm_process/evidence_graph/__pycache__,Automatically generated cache or macOS directory metadata.,7,102663
+tbm_process/facts/__pycache__,Automatically generated cache or macOS directory metadata.,4,34046
+tbm_process/final_reporting/__pycache__,Automatically generated cache or macOS directory metadata.,24,364766
+tbm_process/geology_store/__pycache__,Automatically generated cache or macOS directory metadata.,6,71317
+tbm_process/ingestion/__pycache__,Automatically generated cache or macOS directory metadata.,10,70371
+tbm_process/orchestration/__pycache__,Automatically generated cache or macOS directory metadata.,6,94847
+tbm_process/outputs/__pycache__,Automatically generated cache or macOS directory metadata.,4,40786
+tbm_process/process/__pycache__,Automatically generated cache or macOS directory metadata.,8,225718
+tbm_process/quality/__pycache__,Automatically generated cache or macOS directory metadata.,4,43154
+tbm_process/reporting/__pycache__,Automatically generated cache or macOS directory metadata.,8,351443
+tbm_process/reporting_v2/__pycache__,Automatically generated cache or macOS directory metadata.,6,167828
+experiments/plc_mapping_repair_v1/impact/report_fact_changes,"Historical detailed before/after fact diffs, retained externally.",326,15578084
+experiments/plc_mapping_repair_v1/replay/.DS_Store,Automatically generated cache or macOS directory metadata.,1,6148
+experiments/plc_mapping_repair_v1/replay/before,Pre-repair comparison data; current after data stays at its existing path.,1649,587619686
+experiments/plc_mapping_repair_v1/replay/comparisons,"Historical per-row before/after diffs; retained externally, not consumed by current report entries.",1316,669095814
+experiments/plc_mapping_repair_v1/impact/geology_matches/before,Historical pre-repair matching; all after matches are retained.,329,182668051
+experiments/plc_mapping_repair_v1/impact/geology_runtime_inputs/before,Historical pre-repair matcher context.,329,346593
+experiments/plc_mapping_repair_v1/impact/report_facts/before,Historical pre-repair facts; all after facts are retained.,326,35006798
+experiments/plc_mapping_repair_v1/impact/table_inputs/before,Historical pre-repair temporary table exports.,658,8431870

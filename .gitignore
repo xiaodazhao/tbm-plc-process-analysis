@@ -27,6 +27,16 @@ venv/
 /outputs/*
 !/outputs/README.md
 
+# Current repaired PLC inputs and generated provenance remain local, not source.
+/experiments/plc_mapping_repair_v1/repaired_raw/
+/experiments/plc_mapping_repair_v1/repair_provenance/
+/experiments/plc_mapping_repair_v1/r2_extra_provenance/
+/experiments/plc_mapping_repair_v1/row_layouts/
+/experiments/plc_mapping_repair_v1/independent_evidence/
+/experiments/plc_mapping_repair_v1/figures/
+/experiments/plc_mapping_repair_v1/replay/
+/experiments/plc_mapping_repair_v1/impact/
+
 # Local archives and temporary files
 *.zip
 *.tar
