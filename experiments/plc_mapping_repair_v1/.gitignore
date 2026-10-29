@@ -1,0 +1,8 @@
+# Repaired engineering data and detailed generated tables stay on this machine.
+/*
+!/.gitignore
+!/*.py
+!/*.md
+!/repair_rules.json
+!/audit_summary.json
+!/FINAL_SUMMARY.json

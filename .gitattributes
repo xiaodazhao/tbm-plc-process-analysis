@@ -1,0 +1,3 @@
+# Preserve the exact bytes used by frozen source and experiment SHA manifests.
+# Python accepts LF on Windows; automatic CRLF conversion would invalidate hashes.
+* -text

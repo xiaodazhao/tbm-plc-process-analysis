@@ -1,0 +1,39 @@
+{
+  "schema_version": "tbm_engineering_daily_v2_20261027",
+  "equipment": {
+    "diameter_m": 10.23,
+    "cutter_count": 70,
+    "maximum_rpm": 6.65,
+    "drive_power_kw": 5600,
+    "rated_torque_knm": 17504,
+    "reference_thrust_kn": 40914,
+    "reference_pressure_bar": 350,
+    "reference_advance_speed_mm_min": 100,
+    "evidence": "user_confirmation_2026-10-27_not_independent_manufacturer_verification"
+  },
+  "units": {"advance_speed": "mm/min", "thrust": "kN", "torque": "kN·m", "rpm_canonical": "r/min", "pr": "mm/r", "fpi": "kN/(把·mm)", "se": "MJ/m³"},
+  "analysis": {
+    "minimum_speed_mm_min": 0.5,
+    "minimum_rpm": 0.5,
+    "minimum_pr_mm_rev": 0.1,
+    "minimum_samples": 8,
+    "minimum_duration_seconds": 180,
+    "window_seconds": 300,
+    "hard_gap_seconds": 180,
+    "comparison_rpm_relative_tolerance": 0.15,
+    "comparison_thrust_relative_tolerance": 0.25,
+    "notable_relative_change": 0.20,
+    "minimum_daily_coverage_ratio": 0.80,
+    "maximum_selected_platforms": 6,
+    "maximum_attention_items": 4,
+    "ahead_metres": 20,
+    "maximum_sketch_images": 2,
+    "history_lookback_days": 30
+  },
+  "parameter_status": "report_level_pilot_parameters_not_equipment_safety_limits",
+  "minimum_pr_basis": "conservative_pilot_denominator_guard_not_sensor_resolution_or_rock_threshold",
+  "geology_policy": "prior_day_documents_only_unless_explicit_availability_timestamp_verified",
+  "shield_face_offset_m": null,
+  "design_records": [],
+  "direction": "infer_from_quality_checked_net_chainage_then_prior_history"
+}

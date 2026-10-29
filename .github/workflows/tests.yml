@@ -14,4 +14,4 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install -r requirements-geology-store.txt
-      - run: python -m pytest -q
+      - run: python -m pytest tests -q

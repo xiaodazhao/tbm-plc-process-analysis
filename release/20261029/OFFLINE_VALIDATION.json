@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "same_PLC_source_SHA": true,
+    "same_daily_statistics": true,
+    "coverage_reproduced": true,
+    "comparison_reproduced": true,
+    "replay_coverage_equal_to_accepted": true,
+    "replay_comparison_equal_to_accepted": true,
+    "replay_fact_IDs_equal_to_accepted": true,
+    "plan_passes_current_rules": true,
+    "body_passes_current_rules": true,
+    "no_API_call_log_in_offline_replay": true,
+    "unsent_request_exists": true,
+    "all_final_paragraphs_present_in_PDF": true
+  },
+  "pages": 3,
+  "new_API_calls": 0,
+  "semantic_status": "REVIEW",
+  "not_independent_engineering_accuracy": true
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "tbm_field_profile_v2",
+  "profile_id": "tbm9_2023",
+  "guidance_chainage_mapping": {
+    "enabled": true,
+    "version": "tbm9_guidance_chainage_alignment_v1_2026-10-17",
+    "fields": {
+      "roll": "导向滚动角",
+      "head": "导向盾首里程",
+      "middle": "导向盾中里程",
+      "tail": "导向盾尾里程"
+    },
+    "valid_chainage_min": 900000.0,
+    "valid_chainage_max": 1100000.0,
+    "head_middle_spacing_min_m": 5.0,
+    "head_middle_spacing_max_m": 30.0,
+    "maximum_short_gap_seconds": 120.0,
+    "maximum_short_gap_step_m": 30.0,
+    "unresolved_action": "exclude_from_absolute_chainage_use_without_interpolation"
+  },
+  "aliases": {
+    "time": ["运行时间-time", "timestamp", "time", "datetime"],
+    "raw_state": ["掘进状态", "施工状态", "state"],
+    "chainage": ["导向盾首里程", "当前里程", "chainage", "里程"],
+    "cumulative_advance": ["开累进尺", "累计进尺", "cumulative_advance"],
+    "advance_speed_raw": ["推进速度", "advance_speed", "actual_speed"],
+    "advance_speed_set": ["推进给定速度", "给定速度", "set_speed"],
+    "thrust": ["推力", "总推力", "thrust"],
+    "torque": ["刀盘扭矩", "扭矩", "torque"],
+    "rpm_actual_raw": ["刀盘实际转速", "刀盘转速", "rpm"],
+    "rpm_alternate_raw": ["刀盘给定频率", "cutterhead_set_frequency"],
+    "rpm_set": ["刀盘给定转速", "cutterhead_set_rpm"],
+    "motor_frequency_m1": ["M1电机频率", "M1频率", "motor_frequency_m1"],
+    "penetration_raw": ["贯入度", "penetration"]
+  }
+}

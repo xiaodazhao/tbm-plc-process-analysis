@@ -1,0 +1,74 @@
+{
+  "schema_version": "tbm_report_parameter_registry_v1",
+  "profile_id": "tbm9_2023",
+  "evidence_status": "no_plc_point_table_found_in_project_or_tbm9_data_directory",
+  "parameters": {
+    "advance_speed": {
+      "display_name": "推进速度",
+      "raw_field": "推进速度",
+      "analysis_column": "advance_speed",
+      "transformation": "numeric_identity_after_invalid_negative_and_extreme_value_filtering",
+      "engineering_unit": null,
+      "unit_status": "unconfirmed_no_plc_point_table",
+      "formal_numeric_reporting": false,
+      "research_raw_reporting": true,
+      "value_label": "原始PLC记录值，工程单位待核实",
+      "quality_note": "Only quality-controlled advance_speed values are used. The distance-integration code assumes a scale compatible with division by 60000, but code behavior is not accepted as authoritative unit evidence."
+    },
+    "thrust": {
+      "display_name": "总推力",
+      "raw_field": "推力",
+      "analysis_column": "thrust",
+      "transformation": "numeric_identity_no_unit_scaling",
+      "engineering_unit": null,
+      "unit_status": "unconfirmed_no_plc_point_table",
+      "formal_numeric_reporting": false,
+      "research_raw_reporting": true,
+      "value_label": "原始PLC记录值，工程单位待核实",
+      "quality_note": "No dedicated thrust outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+    },
+    "torque": {
+      "display_name": "刀盘扭矩",
+      "raw_field": "刀盘扭矩",
+      "analysis_column": "torque",
+      "transformation": "numeric_identity_no_unit_scaling",
+      "engineering_unit": null,
+      "unit_status": "unconfirmed_no_plc_point_table",
+      "formal_numeric_reporting": false,
+      "research_raw_reporting": true,
+      "value_label": "原始PLC记录值，工程单位待核实",
+      "quality_note": "No dedicated torque outlier rule exists; report statistics are restricted to the declared operating scope and finite numeric records."
+    },
+    "rpm": {
+      "display_name": "刀盘转速",
+      "raw_field": "刀盘实际转速（切换前）/刀盘给定频率（切换后）",
+      "analysis_column": "rpm_canonical",
+      "transformation": "provisional_switch_mapping_v1_then_reference_quality_filter",
+      "engineering_unit": null,
+      "unit_status": "provisional_mapping_and_unit_unconfirmed",
+      "formal_numeric_reporting": false,
+      "research_raw_reporting": true,
+      "value_label": "暂定统一原始记录值，字段映射及工程单位待核实",
+      "quality_note": "The canonical RPM mapping is provisional pending the PLC point table; 2023-11-03 uses the pre-switch 刀盘实际转速 source when the quality rule accepts it."
+    },
+    "penetration": {
+      "display_name": "贯入度",
+      "raw_field": "贯入度",
+      "analysis_column": "penetration_analysis",
+      "transformation": "quality_controlled_raw_or_advance_speed_divided_by_provisional_canonical_rpm",
+      "engineering_unit": null,
+      "unit_status": "unconfirmed_and_partly_derived_from_provisional_mapping",
+      "formal_numeric_reporting": false,
+      "research_raw_reporting": false,
+      "value_label": "不进入当前日报定量表",
+      "quality_note": "Penetration remains a phase-analysis signal and is withheld from report-level quantitative tables because some values are quality-filtered or reconstructed from speed and provisional RPM."
+    }
+  },
+  "evidence": [
+    "Raw CSV header contains field names but no engineering units.",
+    "configs/field_profiles/tbm9_2023.json maps aliases but defines no unit conversion.",
+    "tbm_process/ingestion/io.py performs numeric coercion without unit scaling.",
+    "tbm_process/quality/preprocessing.py filters speed and creates a provisional RPM mapping.",
+    "No PLC point table, parameter data dictionary, unit table or equipment manual was found by filename in the project or TBM9 data directory."
+  ]
+}

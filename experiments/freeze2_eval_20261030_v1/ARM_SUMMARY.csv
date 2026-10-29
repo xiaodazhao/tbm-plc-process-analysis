@@ -1,0 +1,9 @@
+﻿scope,arm,locked_dates,input_prepared,generated,PDF_generated,body_rules_passed,artifact_check_passed,revisions_triggered,actual_calls_marginal,input_tokens_marginal,output_tokens_marginal,HTTP_or_parse_failures,human_fact_support,human_coverage,human_readability
+interface,A,4,4,4,4,4,4,0,4,23377,8774,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+interface,B,4,4,4,4,0,4,0,4,27158,9423,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+interface,C,4,4,4,4,4,4,0,8,51452,14072,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+interface,D,4,4,4,4,4,4,0,4,31181,8594,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+formal,A,30,30,30,30,22,30,0,30,181379,65059,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+formal,B,30,30,30,30,2,30,0,30,211635,66670,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+formal,C,30,30,30,30,23,30,0,67,453330,115219,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED
+formal,D,30,30,30,30,24,30,7,37,243638,65728,0,NOT_EVALUATED,NOT_EVALUATED,NOT_EVALUATED

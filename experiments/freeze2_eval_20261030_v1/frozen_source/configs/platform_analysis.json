@@ -1,0 +1,40 @@
+{
+  "schema_version": "tbm_platform_first_experiment_v1",
+  "status": "experimental_not_frozen",
+  "description": "Detect complete multi-parameter operating platforms before applying the frozen four-phase segmenter.",
+  "source_data": "outputs/base_analysis/processed_samples",
+  "selected_dates": [
+    "2023-09-23",
+    "2023-10-18",
+    "2023-10-28",
+    "2023-11-03",
+    "2023-11-14",
+    "2023-11-18",
+    "2023-11-28",
+    "2023-11-30",
+    "2023-12-06",
+    "2023-12-23"
+  ],
+  "activity_columns": {
+    "advance_speed": 0.5,
+    "thrust": 1000.0,
+    "torque": 100.0,
+    "rpm_canonical": 0.5
+  },
+  "smoothing_seconds": 60.0,
+  "core_required_active_signals": 2,
+  "support_required_active_signals": 1,
+  "bridge_internal_gap_seconds": 120.0,
+  "boundary_extension_seconds": 180.0,
+  "minimum_core_seconds": 180.0,
+  "minimum_core_samples": 8,
+  "minimum_episode_seconds": 180.0,
+  "rules": [
+    "The original excavation-state field is supporting evidence, not a hard platform boundary.",
+    "A platform core requires at least two smoothed parameters above their activity floors.",
+    "Short internal inactivity gaps may be bridged only inside one continuity block.",
+    "Hard sampling gaps always split platforms.",
+    "Each retained platform is expanded through adjacent supported activity to include startup and decline context.",
+    "The frozen four-phase thresholds are reused after experimental platform detection; frozen outputs are not modified."
+  ]
+}

@@ -1,0 +1,85 @@
+M README.md
+ M docs/ARCHITECTURE.md
+ D docs/CLEANUP_2026-10-22.md
+ D docs/CLEANUP_2026-10-27.md
+ D docs/CLEANUP_ITEMS_2026-10-27.csv
+ M docs/DEBUGGING.md
+ D docs/ENGINEERING_REPORT_STANDARD.md
+ D docs/EVIDENCE_GRAPH_JOINT_REPORTING.md
+ D docs/INTEGRATED_REPORTING.md
+ D docs/INTEGRATION_ACCEPTANCE_2026-10-29.md
+ D docs/METHOD_CHAPTER_DRAFT_INTEGRATED.md
+ D docs/PAPER_DRAFT_INTRO_RELATED_METHOD_20261028.md
+ D docs/THREE_CHAPTER_REPORT.md
+ M docs/UNIFIED_ENGINEERING_REPORT.md
+ M experiments/README.md
+ D experiments/geology_attribute_relations_pilot/README.md
+ D experiments/geology_attribute_relations_pilot/package_results.py
+ D experiments/geology_attribute_relations_pilot/pilot.py
+ D experiments/geology_attribute_relations_pilot/review_results.py
+ D experiments/geology_attribute_relations_pilot/test_pilot.py
+ D experiments/multidate_response_validation_20261028/__init__.py
+ D experiments/multidate_response_validation_20261028/common.py
+ D experiments/multidate_response_validation_20261028/delivery.py
+ D experiments/multidate_response_validation_20261028/independent_audit.py
+ D experiments/multidate_response_validation_20261028/report_validation.py
+ D experiments/multidate_response_validation_20261028/run.py
+ D experiments/multidate_response_validation_20261028/scan_and_explore.py
+ D experiments/multidate_response_validation_20261028/test_experiment.py
+ D experiments/report_polishing_pilot_20261028/README.md
+ D experiments/report_polishing_pilot_20261028/__init__.py
+ D experiments/report_polishing_pilot_20261028/pilot.py
+ D experiments/report_polishing_pilot_20261028/presentation.py
+ D experiments/report_polishing_pilot_20261028/test_pilot.py
+ D experiments/report_polishing_pilot_20261028/test_presentation.py
+ D experiments/report_release_candidate_20261028/__init__.py
+ D experiments/report_release_candidate_20261028/delivery.py
+ D experiments/report_release_candidate_20261028/run.py
+ D experiments/report_release_candidate_20261028/workflow.py
+ D experiments/report_reliability_freeze_20261028/__init__.py
+ D experiments/report_reliability_freeze_20261028/delivery.py
+ D experiments/report_reliability_freeze_20261028/run.py
+ D experiments/report_reliability_freeze_20261028/validation.py
+ M outputs/README.md
+ D scripts/cleanup_desktop_intermediates.py
+ D scripts/migrate_engineering_context.py
+ M tbm_process/engineering_reporting/editor.py
+ M tbm_process/engineering_reporting/pipeline.py
+ M tbm_process/engineering_reporting/rendering.py
+ M tbm_process/engineering_reporting/writer.py
+ M tbm_process/evidence_graph/README.md
+ M tbm_process/reporting_v2/README.md
+?? configs/progress_investigation.json
+?? docs/EXPERIMENT_PROTOCOL_DRAFT.md
+?? docs/GPT_HANDOFF.md
+?? docs/PROGRESS_INVESTIGATION.md
+?? docs/RESEARCH_SUMMARY_FROZEN.md
+?? experiments/plc_mapping_repair_v1/AUDIT_AND_IMPACT_REPORT.md
+?? experiments/plc_mapping_repair_v1/EXPERIMENT_30DAY_REVIEW.md
+?? experiments/plc_mapping_repair_v1/FINAL_SUMMARY.json
+?? experiments/plc_mapping_repair_v1/all_fields_mapping_status.csv
+?? experiments/plc_mapping_repair_v1/audit_summary.json
+?? experiments/plc_mapping_repair_v1/field_distribution_changes.csv
+?? experiments/plc_mapping_repair_v1/independent_boolean_signatures.csv
+?? experiments/plc_mapping_repair_v1/layout_transitions.csv
+?? experiments/plc_mapping_repair_v1/lineage_validation.csv
+?? experiments/plc_mapping_repair_v1/lineage_validation.json
+?? experiments/plc_mapping_repair_v1/negative_signal_evidence.csv
+?? experiments/plc_mapping_repair_v1/r2_revalidation.json
+?? experiments/plc_mapping_repair_v1/repair_daily_summary.csv
+?? experiments/plc_mapping_repair_v1/repair_rules.json
+?? experiments/plc_mapping_repair_v1/secondary_physical_relation.csv
+?? experiments/plc_mapping_repair_v1/source_inventory.json
+?? experiments/plc_mapping_repair_v1/structural_quarantine.csv
+?? experiments/plc_mapping_repair_v1/test_results.xml
+?? experiments/plc_mapping_repair_v1/unresolved_records.csv.gz
+?? release/
+?? scripts/audit_freeze_inventory.py
+?? scripts/audit_report_quality.py
+?? tbm_process/engineering_reporting/front_analysis.py
+?? tbm_process/engineering_reporting/organization.py
+?? tbm_process/engineering_reporting/progress_investigation.py
+?? tbm_process/geology_store/ui.html
+?? tests/test_front_analysis.py
+?? tests/test_progress_investigation.py
+?? tests/test_report_organization.py

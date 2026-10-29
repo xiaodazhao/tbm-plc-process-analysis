@@ -1,0 +1,3 @@
+interval_id,phase_id,phase_label,start_time,end_time,source_row_start,source_row_end
+2023-11-03-E001,2023-11-03-E001-P01,startup,2023-11-03T00:00:00,2023-11-03T00:00:00,2,2
+2023-11-03-E001,2023-11-03-E001-P02,stable,2023-11-03T00:00:20,2023-11-03T00:00:40,3,4

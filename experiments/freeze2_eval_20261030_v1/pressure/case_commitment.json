@@ -1,0 +1,7 @@
+{
+  "cases_sha256": "9eca8de90c1d03fccaf5ed4ba1da5084bb7526f4d9522101ae69d9b8400997ba",
+  "locked_before_evaluation": true,
+  "frozen_verifier_not_modified_or_tuned": true,
+  "unit": "controlled_sentence_pair",
+  "count": 80
+}

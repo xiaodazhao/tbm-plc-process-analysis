@@ -1,0 +1,30 @@
+{
+  "schema_version": "tbm_response_relations_v2_20261027",
+  "sample_policy": "existing_stable_and_advancing_no_state_reclassification",
+  "controlled_comparison": {
+    "required_control_fields": ["rpm_set", "advance_speed_set"],
+    "verified_control_fields": [],
+    "matching": "exact_verified_control_values_within_stable_advancing",
+    "missing_control_action": "descriptive_only_not_controlled",
+    "threshold_source": "inherit_existing_reporting_v2_analysis_parameters"
+  },
+  "sensitivity_tolerance_factors": [0.5, 1.0, 1.5],
+  "content_limits": {
+    "maximum_relation_candidates": 16,
+    "maximum_llm_relations": 8,
+    "maximum_dynamic_facts_per_response": 2
+  },
+  "llm": {
+    "provider": "DeepSeek official API",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "temperature": 0.1,
+    "max_tokens": 7000,
+    "timeout_seconds": 180,
+    "maximum_calls": 24,
+    "transport_retries": 0,
+    "maximum_local_revision_calls_per_report": 1
+  },
+  "semantic_relation_policy": "structural_pass_semantic_REVIEW_not_verified_geological_truth",
+  "human_labels": "not_available_do_not_autofill"
+}

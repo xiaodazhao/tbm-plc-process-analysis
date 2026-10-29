@@ -1,0 +1,11 @@
+{
+  "version": "progress_investigation_v1",
+  "maximum_adjacent_gap_seconds": 60,
+  "minimum_plateau_advancing_seconds": 600,
+  "minimum_valid_speed_support_ratio": 0.8,
+  "minimum_advancing_speed_median_mm_min": 0.5,
+  "unchanged_tolerance_m": 0.0000001,
+  "context_before_seconds": 600,
+  "context_after_seconds": 300,
+  "meaning": "Retrospective data-consistency investigation; descriptive screening parameters, not fault or safety limits. Jump/reset thresholds reuse daily_report_front_sections.json. No distance repair or allocation."
+}

@@ -1,0 +1,21 @@
+{
+  "zip": "/Users/zhaoxiaoda/Desktop/TBM_日报冻结版_研究摘要与证据_20261029.zip",
+  "bytes": 68876806,
+  "MiB": 65.6860408782959,
+  "files": 968,
+  "SHA256": "68c34cc31d294ddf54996833dffb26b5ba6a04655569e754471f459b81e3a2b4",
+  "CRC_passed": true,
+  "actual_extraction_passed": true,
+  "all_manifest_SHA256_passed": true,
+  "security_scan": {
+    "text_files_scanned": 927,
+    "credential_findings": [],
+    "passed": true,
+    "scope": "packaged text/config/request/response/log files; original .env not opened or copied",
+    "blind_keys_not_included": true
+  },
+  "new_API_calls": 0,
+  "not_full_329day_data_backup": true,
+  "note": "SHA sidecar uses UTF-8 because the ZIP filename is Chinese",
+  "historical_path_aliases_added": 21
+}

@@ -1,0 +1,47 @@
+{
+  "version": "engineering_report_standard_20261028",
+  "section_order": ["1", "2.1", "2.2", "3.1", "3.2", "3.3"],
+  "chapter_1": "keep_approved_overview",
+  "chapter_2": {
+    "2.1": "daily_operation_overview_then_daily_curve_and_stable_parameter_table",
+    "2.2": "existing_major_activity_groups_progress_duration_rate_then_real_local_window_curves",
+    "major_group_selection": "reuse_existing_process_summary_selected_without_new_segmentation",
+    "interval_progress": "sum_existing_adoptable_platform_cumulative_advance_endpoint_changes",
+    "interval_rate": "interval_progress_m / (advancing_seconds_inside_same_platforms / 3600)",
+    "interval_rate_label": "折算推进率",
+    "daily_rate": "quality_accepted_daily_guide_shield_advance_m / (daily_advancing_seconds / 3600)",
+    "daily_rate_label": "全天折算推进率",
+    "time_share": "classified_advancing_seconds / effective_observed_state_seconds * 100",
+    "do_not_allocate_boundary_changes": true,
+    "unreliable_progress": "display_待核实_and_suppress_rate_not_zero",
+    "no_global_efficiency_grade_or_fault_inference": true
+  },
+  "presentation": {
+    "body_font_pt": 10.5,
+    "minimum_verified_body_median_pt": 9.5,
+    "statistics_decimals": 2,
+    "rate_decimals": 2,
+    "share_decimals": 1,
+    "one_figure_per_selected_window": true,
+    "independent_y_axes": true,
+    "hide_window_audit_counts_in_body": true,
+    "no_window_statistics_table": true,
+    "visible_chainage_term": "导向盾首里程",
+    "photo_files_in_JSON_order": ["图3.jpg", "图4.jpg", "图5.jpg"],
+    "historical_photo_label_required": true,
+    "fixed_layout_not_model_generated_each_time": true,
+    "exact_nonfactual_boilerplate_normalization_logged": true,
+    "no_trend_is_not_proven_stability": true
+  },
+  "quality": {
+    "reject_unknown_support_IDs": true,
+    "reject_stale_PLC_hash": true,
+    "verify_platform_endpoints_against_saved_PLC_rows": true,
+    "verify_observed_time_denominators": true,
+    "verify_every_table_value_in_PDF": true,
+    "semantic_acceptance": "REVIEW_not_independent_engineering_confirmation",
+    "maximum_generation_calls_per_publication": 2,
+    "transport_retries": 0,
+    "failure_policy": "retain_failed_reply_and_do_not_publish_as_accepted"
+  }
+}

@@ -6,7 +6,7 @@
 `origin/codex/three-chapter-evidence-20261027`。原始PLC、密钥及大型本机结果未加入该提交。
 本轮迁移的是`13`中已被审阅的计算与表达能力，不是另建PLC算法。
 来源函数与原文件SHA见`local_data/engineering_context/migration_manifest.json`。
-`scripts/migrate_engineering_context.py`仅为一次性迁移工具，不是日报运行依赖。
+一次性工具`migrate_engineering_context.py`现已移至项目外归档的`retired_tools/`，不是日报运行依赖。
 
 ## 实际顺序
 

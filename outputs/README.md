@@ -1,9 +1,10 @@
-# Generated outputs
+# 当前唯一接受的日报成果
 
-该目录只保存本地运行结果，不提交Git。克隆仓库后可直接用`datasets/portable_30/`在这里生成新的结果。
+`report_quality_release_20261029_r2/`是2026-10-29冻结时保留的当前成果。
+其中`2024-02-28/2024-02-28.integrated.pdf`为最新三章日报，HTML、完整事实、规划、模型原始请求回复、修改前后与核验记录一起保留。
 
-- `base_analysis/`：`run_analysis.py`生成的基础质量控制数据。
-- `current_analysis/`：`scripts/run_current_analysis.py`生成的当前平台优先分析和LLM事实输入。
-- `integrated_reports/<日期>/`：联合事实、全文计划、三章正文、图表、HTML/PDF及检查记录。
+目录名沿用真实运行名称，避免修改事实来源中的路径及SHA。`r2`不表示还有另一条活动主线。
+`before_*.pdf`等是这次运行的审计证据，不是可用于日常生成的另一个版本。
+历史多日期开发结果已移至项目外归档，见`../release/20261029/HISTORY_RELOCATION.csv`。
 
-历史模型实验及旧报告不在正式工作目录；如需追溯，请使用项目清理前的备份。
+新运行必须另建输出目录；不要覆盖冻结成果。`--dry-run`无API，`--resume`会付费调用。

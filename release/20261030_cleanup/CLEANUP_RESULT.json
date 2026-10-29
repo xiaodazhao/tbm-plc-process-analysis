@@ -1,0 +1,21 @@
+{
+  "removed_old_workspace_directories": [
+    "experiments/frozen_eval_20261029_v1",
+    "experiments/reliability_repair_20261029_v2",
+    "experiments/stability_delivery_20261029_v3",
+    "experiments/stability_30day_20261029_v1",
+    "experiments/practical_report_policy_20261030_v1"
+  ],
+  "history_preserved_only_in_verified_archive": "/Users/zhaoxiaoda/TBM历史归档/20261030_清理前审计证据.zip",
+  "private_allocations_moved_without_reading_contents": [
+    "/Users/zhaoxiaoda/TBM私有评价资料/20261030/frozen_eval_20261029_v1/_sealed",
+    "/Users/zhaoxiaoda/TBM私有评价资料/20261030/reliability_repair_20261029_v2/candidate/.env.example",
+    "/Users/zhaoxiaoda/TBM私有评价资料/20261030/stability_delivery_20261029_v3/candidate/.env.example"
+  ],
+  "latest_delivery_archive_unchanged": true,
+  "identical_group_input_copies_replaced_by_relative_links": 5928,
+  "logical_duplicate_bytes_removed_hardlinks_may_reduce_physical_savings": 4126374004,
+  "cache_or_preview_entries_removed": 174,
+  "production_algorithms_changed": false,
+  "latest_experiment_methods_or_outcomes_changed": false
+}

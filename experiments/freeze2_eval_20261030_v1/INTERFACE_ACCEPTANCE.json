@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "errors": [],
+  "date_count": 4,
+  "arm_terminal_expected": 16,
+  "actual_calls": 20,
+  "rule_or_method_failure_not_hidden_as_interface_fix": true,
+  "checked_utc": "2026-10-29T17:50:43.941161+00:00"
+}

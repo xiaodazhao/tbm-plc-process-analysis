@@ -1,0 +1,15 @@
+{
+  "source_files": 329,
+  "bytes": 2254853032,
+  "rows": 1236761,
+  "structural_bad_rows": 0,
+  "header_shapes": [
+    329,
+    330,
+    331,
+    332,
+    333
+  ],
+  "unique_header_hashes": 18,
+  "audited_files": 329
+}

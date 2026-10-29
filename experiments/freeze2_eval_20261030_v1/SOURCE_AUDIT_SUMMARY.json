@@ -1,0 +1,14 @@
+{
+  "source_links": 1154,
+  "all_file_hash_links_match": true,
+  "source_link_is_not_independent_fact": true,
+  "quote_checks": {
+    "NOT_EVALUATED": 920,
+    "NOT_EXACTLY_FOUND_REQUIRES_REVIEW": 183,
+    "EXACT_WHITESPACE_NORMALIZED_TEXT_FOUND": 51
+  },
+  "numerical_checks": 102,
+  "numerical_passes": 102,
+  "human_metrics": "NOT_EVALUATED",
+  "no_expert_labels_inferred": true
+}

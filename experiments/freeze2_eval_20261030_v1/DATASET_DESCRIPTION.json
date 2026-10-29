@@ -1,0 +1,32 @@
+{
+  "database": "/Users/zhaoxiaoda/Desktop/TBM_时空地质证据库_v1_20261027/20261027T144445/geology.sqlite",
+  "database_SHA256": "54c0b5134705fab9b38a3def775df88d364b7ce05679696a66360df87722354a",
+  "PLC_date_start": "2023-09-15",
+  "PLC_date_end": "2024-10-28",
+  "PLC_days": 329,
+  "spatial_allowed_days": 326,
+  "spatial_allowed_chainage_envelope_m": [
+    1013211.0,
+    1017398.0
+  ],
+  "database_document_counts_not_new_PDF_reextraction": [
+    {
+      "document_type": "HSP",
+      "documents": 49
+    },
+    {
+      "document_type": "SKETCH",
+      "documents": 214
+    },
+    {
+      "document_type": "TSP",
+      "documents": 7
+    }
+  ],
+  "processed_sample_count_from_existing_verified_inventory": 1236761,
+  "current_unexposed_available_pool": 238,
+  "formal_sample_dates": 30,
+  "interface_development_dates": 4,
+  "current_sketch_JSON_refresh_may_differ_from_database_counts": true,
+  "historical_interpretation": "data span and counts do not prove continuous monitoring or accurate stage recognition"
+}

@@ -1,0 +1,14 @@
+{
+  "purpose": "descriptive_mechanism_audit_not_additional_primary_hypothesis_or_truth_labels",
+  "formal_C_initial_plan_pass": 23,
+  "formal_C_plan_repairs": 7,
+  "formal_C_rule_fallbacks": 0,
+  "formal_D_local_patch_records": 7,
+  "all_recorded_patches_preserve_other_structure_and_IDs": true,
+  "formal_final_rule_types": {
+    "ID_contract_not_proven_information_omission": 28,
+    "numeric_membership_not_confirmed_value_error": 27,
+    "other_frozen_rule_not_human_fact_truth": 3,
+    "typed_quantity_or_role": 2
+  }
+}

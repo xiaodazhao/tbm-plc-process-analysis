@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-10-29T18:03:59.596737+00:00",
+  "code_SHA256": "a58fe5c14d8efc961a3affeb64088e48f73ed008569b2425fde58a51a6eee3d4",
+  "no_real_human_labels_seen_or_filled": true,
+  "definitions": "same preregistered S/(S+C+U), I/(S+C+U+I), conservative S/(S+C+U+I); no unblinding"
+}

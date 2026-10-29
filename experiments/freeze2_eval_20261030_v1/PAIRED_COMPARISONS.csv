@@ -1,0 +1,28 @@
+﻿comparison,metric,paired_days,locked_day_denominator,mean_difference,CI95_low,CI95_high,source_cluster_count,cluster_sensitivity_CI95_low,cluster_sensitivity_CI95_high,cluster_definition,bootstrap_repeats,seed,not_engineering_fact_effect,status
+C-B,generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,PDF_generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,body_rules_passed,30,30,0.7,0.5333333333333333,0.8333333333333334,27,0.5185185185185185,0.8519841269841268,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,artifact_check_passed,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,characters,30,30,-80.63333333333334,-157.26916666666665,3.4424999999999915,27,-171.73666666666665,1.8821839080459586,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,exact_sentence_duplicate_ratio,30,30,-0.0018578848256690168,-0.00841687859994141,0.004546922712245461,27,-0.008139235308234596,0.004874646395210533,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+C-B,human_fact_support,0,,,,,,,,,,,,NOT_EVALUATED
+C-B,human_required_coverage,0,,,,,,,,,,,,NOT_EVALUATED
+C-B,human_readability,0,,,,,,,,,,,,NOT_EVALUATED
+D-C,generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,PDF_generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,body_rules_passed,30,30,0.03333333333333333,0.0,0.1,27,0.0,0.10714285714285714,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,artifact_check_passed,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,characters,30,30,-1.4666666666666666,-6.3374999999999995,2.1333333333333333,27,-5.363920454545454,2.0376262626262625,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,exact_sentence_duplicate_ratio,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-C,human_fact_support,0,,,,,,,,,,,,NOT_EVALUATED
+D-C,human_required_coverage,0,,,,,,,,,,,,NOT_EVALUATED
+D-C,human_readability,0,,,,,,,,,,,,NOT_EVALUATED
+D-A,generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,PDF_generated,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,body_rules_passed,30,30,0.06666666666666667,-0.06666666666666667,0.23333333333333334,27,-0.07142857142857142,0.21875,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,artifact_check_passed,30,30,0.0,0.0,0.0,27,0.0,0.0,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,characters,30,30,3.2,-77.40083333333334,76.24,27,-78.42306451612903,85.88195216907674,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,exact_sentence_duplicate_ratio,30,30,-0.005658804971543241,-0.012263703690274883,0.0018279652997269917,27,-0.012827826978644657,0.0023465880462535593,connected_date_components_sharing_any_forecast_ID; fewer_than_two_clusters_not_estimable,1000,20261029,True,
+D-A,human_fact_support,0,,,,,,,,,,,,NOT_EVALUATED
+D-A,human_required_coverage,0,,,,,,,,,,,,NOT_EVALUATED
+D-A,human_readability,0,,,,,,,,,,,,NOT_EVALUATED

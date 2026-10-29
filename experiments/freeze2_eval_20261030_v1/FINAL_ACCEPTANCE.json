@@ -1,0 +1,20 @@
+{
+  "freeze_and_registry_locks_passed": true,
+  "identical_arm_inputs": true,
+  "group_inputs_checked": 136,
+  "source_paths_and_hash_pairs": 208,
+  "all_actual_sources_still_match": true,
+  "group_PDFs": 136,
+  "all_group_PDF_integrity_passed": true,
+  "all_calls_terminal_success": true,
+  "calls_by_scope": {
+    "development_fix": 2,
+    "interface": 20,
+    "formal": 164,
+    "relations": 16
+  },
+  "formal_and_relations_budget_used": 180,
+  "within_registered_budget": true,
+  "blind_keys_read": false,
+  "human_fact_labels_inferred": false
+}

@@ -1,0 +1,28 @@
+{
+  "version": "TBM-Daily-20261029-freeze1",
+  "created_utc": "2026-10-29T10:31:40.183730+00:00",
+  "project_root": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis",
+  "main_entry": "scripts/run_integrated_report.py",
+  "git_commit": "8e3bac205885c240d21ccc138c16c02cdd2163be",
+  "git_branch": "codex/three-chapter-evidence-20261027",
+  "working_tree_clean": false,
+  "freeze_mechanism": "SHA256-bound working-tree source snapshot, not a new Git commit",
+  "source_files": 195,
+  "source_tree_sha256": "e0e86f792f8506a53efc672ef5714493ba22f738add241fc82e2d6f63fa3d0fc",
+  "protected_core_unchanged_vs_8e3bac2": true,
+  "accepted_report": "outputs/report_quality_release_20261029_r2/2024-02-28/2024-02-28.integrated.pdf",
+  "accepted_report_sha256": "da14eb10eff3bb91969bfef8299978a4bc4a7ba397e3441b74352948ff2fddc2",
+  "tests": {
+    "passed": 443,
+    "warnings": 5,
+    "failures": 0
+  },
+  "offline_replay_passed": true,
+  "new_API_calls_during_freeze": 0,
+  "semantic_status": "REVIEW",
+  "independent_scientific_effectiveness_not_established": true,
+  "historical_archive": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前",
+  "google_chrome_version": "156.0.8078.49",
+  "credentials_and_blind_keys_excluded": true,
+  "source_dataset_not_included_in_its_entirety": true
+}

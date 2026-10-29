@@ -1,0 +1,7 @@
+# Keep only active experiment tools and the latest locked study.
+/*
+!/.gitignore
+!/README.md
+!/plc_mapping_repair_v1/
+!/plc_standardized_export_20261025/
+!/freeze2_eval_20261030_v1/

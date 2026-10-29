@@ -1,5 +1,7 @@
 # TBM多源证据图 V1
 
+> 本文件是组件早期独立验证说明。当前图组件已被整篇日报`engineering_reporting.pipeline.prepare`复用；不是另一条默认生成主线。完整链路与真实下游消费方式见`docs/RESEARCH_SUMMARY_FROZEN.md`。
+
 这是独立增量组件，不修改PLC清洗、平台、四阶段、性能公式或原六章入口。只把可对应里程的机器摘要、地质来源与可核查对照组织成关系。没有Neo4j、向量库、Agent、故障诊断或付费调用。
 
 ## 真实入口

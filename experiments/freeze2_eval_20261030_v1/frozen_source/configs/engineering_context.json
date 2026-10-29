@@ -1,0 +1,33 @@
+{
+  "version": "practical_gas_and_measure_RAG_20261029_v1",
+  "embedding": {
+    "model": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "query_prefix": "为这个句子生成表示以用于检索相关文章：",
+    "device": "cpu",
+    "batch_size": 32,
+    "max_sequence_length": 512,
+    "rrf_constant": 60,
+    "candidate_count": 40,
+    "max_references_per_context": 2
+  },
+  "gas": {
+    "unit": "ppm",
+    "unit_source": "user_designated_research_unit",
+    "formal_alarm": false,
+    "attention_value_role": "historical_research_reference_not_site_alarm_setting",
+    "minimum_window_coverage": 1.0,
+    "rules": [
+      {"id": "CO2_PC_STEL", "field": "CO2检测", "basis_limit_mgm3": 18000, "molar_mass": 44.01, "window_seconds": 900, "source_PDF_page": 13, "source_table_entry": 98},
+      {"id": "SO2_PC_STEL", "field": "SO2检测", "basis_limit_mgm3": 10, "molar_mass": 64.066, "window_seconds": 900, "source_PDF_page": 13, "source_table_entry": 96},
+      {"id": "H2S_MAC", "field": "H2S检测", "basis_limit_mgm3": 10, "molar_mass": 34.081, "window_seconds": 0, "source_PDF_page": 18, "source_table_entry": 175}
+    ],
+    "ppm_conversion": "reference_ppm = basis_limit_mgm3 * 24.05 / molar_mass, GBZ2.1-2019 A.2.6",
+    "reference_conditions": "20 degrees C, 101.3 kPa; not measured site temperature/pressure",
+    "unconfigured_fields": ["NO检测", "NO2检测", "CH4检测"],
+    "unconfigured_reason": "No independent adopted thresholds configured; table and curves only, no safety inference"
+  },
+  "generation": {"model": "deepseek-v4-flash", "temperature": 0.1, "sdk_retries": 0, "max_targeted_repairs": 1},
+  "source_policy": "Existing 20261028 user-confirmed design-background policy retained; no source or frozen report edits",
+  "no_dust_analysis": true
+}

@@ -1,0 +1,17 @@
+{
+  "python": "3.11.15 (main, Mar 11 2026, 17:14:47) [Clang 20.1.8 ]",
+  "executable": "/Users/zhaoxiaoda/miniconda3/envs/LLMenv/bin/python",
+  "versions": {
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.9",
+    "PyMuPDF": "1.27.2.3",
+    "openai": "2.32.0",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.15.0",
+    "playwright": "not_installed",
+    "pytest": "9.1.1"
+  }
+}

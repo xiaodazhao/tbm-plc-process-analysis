@@ -1,0 +1,5 @@
+﻿arm,formal_reports,actual_marginal_calls,actual_marginal_input_tokens,actual_marginal_output_tokens,model_API_seconds_marginal,standalone_equivalent_calls,standalone_equivalent_total_tokens,standalone_equivalent_model_seconds,local_plotting_and_PDF_time_not_measured_per_arm,standalone_is_equivalent_not_additional_actual_HTTP
+A,30,30,181379,65059,275.4409999999999,30,246438,275.4409999999999,True,True
+B,30,30,211635,66670,271.626,30,278305,271.626,True,True
+C,30,67,453330,115219,468.6500000000002,67,568549,468.6500000000002,True,True
+D,30,37,243638,65728,247.37299999999996,104,877915,716.0229999999998,True,True

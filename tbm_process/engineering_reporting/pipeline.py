@@ -121,6 +121,11 @@ def prepare(day, folder, paths):
     unified = assemble(day, folder, package, pack, activities, evidence, ctx, fs, gas, refs)
     risk = build_risks(day, evidence, resources)
     unified = add_to_pack(unified, risk, resources, folder)
+    from .front_analysis import enrich_front
+    unified = enrich_front(unified, package, activities, pack, samples, gas,
+                           paths['source_root'], paths['analysis'], folder)
+    from .organization import enrich_organization
+    unified = enrich_organization(unified, package, samples, folder)
     for name, value in [('engineering_evidence.original.json', evidence), ('design_context.json', ctx),
                         ('admissible_forecasts.json', fs), ('selected_references.json', [{'context':c, 'references':r} for c,r in refs])]:
         save(folder/name, value)
@@ -134,15 +139,24 @@ def prepare(day, folder, paths):
     return unified
 
 
-def generate(folder, key, model):
+def generate(folder, key, model, *, section_ids=None, baseline_folder=None, seed_plan=None, seed_draft=None):
     from .model import model_stage
-    from .writer import request, validate_plan, validate_text
-    pack = load(folder/'unified_report_input.json')
+    from .writer import request, validate_plan, validate_text, retire_unused_optional_front_references, qualify_overview_forecast_reference
+    full_pack = load(folder/'unified_report_input.json')
+    pack = full_pack
     preflight = load(folder/'preflight.json')
     if not preflight['passed'] or sha(folder/'unified_report_input.json') != preflight['input_sha256']:
         raise ValueError('input_changed_since_preflight')
     if (folder/'model_calls.json').exists():
         raise ValueError('existing_model_run_not_overwritten_use_new_output_directory')
+    if section_ids is not None:
+        from copy import deepcopy
+        pack = deepcopy(full_pack)
+        pack['facts'] = [f for f in pack['facts'] if f['section'] in section_ids]
+        pack['sections'] = {s:t for s,t in pack['sections'].items() if s in section_ids}
+        pack['generation_scope'] = list(section_ids)
+        if baseline_folder is None:
+            raise ValueError('partial_revision_requires_original_checked_report')
     ledger = []
     def call(stage, req):
         req['model'] = model
@@ -151,26 +165,29 @@ def generate(folder, key, model):
         if result is None:
             raise RuntimeError('model_call_failed:'+stage)
         return result
-    plan = call('plan', request('plan', pack))
-    plan_check = validate_plan(plan, pack)
+    plan = seed_plan if seed_plan is not None else call('plan', request('plan', pack))
+    plan_check = validate_plan(plan, pack, section_ids=section_ids)
     save(folder/'plan.initial.json', plan); save(folder/'plan.initial.validation.json', plan_check)
     if not plan_check['passed']:
         req = request('plan', pack)
         req['messages'].append({'role':'assistant', 'content':json.dumps(plan, ensure_ascii=False)})
         req['messages'].append({'role':'user', 'content':'仅修复以下提纲检查问题，仍返回完整规划JSON：'+json.dumps(plan_check['errors'], ensure_ascii=False)})
         plan = call('plan_repair', req)
-        plan_check = validate_plan(plan, pack)
+        plan_check = validate_plan(plan, pack, section_ids=section_ids)
     save(folder/'content_plan.json', plan); save(folder/'content_plan.validation.json', plan_check)
     if not plan_check['passed']:
         raise ValueError('plan_failed_after_one_bounded_repair')
-    draft = call('generation', request('write', pack, plan=plan))
-    check = validate_text(draft, pack, plan)
+    draft = seed_draft if seed_draft is not None else call('generation', request('write', pack, plan=plan))
+    check = validate_text(draft, pack, plan, section_ids=section_ids)
     save(folder/'narrative.initial.json', draft); save(folder/'narrative.initial.validation.json', check)
     from .editor import request as editor_request
     edited = call('editor', editor_request(pack, draft, check['errors'], model))
     save(folder/'editor.comparison.json', {'before': draft, 'after': edited})
     draft = edited
-    check = validate_text(draft, pack, plan)
+    if 'front_revision' in pack:
+        save(folder/'source_comparator_qualification.json',qualify_overview_forecast_reference(draft,full_pack))
+        save(folder/'final_plan_reconciliation.json',retire_unused_optional_front_references(plan,draft,pack))
+    check = validate_text(draft, pack, plan, section_ids=section_ids)
     save(folder/'editor.validation.json', check)
     if not check['passed']:
         req = editor_request(pack, draft, check['errors'], model)
@@ -178,7 +195,35 @@ def generate(folder, key, model):
         req['messages'].append({'role':'user', 'content':'只改确有问题的段落，其余原样保留；返回完整JSON。问题：'+json.dumps(check['errors'], ensure_ascii=False)})
         revised = call('targeted_revision', req)
         save(folder/'revision.diff.json', {'before': draft, 'after': revised, 'reasons': check['errors']})
-        draft = revised; check = validate_text(draft, pack, plan)
+        draft = revised
+        if 'front_revision' in pack:
+            save(folder/'revised_source_comparator_qualification.json',qualify_overview_forecast_reference(draft,full_pack))
+            save(folder/'revised_plan_reconciliation.json',retire_unused_optional_front_references(plan,draft,pack))
+        check = validate_text(draft, pack, plan, section_ids=section_ids)
+    if section_ids is not None:
+        from copy import deepcopy
+        old_plan = load(baseline_folder/'content_plan.json')
+        old_draft = load(baseline_folder/'final_narrative.json')
+        save(folder/'front_plan.json',plan);save(folder/'front_narrative.json',draft)
+        save(folder/'front_narrative.validation.json',check)
+        plan['sections'] += deepcopy([s for s in old_plan['sections'] if s['section_id'] not in section_ids])
+        plan['omissions'] += [r for r in old_plan.get('omissions',[]) if
+                              next(f for f in full_pack['facts'] if f['fact_id']==r['fact_id'])['section'] not in section_ids]
+        draft['sections'] += deepcopy([s for s in old_draft['sections'] if s['section_id'] not in section_ids])
+        untouched = [s for s in old_draft['sections'] if s['section_id'] not in section_ids]
+        if [s for s in draft['sections'] if s['section_id'] not in section_ids] != untouched:
+            raise ValueError('out_of_scope_chapter_changed')
+        save(folder/'unchanged_chapters.validation.json',{'passed':True,
+             'baseline_narrative_sha256':sha(baseline_folder/'final_narrative.json'),
+             'unchanged_sections':[s['section_id'] for s in untouched]})
+        save(folder/'content_plan.json',plan)
+        save(folder/'content_plan.validation.json',validate_plan(plan,full_pack))
+        full_check = validate_text(draft,full_pack,plan)
+        full_check['passed'] = full_check['passed'] and check['passed']
+        check = full_check
+    else:
+        save(folder/'content_plan.json',plan)
+        save(folder/'content_plan.validation.json',validate_plan(plan,pack))
     save(folder/'final_narrative.json', draft); save(folder/'final_narrative.validation.json', check)
     if not check['passed']:
         raise ValueError('body_failed_after_one_bounded_revision')

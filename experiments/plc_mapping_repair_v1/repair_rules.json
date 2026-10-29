@@ -1,0 +1,14 @@
+{
+  "version": "tbm9_block_local_export_adapter_v1_20261023",
+  "core_method_changed": false,
+  "date_based_mapping": false,
+  "motor_block": "unique two 14-boolean runs separated by 14 temperatures, preserve channel order",
+  "rpm": "duplicated brake anchor + motor frequency consistency + distinct payload roles; never speed/penetration alone",
+  "gas": "brake index +33, independent 4-channel step compatibility; no gas safety interpretation",
+  "navigation": "existing independent head/middle plausibility mapping; no interpolation",
+  "peripheral_fields": "raw passthrough only; not certified, not used for equipment conclusions",
+  "source_indices": "zero-based original CSV column indices; -1 means unresolved and value masked",
+  "raw_values": "raw__ columns for each altered field, originals also retained with SHA256",
+  "units": "unconfirmed",
+  "safety_comparison": false
+}

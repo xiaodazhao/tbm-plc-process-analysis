@@ -1,0 +1,137 @@
+﻿scope,date,arm,actual_successful_stages,generation_transport_succeeded,D_editor_succeeded,D_reused_C_initial_text,no_engineering_quality_truth_inferred
+interface,2024-01-24,A,"[""generation""]",True,,,True
+interface,2024-01-24,B,"[""generation""]",True,,,True
+interface,2024-01-24,C,"[""plan"", ""generation""]",True,,,True
+interface,2024-01-24,D,"[""editor""]",,True,True,True
+interface,2024-02-28,A,"[""generation""]",True,,,True
+interface,2024-02-28,B,"[""generation""]",True,,,True
+interface,2024-02-28,C,"[""plan"", ""generation""]",True,,,True
+interface,2024-02-28,D,"[""editor""]",,True,True,True
+interface,2024-03-15,A,"[""generation""]",True,,,True
+interface,2024-03-15,B,"[""generation""]",True,,,True
+interface,2024-03-15,C,"[""plan"", ""generation""]",True,,,True
+interface,2024-03-15,D,"[""editor""]",,True,True,True
+interface,2024-04-26,A,"[""generation""]",True,,,True
+interface,2024-04-26,B,"[""generation""]",True,,,True
+interface,2024-04-26,C,"[""plan"", ""generation""]",True,,,True
+interface,2024-04-26,D,"[""editor""]",,True,True,True
+formal,2023-10-17,A,"[""generation""]",True,,,True
+formal,2023-10-17,B,"[""generation""]",True,,,True
+formal,2023-10-17,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2023-10-17,D,"[""editor""]",,True,True,True
+formal,2023-10-23,A,"[""generation""]",True,,,True
+formal,2023-10-23,B,"[""generation""]",True,,,True
+formal,2023-10-23,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-10-23,D,"[""editor""]",,True,True,True
+formal,2023-11-02,A,"[""generation""]",True,,,True
+formal,2023-11-02,B,"[""generation""]",True,,,True
+formal,2023-11-02,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-11-02,D,"[""editor""]",,True,True,True
+formal,2023-11-10,A,"[""generation""]",True,,,True
+formal,2023-11-10,B,"[""generation""]",True,,,True
+formal,2023-11-10,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-11-10,D,"[""editor""]",,True,True,True
+formal,2023-11-22,A,"[""generation""]",True,,,True
+formal,2023-11-22,B,"[""generation""]",True,,,True
+formal,2023-11-22,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-11-22,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2023-12-16,A,"[""generation""]",True,,,True
+formal,2023-12-16,B,"[""generation""]",True,,,True
+formal,2023-12-16,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-12-16,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2023-12-21,A,"[""generation""]",True,,,True
+formal,2023-12-21,B,"[""generation""]",True,,,True
+formal,2023-12-21,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-12-21,D,"[""editor""]",,True,True,True
+formal,2023-12-28,A,"[""generation""]",True,,,True
+formal,2023-12-28,B,"[""generation""]",True,,,True
+formal,2023-12-28,C,"[""plan"", ""generation""]",True,,,True
+formal,2023-12-28,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2024-01-02,A,"[""generation""]",True,,,True
+formal,2024-01-02,B,"[""generation""]",True,,,True
+formal,2024-01-02,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-01-02,D,"[""editor""]",,True,True,True
+formal,2024-01-03,A,"[""generation""]",True,,,True
+formal,2024-01-03,B,"[""generation""]",True,,,True
+formal,2024-01-03,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-01-03,D,"[""editor""]",,True,True,True
+formal,2024-01-11,A,"[""generation""]",True,,,True
+formal,2024-01-11,B,"[""generation""]",True,,,True
+formal,2024-01-11,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-01-11,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2024-01-14,A,"[""generation""]",True,,,True
+formal,2024-01-14,B,"[""generation""]",True,,,True
+formal,2024-01-14,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-01-14,D,"[""editor""]",,True,True,True
+formal,2024-02-02,A,"[""generation""]",True,,,True
+formal,2024-02-02,B,"[""generation""]",True,,,True
+formal,2024-02-02,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-02-02,D,"[""editor""]",,True,True,True
+formal,2024-02-06,A,"[""generation""]",True,,,True
+formal,2024-02-06,B,"[""generation""]",True,,,True
+formal,2024-02-06,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-02-06,D,"[""editor""]",,True,True,True
+formal,2024-02-23,A,"[""generation""]",True,,,True
+formal,2024-02-23,B,"[""generation""]",True,,,True
+formal,2024-02-23,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-02-23,D,"[""editor""]",,True,True,True
+formal,2024-03-03,A,"[""generation""]",True,,,True
+formal,2024-03-03,B,"[""generation""]",True,,,True
+formal,2024-03-03,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-03-03,D,"[""editor""]",,True,True,True
+formal,2024-03-08,A,"[""generation""]",True,,,True
+formal,2024-03-08,B,"[""generation""]",True,,,True
+formal,2024-03-08,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-03-08,D,"[""editor""]",,True,True,True
+formal,2024-03-29,A,"[""generation""]",True,,,True
+formal,2024-03-29,B,"[""generation""]",True,,,True
+formal,2024-03-29,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-03-29,D,"[""editor""]",,True,True,True
+formal,2024-04-13,A,"[""generation""]",True,,,True
+formal,2024-04-13,B,"[""generation""]",True,,,True
+formal,2024-04-13,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-04-13,D,"[""editor""]",,True,True,True
+formal,2024-05-04,A,"[""generation""]",True,,,True
+formal,2024-05-04,B,"[""generation""]",True,,,True
+formal,2024-05-04,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-05-04,D,"[""editor""]",,True,True,True
+formal,2024-05-27,A,"[""generation""]",True,,,True
+formal,2024-05-27,B,"[""generation""]",True,,,True
+formal,2024-05-27,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-05-27,D,"[""editor""]",,True,True,True
+formal,2024-06-01,A,"[""generation""]",True,,,True
+formal,2024-06-01,B,"[""generation""]",True,,,True
+formal,2024-06-01,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-06-01,D,"[""editor""]",,True,True,True
+formal,2024-06-08,A,"[""generation""]",True,,,True
+formal,2024-06-08,B,"[""generation""]",True,,,True
+formal,2024-06-08,C,"[""plan"", ""plan_repair"", ""generation""]",True,,,True
+formal,2024-06-08,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2024-06-13,A,"[""generation""]",True,,,True
+formal,2024-06-13,B,"[""generation""]",True,,,True
+formal,2024-06-13,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-06-13,D,"[""editor""]",,True,True,True
+formal,2024-06-14,A,"[""generation""]",True,,,True
+formal,2024-06-14,B,"[""generation""]",True,,,True
+formal,2024-06-14,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-06-14,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2024-06-23,A,"[""generation""]",True,,,True
+formal,2024-06-23,B,"[""generation""]",True,,,True
+formal,2024-06-23,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-06-23,D,"[""editor""]",,True,True,True
+formal,2024-08-17,A,"[""generation""]",True,,,True
+formal,2024-08-17,B,"[""generation""]",True,,,True
+formal,2024-08-17,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-08-17,D,"[""editor""]",,True,True,True
+formal,2024-08-23,A,"[""generation""]",True,,,True
+formal,2024-08-23,B,"[""generation""]",True,,,True
+formal,2024-08-23,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-08-23,D,"[""editor""]",,True,True,True
+formal,2024-10-12,A,"[""generation""]",True,,,True
+formal,2024-10-12,B,"[""generation""]",True,,,True
+formal,2024-10-12,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-10-12,D,"[""editor"", ""targeted_revision""]",,True,True,True
+formal,2024-10-19,A,"[""generation""]",True,,,True
+formal,2024-10-19,B,"[""generation""]",True,,,True
+formal,2024-10-19,C,"[""plan"", ""generation""]",True,,,True
+formal,2024-10-19,D,"[""editor""]",,True,True,True

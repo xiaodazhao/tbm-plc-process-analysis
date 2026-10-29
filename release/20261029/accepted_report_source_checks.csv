@@ -1,0 +1,9 @@
+﻿path,exists,expected_sha256,sha_matches
+/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/plc_mapping_repair_v1/replay/after/processed_samples/2024-02-28.csv.gz,True,1ee2f1b350dbf20b9751949f19afe6fff5fb834d858b79e15316c7c5c7729982,True
+/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/local_data/engineering_context/sources/【07】伯舒拉岭施工图设计说明书.pdf,True,cec51df6d509d6e326f86c13d90320fe26a986d75ab931ca740f039e5ace2dad,True
+/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/report_quality_release_20261029_r2/2024-02-28/progress_investigations.json,True,dfb6fe058a6f5e5a1a39e74fd4c769c93b3915b0ec84a6361b4190858241a900,True
+/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/report_quality_release_20261029_r2/2024-02-28/report_organization.json,True,72b4ee80bab8159c9a0a00717e88c3e46300e597eb1c14a894e01f114355a7a8,True
+/Users/zhaoxiaoda/Desktop/伯舒拉岭数据/TBM运行数据/tbm_data_20240228.csv,True,6f7c6703887ca5a0fce3978836fcb0d547ab1179a8d3b7118ef2b75bc57ff4df,True
+/Users/zhaoxiaoda/Desktop/伯舒拉岭数据/伯舒拉岭隧道进口右线风险处置.xlsx,True,e82934b0ea3466f943a56f087b34ebd2c7ca03b3d4058ea849b09abfaf52de85,True
+/Users/zhaoxiaoda/Desktop/伯舒拉岭数据/右线地质资料/伯舒拉岭右线洞身素描/洞身纵向地质素描DyK1015+197.0～DyK1015+227.0/数据.json,True,9b83046c20318521fefc66937f464973338548f702949c04a3290c7eec1fc658,True
+/Users/zhaoxiaoda/Desktop/伯舒拉岭数据/右线地质资料/水平声波剖面/DyK1015+157.00/伯舒拉岭隧道进口右线水平声波剖面法超前地质预报报告(DyK1015+157～DyK1015+257)-20240224.pdf,True,3b176eba4805bc386fb2b15265f47b0b9cab6093738180225b14ff8ad1219dcd,True

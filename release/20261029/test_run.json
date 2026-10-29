@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/zhaoxiaoda/miniconda3/envs/LLMenv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=release/20261029/tests.xml"
+  ],
+  "exit_code": 0,
+  "seconds": 15.746808665804565,
+  "API_calls": 0
+}

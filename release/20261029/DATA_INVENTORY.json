@@ -1,0 +1,251 @@
+{
+  "inventory_version": "20261029_freeze_read_only_v1",
+  "new_API_calls": 0,
+  "PLC": {
+    "days": 329,
+    "first_date": "2023-09-15",
+    "last_date": "2024-10-28",
+    "spatial_allowed_days": 326,
+    "blocked_dates": [
+      "2023-10-06",
+      "2023-11-05",
+      "2023-11-26"
+    ],
+    "admitted_start_m": 1013211.0,
+    "admitted_end_m": 1017398.0,
+    "processed_day_files": 329,
+    "platforms": 2954,
+    "phases": 8804,
+    "phase_labels": {
+      "startup": 2002,
+      "rising": 2135,
+      "stable": 2379,
+      "declining": 2288
+    },
+    "days_without_platforms": 58,
+    "days_without_stable_phases": 61,
+    "historical_mapping_audit": {
+      "source_files": 329,
+      "source_rows": 1236761,
+      "all_329_paired_replays_complete": true,
+      "all_before_branches_reproduce_archive": true,
+      "lineage_validation": {
+        "days": 329,
+        "all_raw_sha_unchanged": true,
+        "lineage_cells_checked": 131096666,
+        "lineage_mismatches": 0,
+        "issues": [],
+        "all_row_time_keys_unchanged": true,
+        "engineering_accuracy_claimed": false,
+        "units_confirmed": false
+      },
+      "impact": {
+        "paired_days": 329,
+        "llm_invoked": false,
+        "algorithm_and_thresholds_changed": false,
+        "geology_before_after_unchanged_days": 329,
+        "geology_historical_selection_reproduced_days": 329,
+        "report_facts_built_both_versions": 326,
+        "report_facts_changed_days": 293,
+        "fact_builder_failure_count": 6,
+        "official_reports_modified": false
+      },
+      "rpm_resolved": 929109,
+      "rpm_unresolved": 307652,
+      "rpm_relocated": 337849,
+      "gas_resolved": 957743,
+      "gas_unresolved": 279018,
+      "motor_resolved": 1204603,
+      "motor_unresolved": 32158,
+      "current_platform_geometry_changed_dates": 227,
+      "current_phase_geometry_changed_dates": 213,
+      "current_phase_label_changed_samples": 12030,
+      "current_machine_state_changed_samples": 90298,
+      "daily_advance_changed_days": 0,
+      "daily_working_time_changed_days": 0,
+      "chapter1_reader_values_changed_days": 0,
+      "chapter2_table_changed_days": 248,
+      "tests": {
+        "tests": 126,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "rerun_output": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/plc_mapping_repair_v1/rerun_outputs/20261023T022807Z_274870be",
+      "api_calls": 0,
+      "before_and_inputs_only_core3_models_identical": true,
+      "not_a_full_field_identity_certificate": true,
+      "units_confirmed": false,
+      "automatic_official_replacement": false,
+      "mapping_review_version": "tbm9_block_local_export_adapter_v1r2_20261023",
+      "r2_revalidated_days": 329,
+      "r2_effective_input_changed_dates": []
+    }
+  },
+  "geology_database": {
+    "path": "/Users/zhaoxiaoda/Desktop/TBM_时空地质证据库_v1_20261027/20261027T144445/geology.sqlite",
+    "sha256": "54c0b5134705fab9b38a3def775df88d364b7ce05679696a66360df87722354a",
+    "documents": 270,
+    "document_types": {
+      "HSP": 49,
+      "SKETCH": 214,
+      "TSP": 7
+    },
+    "fact_records": 4417,
+    "fact_counts": [
+      {
+        "fact_type": "geological_description",
+        "information_role": "design",
+        "count": 214
+      },
+      {
+        "fact_type": "geological_description",
+        "information_role": "forecast",
+        "count": 281
+      },
+      {
+        "fact_type": "geological_description",
+        "information_role": "inference",
+        "count": 214
+      },
+      {
+        "fact_type": "geological_description",
+        "information_role": "observation",
+        "count": 960
+      },
+      {
+        "fact_type": "geophysical_description",
+        "information_role": "forecast",
+        "count": 281
+      },
+      {
+        "fact_type": "integrity",
+        "information_role": "forecast",
+        "count": 281
+      },
+      {
+        "fact_type": "joints",
+        "information_role": "forecast",
+        "count": 269
+      },
+      {
+        "fact_type": "lithology",
+        "information_role": "forecast",
+        "count": 268
+      },
+      {
+        "fact_type": "mixed_original_conclusion",
+        "information_role": "inference",
+        "count": 214
+      },
+      {
+        "fact_type": "recommendation",
+        "information_role": "recommendation",
+        "count": 54
+      },
+      {
+        "fact_type": "risk",
+        "information_role": "forecast",
+        "count": 327
+      },
+      {
+        "fact_type": "rock_grade",
+        "information_role": "design",
+        "count": 214
+      },
+      {
+        "fact_type": "rock_grade",
+        "information_role": "forecast",
+        "count": 281
+      },
+      {
+        "fact_type": "rock_grade",
+        "information_role": "observation",
+        "count": 214
+      },
+      {
+        "fact_type": "special",
+        "information_role": "forecast",
+        "count": 61
+      },
+      {
+        "fact_type": "water",
+        "information_role": "forecast",
+        "count": 47
+      },
+      {
+        "fact_type": "weathering",
+        "information_role": "forecast",
+        "count": 237
+      }
+    ],
+    "available_timestamp_nonempty": 0,
+    "observation_date_nonempty": 0,
+    "source_exists": 56,
+    "source_SHA_matches": 56,
+    "cached_PLC_response_rows": 4,
+    "current_refreshed_sketch_JSONs": 214,
+    "current_refreshed_sketch_JSONs_SHA_match": 214,
+    "stored_SKETCH_original_paths_are_legacy_not_current_runtime_sources": true,
+    "not_independent_extraction_accuracy": true
+  },
+  "accepted_report": {
+    "date": "2024-02-28",
+    "folder": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/report_quality_release_20261029_r2/2024-02-28",
+    "facts": 45,
+    "facts_by_section": {
+      "1": 5,
+      "2.1": 2,
+      "3.1": 10,
+      "2.2": 9,
+      "3.3": 10,
+      "3.2": 2,
+      "2.3": 7
+    },
+    "required_fact_count": 31,
+    "nodes": {
+      "EngineeringComparison": 278,
+      "GeologyDocument": 239,
+      "GeologyFact": 3024,
+      "PLCResponse": 1,
+      "ConstructionSegment": 1340
+    },
+    "edges": {
+      "HAS_FACT": 3024,
+      "COVERS": 1745,
+      "OBSERVED_AT": 328,
+      "COMPARES": 285,
+      "DERIVED_FROM": 285,
+      "OVERLAPS_WITH": 21,
+      "MEASURED_OVER": 1
+    },
+    "all_fact_sources_exist_and_match": true,
+    "artifact_validation": {
+      "date": "2024-02-28",
+      "pdf": "outputs/report_quality_release_20261029_r2/2024-02-28/2024-02-28.integrated.pdf",
+      "pages": 3,
+      "model_paragraphs_missing_from_pdf": [],
+      "out_of_page_text_blocks": [],
+      "image_count": 6,
+      "narrative_SHA256": "5ae2d78d3d02795d6411a85ccd7f595032e5c1ebb85657d47bb8cb164bad5410",
+      "HTML_SHA256": "2297a07a5b159b4c03556d7a27b53f500b3978de39985fdb3cde0cf75a86fcb9",
+      "PDF_SHA256": "da14eb10eff3bb91969bfef8299978a4bc4a7ba397e3441b74352948ff2fddc2",
+      "passed": true,
+      "semantic_status": "REVIEW",
+      "PDF_text_same_as_checked_model_text": true
+    },
+    "current_sketch_refresh_counts": {
+      "current_sketch_count": 214,
+      "legacy_sketches_removed_from_input": 86,
+      "explicitly_dated_sketches": 0,
+      "explicit_report_date_records": 170,
+      "observation_date_records": 0,
+      "confirmed_availability_dates": 214,
+      "unique_sketch_records": 214,
+      "exact_duplicate_copies": 0,
+      "policy": "current_JSON_only; explicit_report_date_precedes_legacy_user_confirmed_URL_date; observation_and_upload_dates_kept_separate; no_intraday_timestamp_invention"
+    },
+    "not_independent_effectiveness_experiment": true
+  },
+  "no_human_labels_inferred": true
+}

@@ -1,36 +1,42 @@
 # 当前代码与执行路径
 
-## 共用PLC分析层
+版本：TBM-Daily-20261029-freeze1。
 
-`ingestion -> quality -> process -> dynamics -> facts -> orchestration -> outputs`。
-`run_analysis.py`、`scripts/run_current_analysis.py`负责从原始PLC重建分析。
-`reporting.front_sections`只读已有逐点数据和平台/阶段表，提供报告事实。
-本次清理没有修改这一层的代码、阈值、字段映射或已处理结果。
+## 唯一默认报告路径
 
-## 当前证据库应用
+`scripts/run_integrated_report.py → engineering_reporting.cli.main → pipeline.run`。
 
-入口 `scripts/build_geology_store.py`：
+准备阶段为`pipeline.prepare`：读取已修复PLC与既有阶段，读取SQLite并刷新当前素描，建立证据图与响应分析，组织活动进尺、气体、设计参考和原来源风险，执行进尺调查与覆盖对账，锁定统一事实及来源SHA。
 
-1. `geology_store.database.import_catalog`复用`evidence_graph.catalog/sketches`，读取TSP/HSP提取结果和桌面最新素描JSON，保存SQLite文档、事实、日期、里程及来源。
-2. `geology_store.spatial/time_policy`执行区间交并和资料时间准入；`applications`构建当日范围、当日新增素描、前方预报三类查询结果。
-3. `reporting_v2.facts.build_facts`复用修复后的PLC逐点数据和平台表，构建施工统计及性能事实，不重新分段。
-4. `geology_store.reporting`复用`reporting_v2.narrative`的离线规划、离线文字和检查，再由`reporting_v2.rendering`绘图、输出HTML/PDF。
-5. `query_geology_store.py`和`serve_geology_store.py`读取同一数据库；查询不需要再次解析原件。
+生成阶段为`pipeline.generate`：整篇规划、提纲检查、整篇写作、常规编辑、正文规则检查及必要时一次定向修订。
+渲染阶段为`engineering_reporting.rendering.render_report`：同一正文、真实图表、HTML/PDF与成品一致性核对。
 
-这条新入口当前是**离线应用验证**，不调用真实LLM。脚本还执行全量来源和覆盖审计，因此只指定一天也会导入完整库，但只生成指定日期的日报。
+没有成品后追加气体的第二轮日报流程。
 
-## 仍在使用的独立入口
+## 复用组件
 
-- `run_evidence_graph_report.py`：证据图、来源绑定和离线日报的独立验证路径。证据库复用其部分适配组件，但没有把所有图推理步骤接入数据库日报。
-- `run_engineering_report_v2.py`：六章工程日报；默认离线，可显式调用LLM。其原始目录型地质输入与新数据库的当前素描输入不能混为一谈。
-- `run_integrated_report.py`：保留的三章联合事实、LLM全文规划和生成路径。`final_reporting`里的部分工具仍被最新模块调用，不能按名称删除。
+- `reporting_v2`：PLC事实、响应特征、活动进尺和底层绘图。
+- `evidence_graph`：文档/事实/区段/响应/比较及来源约束，编译为报告证据；模型不直接执行图算法。
+- `geology_store`：SQLite查询、时间与空间准入。
+- `final_reporting`：共享模型接口及历史兼容组件。
+- `ingestion → quality → process → dynamics`：既有PLC处理和分段，不在日报运行时重算全329天。
 
-这些入口的研究任务和输入版本不同。真实模型输出、离线预览、最终成品应分别追溯，不能仅因共用部分函数就宣称已经完成统一真实模型端到端验证。
+`run_analysis.py`及`run_current_analysis.py`负责重建分析，不是日常日报入口。
+`build_geology_store.py`负责建库，`query/serve_geology_store.py`负责查询，不是新的整篇生成主线。
 
-## 保留数据
+## 兼容入口
 
-全量处理结果仍位于 `experiments/plc_mapping_repair_v1/replay/after`；既有日报事实与地质匹配的`after`分支继续保留。当前代码显式引用这些路径，本次没有迁移。
-历史修复前数据、对照明细、重复源码快照和独立探索已从工作目录清走，可在完整清理备份中恢复。
-原始PLC、PDF、素描JSON、设计资料在项目外，不属于本次删除范围。
+`run_engineering_report_v2.py`、`run_evidence_graph_report.py`、`run_three_chapter_report.py`和显式`--profile portable`供历史回放/回归保留。
+它们的模型、章节及输入策略不能当作冻结版默认行为。保留兼容源码不等于同时维护多条活动研究主线。
 
-调试入口和断点见[DEBUGGING.md](DEBUGGING.md)，清理边界见[CLEANUP_2026-10-27.md](CLEANUP_2026-10-27.md)。
+## 数据和审计
+
+当前329天结果仍在`experiments/plc_mapping_repair_v1/replay/after`及相关`impact/*/after`；本次不迁移这些被调用路径。
+原始资料和当前素描在桌面`伯舒拉岭数据`；地质SQLite及来源注册索引仍是明确的外部依赖。
+`local_data/engineering_context`及本地嵌入模型不是可删除的无关缓存。
+
+清理后的唯一接受成果为`outputs/report_quality_release_20261029_r2`。
+旧实验和中间输出移至`/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前`。
+完整迁移清单、源码身份及验证见`release/20261029`。
+
+方法细节见[详细研究摘要](RESEARCH_SUMMARY_FROZEN.md)，断点思路见[调试说明](DEBUGGING.md)。

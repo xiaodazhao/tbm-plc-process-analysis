@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "staged_files_scanned": 825,
+  "staged_total_bytes": 97248854,
+  "credential_pattern_findings_filenames_only": [],
+  "forbidden_paths": [],
+  "files_at_or_above_GitHub_100MiB_limit": [],
+  "production_freeze_files_checked": 195,
+  "production_freeze_changed": [],
+  "candidate_snapshot_files_checked": 190,
+  "candidate_snapshot_changed": [],
+  "registered_study_changed": [],
+  "secret_values_printed": false,
+  "sealed_mapping_contents_read": false,
+  "archive_and_private_data_publication": false
+}

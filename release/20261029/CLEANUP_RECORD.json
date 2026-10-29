@@ -1,0 +1,350 @@
+{
+  "archive_root": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前",
+  "archived_top_level_items": [
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/unified_integration_validation_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/unified_integration_validation_20261029",
+      "files": 18,
+      "bytes": 33587288,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/post_cleanup_final_smoke_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/post_cleanup_final_smoke_20261029",
+      "files": 32,
+      "bytes": 25915420,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/progress_investigation_pipeline_smoke_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/progress_investigation_pipeline_smoke_20261029",
+      "files": 49,
+      "bytes": 34907295,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/plc_response_relations_v2",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/plc_response_relations_v2",
+      "files": 89,
+      "bytes": 42489233,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/engineering_integration_tests.xml",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/engineering_integration_tests.xml",
+      "files": 1,
+      "bytes": 49535,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/engineering_integration_final_tests.xml",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/engineering_integration_final_tests.xml",
+      "files": 1,
+      "bytes": 50094,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_chapters_accepted_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_chapters_accepted_20261029",
+      "files": 268,
+      "bytes": 114252565,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/report_quality_release_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/report_quality_release_20261029",
+      "files": 65,
+      "bytes": 36204995,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/post_cleanup_smoke_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/post_cleanup_smoke_20261029",
+      "files": 31,
+      "bytes": 25912478,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_revision_final_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_revision_final_20261029",
+      "files": 284,
+      "bytes": 109504535,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/unified_engineering_acceptance_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/unified_engineering_acceptance_20261029",
+      "files": 211,
+      "bytes": 108219755,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_revision_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_revision_20261029",
+      "files": 178,
+      "bytes": 102311748,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/integration_security_scan.json",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/integration_security_scan.json",
+      "files": 1,
+      "bytes": 71,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_revision_review_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_revision_review_20261029",
+      "files": 264,
+      "bytes": 109311518,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/desktop_cleanup",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/desktop_cleanup",
+      "files": 3,
+      "bytes": 33886,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_revision_tests.xml",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_revision_tests.xml",
+      "files": 1,
+      "bytes": 51530,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/progress_investigation_release_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/progress_investigation_release_20261029",
+      "files": 42,
+      "bytes": 4562474,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/progress_investigation_validated_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/progress_investigation_validated_20261029",
+      "files": 40,
+      "bytes": 4537748,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/unified_integration_validation_20261029_r1",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/unified_integration_validation_20261029_r1",
+      "files": 18,
+      "bytes": 33587336,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/front_native_pipeline_smoke_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/front_native_pipeline_smoke_20261029",
+      "files": 42,
+      "bytes": 26124870,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/progress_investigation_release_mainline_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/progress_investigation_release_mainline_20261029",
+      "files": 49,
+      "bytes": 34924850,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/progress_investigation_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/progress_investigation_20261029",
+      "files": 39,
+      "bytes": 4481954,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/unified_engineering_release_20261029",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_outputs/unified_engineering_release_20261029",
+      "files": 257,
+      "bytes": 117376399,
+      "reason": "历史成果或试跑；不是当前日报输入"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/archives/desktop_history_20261029_151617",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/previous_archives/desktop_history_20261029_151617",
+      "files": 44144,
+      "bytes": 4840026618,
+      "reason": "旧项目副本和历史科研证据；从工作树移出"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/multidate_response_validation_20261028",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_experiments/multidate_response_validation_20261028",
+      "files": 17,
+      "bytes": 258337,
+      "reason": "独立历史实验；无当前源码或测试依赖"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/report_reliability_freeze_20261028",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_experiments/report_reliability_freeze_20261028",
+      "files": 8,
+      "bytes": 128078,
+      "reason": "独立历史实验；无当前源码或测试依赖"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/report_polishing_pilot_20261028",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_experiments/report_polishing_pilot_20261028",
+      "files": 12,
+      "bytes": 128038,
+      "reason": "独立历史实验；无当前源码或测试依赖"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/geology_attribute_relations_pilot",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_experiments/geology_attribute_relations_pilot",
+      "files": 9,
+      "bytes": 208425,
+      "reason": "独立历史实验；无当前源码或测试依赖"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/report_release_candidate_20261028",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_experiments/report_release_candidate_20261028",
+      "files": 8,
+      "bytes": 118615,
+      "reason": "独立历史实验；无当前源码或测试依赖"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/INTEGRATED_REPORTING.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/INTEGRATED_REPORTING.md",
+      "files": 1,
+      "bytes": 5597,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/INTEGRATION_ACCEPTANCE_2026-10-29.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/INTEGRATION_ACCEPTANCE_2026-10-29.md",
+      "files": 1,
+      "bytes": 3745,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/METHOD_CHAPTER_DRAFT_INTEGRATED.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/METHOD_CHAPTER_DRAFT_INTEGRATED.md",
+      "files": 1,
+      "bytes": 7455,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/PAPER_DRAFT_INTRO_RELATED_METHOD_20261028.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/PAPER_DRAFT_INTRO_RELATED_METHOD_20261028.md",
+      "files": 1,
+      "bytes": 26038,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/THREE_CHAPTER_REPORT.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/THREE_CHAPTER_REPORT.md",
+      "files": 1,
+      "bytes": 2410,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/ENGINEERING_REPORT_STANDARD.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/ENGINEERING_REPORT_STANDARD.md",
+      "files": 1,
+      "bytes": 6454,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/CLEANUP_2026-10-22.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/CLEANUP_2026-10-22.md",
+      "files": 1,
+      "bytes": 2836,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/CLEANUP_2026-10-27.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/CLEANUP_2026-10-27.md",
+      "files": 1,
+      "bytes": 7203,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/CLEANUP_ITEMS_2026-10-27.csv",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/CLEANUP_ITEMS_2026-10-27.csv",
+      "files": 1,
+      "bytes": 6421,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/docs/EVIDENCE_GRAPH_JOINT_REPORTING.md",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/historical_docs/EVIDENCE_GRAPH_JOINT_REPORTING.md",
+      "files": 1,
+      "bytes": 8412,
+      "reason": "旧架构或展示说明；以本次冻结说明替代"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/migrate_engineering_context.py",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/retired_tools/migrate_engineering_context.py",
+      "files": 1,
+      "bytes": 9608,
+      "reason": "一次性迁移/旧成果定向工具；主流程已有相应能力"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/cleanup_desktop_intermediates.py",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/retired_tools/cleanup_desktop_intermediates.py",
+      "files": 1,
+      "bytes": 4870,
+      "reason": "一次性迁移/旧成果定向工具；主流程已有相应能力"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/audit_front_chapters.py",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/retired_tools/audit_front_chapters.py",
+      "files": 1,
+      "bytes": 11533,
+      "reason": "一次性迁移/旧成果定向工具；主流程已有相应能力"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/revise_report_front.py",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/retired_tools/revise_report_front.py",
+      "files": 1,
+      "bytes": 6953,
+      "reason": "一次性迁移/旧成果定向工具；主流程已有相应能力"
+    },
+    {
+      "old_path": "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/investigate_progress.py",
+      "archive_path": "/Users/zhaoxiaoda/TBM历史归档/20261029_冻结前/retired_tools/investigate_progress.py",
+      "files": 1,
+      "bytes": 9869,
+      "reason": "一次性迁移/旧成果定向工具；主流程已有相应能力"
+    }
+  ],
+  "archived_files": 46196,
+  "archived_bytes": 5809385092,
+  "removed_regenerable_cache_paths": [
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/reporting/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/dynamics/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/ingestion/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/quality/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/final_reporting/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/contracts/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/orchestration/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/geology_store/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/evidence_graph/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/reporting_v2/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/facts/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/outputs/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/process/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tests/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/plc_standardized_export_20261025/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/plc_mapping_repair_v1/__pycache__",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/.pytest_cache",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tmp",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/archives",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/experiments/plc_mapping_repair_v1/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tests/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/scripts/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/.github/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/local_data/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/tbm_process/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/.cache/.DS_Store",
+    "/Users/zhaoxiaoda/Desktop/tbm-plc-process-analysis/outputs/.DS_Store"
+  ],
+  "original_PLC_geology_and_blind_keys_not_modified": true,
+  "new_API_calls": 0
+}

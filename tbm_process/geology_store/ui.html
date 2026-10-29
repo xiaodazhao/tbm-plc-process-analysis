@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TBM地质证据查询</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#24302d;font:14px/1.55 system-ui,'PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:0}header{padding:18px 28px;border-bottom:1px solid #ccd6d1;display:flex;gap:16px;align-items:baseline}h1{font-size:21px;margin:0}header span{color:#66756f}main{max-width:1550px;margin:auto;padding:20px 28px}form{display:flex;align-items:end;gap:12px;flex-wrap:wrap;border-bottom:1px solid #dde4df;padding-bottom:18px}label{display:grid;gap:5px;font-size:12px;color:#59675f}input,select,button{font:inherit;border:1px solid #b8c5bd;border-radius:4px;background:white;padding:7px 9px;min-height:36px}input{width:166px}input[type=checkbox]{width:16px;min-height:16px}button{cursor:pointer;color:#fff;background:#286f5b;border-color:#286f5b;font-size:14px;padding:7px 18px}button.secondary{background:#fff;color:#344e63;border-color:#91a4af}.check{display:flex;gap:6px;align-items:center;min-height:36px;font-size:13px}.metrics{display:flex;gap:32px;flex-wrap:wrap;border-bottom:1px solid #dde4df;padding:14px 0}.metrics b{font-size:19px;margin-right:7px;font-weight:600}h2{font-size:16px;margin:18px 0 9px}.workarea{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px}.tablewrap{overflow:auto;max-height:650px}table{border-collapse:collapse;width:100%;font-size:12px}th{text-align:left;background:#f1f5f2;position:sticky;top:0}th,td{padding:9px 10px;border-bottom:1px solid #dce3de;vertical-align:top}tr[data-id]{cursor:pointer}tr[data-id]:hover{background:#edf5f0}td{overflow-wrap:anywhere}aside{border-left:1px solid #dce3de;padding-left:20px;overflow-wrap:anywhere}.detail p{white-space:pre-wrap;margin:10px 0}.detail dt{color:#6b756d;font-size:12px;margin-top:10px}.detail dd{margin:2px 0}a{color:#28698a}#status{min-height:24px;padding:10px 0;color:#5c6c63}#chart{min-height:340px}.gaps{font-size:12px;color:#69594d}#evidenceText{font-size:13px;line-height:1.7}@media(max-width:850px){header,main{padding-left:16px;padding-right:16px}.workarea{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce3de;padding:12px 0}.metrics{gap:15px}input{width:148px}}
+table{min-width:640px}.workarea>section{min-width:0}.tablewrap{width:100%;min-width:0}th:first-child,td:first-child{width:58px;white-space:nowrap}th:nth-child(2),td:nth-child(2){width:118px}th:nth-child(3),td:nth-child(3){width:72px}#chart{width:100%;max-width:100%;min-width:0;overflow:hidden}.detail img{display:block;max-width:100%;height:auto;margin-top:12px}@media(max-width:850px){.workarea{grid-template-columns:minmax(0,1fr)}}
+</style></head><body>
+<header><h1>TBM地质证据库</h1><span>伯舒拉岭 · 右线 · DyK</span></header>
+<main><form id="form">
+<label>起始里程<input id="start" value="DyK1015+800" required></label>
+<label>结束里程<input id="end" value="DyK1015+850" required></label>
+<label>历史截止日期<input id="day" type="date" value="2024-04-26" required></label>
+<label>资料类型<select id="kind"><option value="">全部</option><option>TSP</option><option>HSP</option><option>SKETCH</option><option>DESIGN</option></select></label>
+<label class="check"><input type="checkbox" id="historical" checked>仅截止日前可用</label>
+<button type="submit">查询</button><button type="button" class="secondary" id="full">全线范围</button>
+<label>前方距离 / m<input id="distance" type="number" min="0.001" step="any" value="20"></label>
+<label>推进方向<select id="direction"><option value="1">里程增大</option><option value="-1">里程减小</option></select></label>
+<button type="button" class="secondary" id="ahead">以前述终点查询前方</button>
+</form><div id="status" role="status"></div><div class="metrics" id="metrics"></div>
+<div id="chart"></div><div id="gaps" class="gaps"></div>
+<div class="workarea"><section><h2>地质原记录</h2><div class="tablewrap"><table><thead><tr><th>来源</th><th>范围 / m</th><th>性质</th><th>原文</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<aside><h2>来源与原文</h2><div class="detail" id="detail"><p>尚未选择记录</p></div></aside></div>
+</main><script src="/plotly.js"></script><script>
+const $=id=>document.getElementById(id); let facts=[];
+const roles={forecast:'预测',observation:'原记录观察',design:'设计转述',inference:'原资料推测',recommendation:'原建议'};
+const kinds={SKETCH:'素描',DESIGN:'设计',TSP:'TSP',HSP:'HSP'};
+function el(tag,text){const n=document.createElement(tag);n.textContent=text;return n}
+async function get(path){const r=await fetch(path);const d=await r.json();if(!r.ok)throw Error(d.error||r.status);return d}
+async function details(id){const d=await get('/api/fact?id='+encodeURIComponent(id)+'&as_of='+($('historical').checked?$('day').value:''));const f=d.fact,m=d.document.metadata;const box=$('detail');box.replaceChildren();
+const dl=el('dl','');for(const [label,val] of [['报告',d.document.source_file],['报告编制日期',m.cover_date||'未单独记载'],['提交日期',m.submission_date||'未记载'],['可用日期',m.available_date||'按提交日期保守准入'],['观察日期',m.observation_date||'未单独记载'],['原始页码/字段',f.source.page?'PDF第'+f.source.page+'页':f.source.source_pointer||'未定位'],['原文件',f.source.path||'未找到']]){dl.append(el('dt',label),el('dd',val))}box.append(dl,el('h2','原文'),el('p',f.original_text));const a=el('a','打开原始来源');a.href='/api/source?id='+encodeURIComponent(f.document_id);a.target='_blank';a.rel='noopener';box.append(a);
+const peers=d.peer_forecasts||[];if(peers.length){box.append(el('h2','重叠范围的其他预测'));for(const p of peers.slice(0,12)){const b=el('p',p.document_type+'：'+p.original_text);box.append(b)}}
+const unlocated=d.unlocated_source_facts||[];if(unlocated.length){box.append(el('h2','本资料未注明具体位置的原文'));for(const f of unlocated)box.append(el('p',f.original_text))}
+const images=d.document.local_images||[];const index=images.findIndex(x=>x.path.endsWith('图0.jpg'));if(index>=0){const img=document.createElement('img');img.alt='原始地质素描';img.src='/api/image?id='+encodeURIComponent(f.document_id)+'&index='+index;box.append(img)}
+}
+async function run(ahead=false){$('status').textContent='正在查询…';$('detail').replaceChildren(el('p','尚未选择记录'));try{const q=new URLSearchParams({start:$('start').value,end:$('end').value,as_of:$('historical').checked?$('day').value:'',source_type:$('kind').value,plc_day:$('day').value});
+if(ahead){q.set('current',$('end').value);q.set('distance',$('distance').value);q.set('direction',$('direction').value);if(!$('historical').checked)throw Error('前方历史预报查询须选择截止日期');}
+const d=await get((ahead?'/api/ahead?':'/api/query?')+q);facts=d.query.facts;const c=d.coverage;$('metrics').replaceChildren();for(const [name,v] of [['TSP',c.tsp_m],['HSP',c.hsp_m],['联合覆盖',c.union_m],['空档',c.gap_m]]){const n=el('div','');n.append(el('b',v.toFixed(2)+' m'),document.createTextNode(name));$('metrics').append(n)}
+$('rows').replaceChildren();for(const f of facts.filter(x=>['geological_description','rock_grade','risk'].includes(x.fact_type))){const tr=document.createElement('tr');tr.dataset.id=f.fact_id;tr.append(el('td',kinds[f.document_type]||f.document_type),el('td',f.start_m.toFixed(2)+(f.end_m!==f.start_m?'—'+f.end_m.toFixed(2):'')),el('td',roles[f.information_role]||f.information_role),el('td',f.original_text));tr.onclick=()=>details(f.fact_id);$('rows').append(tr)}
+d.figure.layout.width=$('chart').clientWidth;await Plotly.react('chart',d.figure.data,d.figure.layout,{responsive:true,displayModeBar:false});$('chart').removeAllListeners('plotly_click');$('chart').on('plotly_click',event=>{const id=event.points[0].customdata;if(id)details(id)});
+$('gaps').textContent=c.gaps.length?'尚无既有预报：'+c.gaps.map(g=>g.start_m.toFixed(2)+'—'+g.end_m.toFixed(2)+' m').join('；'):'查询范围内已有预报覆盖';
+$('status').textContent=(d.query.as_of?'截止 '+d.query.as_of+' 之前':'全量历史资料')+' · '+d.query.documents.length+' 份资料 · '+facts.length+' 条字段事实 · '+d.query.range_m.map(v=>v.toFixed(3)).join('—')+' m';
+}catch(e){$('status').textContent='查询失败：'+e.message}}
+$('form').onsubmit=e=>{e.preventDefault();run()};$('ahead').onclick=()=>run(true);$('full').onclick=async()=>{const d=await get('/api/meta');$('start').value=d.plc_audit_range_m[0];$('end').value=d.plc_audit_range_m[1];run()};run();
+window.addEventListener('resize',()=>window.requestAnimationFrame(()=>{if($('chart').data)Plotly.relayout($('chart'),{width:$('chart').clientWidth})}));
+</script></body></html>
